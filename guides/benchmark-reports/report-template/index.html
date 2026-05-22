@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Benchmark Report Template: Monthly Evidence Release Blueprint | SaaSVerdict</title>
+<meta content="Reusable monthly benchmark template with evidence requirements, publication checklist, and traceability fields for antidetect reliability reports." name="description"/>
+<meta content="index,follow,max-image-preview:large" name="robots"/>
+<link href="https://saasverdict.com/guides/benchmark-reports/report-template/" rel="canonical"/>
+<link href="https://saasverdict.com/feeds/lab-updates.xml" rel="alternate" title="SaaSVerdict Lab Updates RSS" type="application/rss+xml"/>
+<meta content="Benchmark Report Template | SaaSVerdict" property="og:title"/>
+<meta content="Use this template to publish monthly benchmark reports with consistent methodology traceability." property="og:description"/>
+<meta content="https://saasverdict.com/guides/benchmark-reports/report-template/" property="og:url"/>
+<meta content="article" property="og:type"/>
+<meta content="SaaSVerdict" property="og:site_name"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Benchmark Report Template | SaaSVerdict" name="twitter:title"/>
+<meta content="Monthly report blueprint with SOP-ready evidence structure." name="twitter:description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Space+Grotesk:wght@500;700&amp;display=swap" rel="stylesheet"/>
+<link href="/assets/css/site.css" rel="stylesheet"/>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "TechArticle",
+          "headline": "Benchmark Report Template: Monthly Evidence Release Blueprint",
+          "dateModified": "2026-04-04",
+          "author": {"@type": "Organization", "name": "SaaSVerdict"},
+          "publisher": {"@type": "Organization", "name": "SaaSVerdict"},
+          "mainEntityOfPage": "https://saasverdict.com/guides/benchmark-reports/report-template/"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://saasverdict.com/"},
+            {"@type": "ListItem", "position": 2, "name": "Guides", "item": "https://saasverdict.com/guides/"},
+            {"@type": "ListItem", "position": 3, "name": "Benchmark Reports", "item": "https://saasverdict.com/guides/benchmark-reports/"},
+            {"@type": "ListItem", "position": 4, "name": "Report Template", "item": "https://saasverdict.com/guides/benchmark-reports/report-template/"}
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is the minimum evidence requirement before publishing?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "At least three repeated clean runs per critical flow, explicit no-buy conditions, and methodology version tagging."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can this template be used for urgent correction releases?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. Keep the same structure and add a correction impact note section with changed assumptions and affected decisions."
+              }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "How do I check if a benchmark draft is ready to publish?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Use the Benchmark Release Checker tool to validate evidence, governance, and traceability gates before publication."
+                            }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<header class="site-header">
+<div class="container nav-wrap">
+<a class="logo" href="/">SaaS<span>Verdict</span></a>
+<nav aria-label="Main navigation" class="nav-links">
+<a href="/tools/">Tools</a>
+<a href="/compare/">Compare</a>
+<a href="/promo/">Promo</a>
+<a aria-current="page" href="/guides/">Guides</a>
+<a href="/contact/">Contact</a>
+</nav>
+</div>
+</header>
+<main class="container" id="main-content">
+<p class="breadcrumb"><a href="/">Home</a> / <a href="/guides/">Guides</a> / <a href="/guides/benchmark-reports/">Benchmark Reports</a> / Report Template</p>
+<section class="hero">
+<span class="badge">Publishing Toolkit</span>
+<h1>Monthly Benchmark Report Template</h1>
+<p class="lead">Use this blueprint to publish benchmark reports with consistent structure, reproducible evidence fields, and audit-ready decision notes.</p>
+<p class="hero-meta">Updated: 2026-04-04 | Scope: monthly releases and urgent correction updates.</p>
+<p class="disclosure">Disclosure: SaaSVerdict may earn affiliate commissions. Validate pricing and eligibility before checkout.</p>
+</section>
+<section class="section">
+<p class="section-kicker">Template Flow</p>
+<h2>Required Section Order</h2>
+<div class="timeline">
+<div class="timeline-step"><b>Section 1:</b> baseline context and active methodology version.</div>
+<div class="timeline-step"><b>Section 2:</b> reliability score bands with drift indicators.</div>
+<div class="timeline-step"><b>Section 3:</b> known limits, no-buy conditions, and risk caveats.</div>
+<div class="timeline-step"><b>Section 4:</b> action path with readiness and evidence tooling links.</div>
+<div class="timeline-step"><b>Section 5:</b> traceability block linking methodology, changelog, and prior report.</div>
+</div>
+</section>
+<section class="section">
+<div class="panel">
+<p class="section-kicker">YAML Blueprint</p>
+<h2>Front-Matter Block</h2>
+<pre><code>report_id: '2026-06'
+published_at: '2026-06-04'
+methodology_version: 'v1.2'
+benchmark_universe: 22
+evidence_requirements:
+  min_repeated_runs: 3
+  worker_parity_required: true
+  connection_hygiene_required: true
+critical_flags:
+  - persistent_dns_leak
+  - worker_main_mismatch
+confidence_band: 'A|B|C'
+previous_report: '2026-05'
+recommendation_policy: 'evidence_first'
+review_owner: 'qa-lead'</code></pre>
+<p class="small">Keep this block at the top of each report draft so metadata and editorial checks stay consistent.</p>
+</div>
+</section>
+<section class="section">
+<p class="section-kicker">Release Checklist</p>
+<h2>Monthly Publication Gate</h2>
+<div class="table-wrap">
+<table class="table-compact">
+<thead>
+<tr>
+<th>Gate</th>
+<th>Requirement</th>
+<th>Pass rule</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Evidence Gate</td>
+<td>Repeated-run logs and no-buy conditions attached</td>
+<td>All critical workflows have at least 3 clean runs</td>
+</tr>
+<tr>
+<td>Methodology Gate</td>
+<td>Version tag matches active changelog</td>
+<td>No stale scoring weights or blocker definitions</td>
+</tr>
+<tr>
+<td>Editorial Gate</td>
+<td>Known limits and caveats explicitly listed</td>
+<td>No conversion-only language without risk context</td>
+</tr>
+<tr>
+<td>Action Gate</td>
+<td>Readiness and evidence tools linked in report path</td>
+<td>Reader can run go or no-go workflow end-to-end</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section class="section">
+<p class="section-kicker">Related Resources</p>
+<h2>Build, Validate, Publish</h2>
+<div aria-label="Related resources" class="related-links">
+<a href="/guides/benchmark-reports/">Benchmark reports hub</a>
+<a href="/guides/benchmark-reports/2026-05/">May 2026 preview</a>
+<a href="/guides/benchmark-reports/2026-04/">April 2026 baseline</a>
+<a href="/guides/methodology-changelog/">Methodology changelog</a>
+<a href="/guides/evaluation-methodology/">Evaluation methodology</a>
+<a href="/tools/fingerprint-readiness-score/">Fingerprint readiness score</a>
+<a href="/tools/evidence-pack-builder/">Evidence pack builder</a>
+<a href="/tools/benchmark-release-checker/">Benchmark publish-gate checker</a>
+<a href="/feeds/lab-updates.xml">Lab updates RSS</a>
+</div>
+</section>
+<section class="section">
+<p class="section-kicker">FAQ</p>
+<h2>Template Questions</h2>
+<div class="faq-list">
+<details>
+<summary>What is the minimum evidence requirement before publishing?</summary>
+<p>At least three repeated clean runs per critical flow, explicit no-buy conditions, and methodology version tagging.</p>
+</details>
+<details>
+<summary>Can this template be used for urgent correction releases?</summary>
+<p>Yes. Keep the same structure and add a correction impact note section with changed assumptions and affected decisions.</p>
+</details>
+<details>
+<summary>How do I check if a benchmark draft is ready to publish?</summary>
+<p>Run Benchmark Release Checker to validate missing evidence, unresolved blockers, and governance gaps before publishing.</p>
+</details>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="container footer-top-grid">
+<div class="footer-brand-block">
+<a class="logo" href="/">SaaS<span>></span></a>
+<p class="small">Reliability-first publication for antidetect browser operations, automation workflows, and decision-grade implementation guidance.</p>
+<p class="small">Contact: <a href="mailto:admin@saasverdict.com">admin@saasverdict.com</a></p>
+<div aria-label="Publication principles" class="footer-badges">
+<span>Updated monthly</span>
+<span>Evidence-first</span>
+<span>Implementation-ready</span>
+</div>
+</div>
+<div class="footer-col">
+<p class="footer-title">Start Here</p>
+<div class="footer-links">
+<a href="/tools/">Tools hub</a>
+<a href="/compare/">Comparison hub</a>
+<a href="/guides/">Guides hub</a>
+<a href="/promo/">Promo verification</a>
+<a href="/tools/antidetect-browsers/">2026 rankings</a>
+<a href="/compare/multilogin-alternatives/">Multilogin alternatives</a>
+<a href="/tools/multilogin-discount/">Discount framework</a>
+</div>
+</div>
+<div class="footer-col">
+<p class="footer-title">Technical Playbooks</p>
+<div class="footer-links">
+<a href="/guides/multilogin-x-api-playwright/">API + Playwright</a>
+<a href="/guides/antidetection-ops-sop/">Ops SOP</a>
+<a href="/guides/detection-tests/">Detection tests</a>
+<a href="/guides/connection-leak-tests/">Leak tests</a>
+<a href="/guides/antidetect-libs-playbook/">Anti-detect libs</a>
+<a href="/guides/mlx-api-hub/">API knowledge hub</a>
+<a href="/guides/benchmark-reports/">Benchmark reports</a>
+</div>
+</div>
+<div class="footer-col">
+<p class="footer-title">Trust and Company</p>
+<div class="footer-links">
+<a href="/guides/evaluation-methodology/">Methodology</a>
+<a href="/guides/methodology-changelog/">Methodology changelog</a>
+<a href="/editorial-policy/">Editorial policy</a>
+<a href="/about/">About</a>
+<a href="/contact/">Contact</a>
+<a href="/privacy-policy/">Privacy</a>
+<a href="/terms/">Terms</a>
+</div>
+</div>
+</div>
+<div class="container footer-bottom-row">
+<p class="small">(c) <span data-year=""></span> SaaSVerdict. All rights reserved.</p>
+<div class="footer-mini-links">
+<a href="/feeds/lab-updates.xml">Lab updates RSS</a>
+<a href="/sitemap.xml">XML sitemap</a>
+<a href="/tools/benchmark-release-checker/">Release checker</a>
+<a href="/guides/">Guides</a>
+<a href="/compare/">Compare</a>
+</div>
+</div>
+</footer>
+<script defer="" src="/assets/js/site.js"></script>
+</body>
+</html>

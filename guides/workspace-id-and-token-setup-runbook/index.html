@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Workspace ID and Token Setup Runbook 2026: Access Hygiene for Automation | SaaSVerdict</title>
+<meta content="Operational runbook for workspace ID, user ID, and token setup: retrieval workflow, secret hygiene, environment boundaries, and audit logging." name="description"/>
+<meta content="index,follow,max-image-preview:large" name="robots"/>
+<link href="https://saasverdict.com/guides/workspace-id-and-token-setup-runbook/" rel="canonical"/>
+<meta content="Workspace ID and Token Setup Runbook 2026" property="og:title"/>
+<meta content="Establish reliable access setup for automation teams with clear security and audit controls." property="og:description"/>
+<meta content="https://saasverdict.com/guides/workspace-id-and-token-setup-runbook/" property="og:url"/>
+<meta content="article" property="og:type"/>
+<meta content="SaaSVerdict" property="og:site_name"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Workspace ID and Token Setup Runbook" name="twitter:title"/>
+<meta content="A practical access setup guide for team-safe automation workflows." name="twitter:description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Space+Grotesk:wght@500;700&amp;display=swap" rel="stylesheet"/>
+<link href="/assets/css/site.css" rel="stylesheet"/>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "TechArticle",
+          "headline": "Workspace ID and Token Setup Runbook 2026",
+          "dateModified": "2026-04-05",
+          "author": {"@type": "Organization", "name": "SaaSVerdict"},
+          "publisher": {"@type": "Organization", "name": "SaaSVerdict"},
+          "mainEntityOfPage": "https://saasverdict.com/guides/workspace-id-and-token-setup-runbook/"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://saasverdict.com/"},
+            {"@type": "ListItem", "position": 2, "name": "Guides", "item": "https://saasverdict.com/guides/"},
+            {"@type": "ListItem", "position": 3, "name": "Workspace and Token Setup", "item": "https://saasverdict.com/guides/workspace-id-and-token-setup-runbook/"}
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Which identifiers should be tracked for automation audit?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "At minimum track workspace_id, user_id, profile_id, token version, and trace_id for each execution."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Should one token be shared by all teams?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. Use scoped tokens per environment or role to reduce blast radius and improve incident triage."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How often should token policy be reviewed?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Review quarterly, and immediately after incidents, team changes, or infrastructure migration events."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<header class="site-header">
+<div class="container nav-wrap">
+<a class="logo" href="/">SaaS<span>Verdict</span></a>
+<nav aria-label="Main navigation" class="nav-links">
+<a href="/tools/">Tools</a>
+<a href="/compare/">Compare</a>
+<a href="/promo/">Promo</a>
+<a aria-current="page" href="/guides/">Guides</a>
+<a href="/about/">About</a>
+<a href="/contact/">Contact</a>
+</nav>
+</div>
+</header>
+<main class="container" id="main-content">
+<p class="breadcrumb"><a href="/">Home</a> / <a href="/guides/">Guides</a> / Workspace ID and Token Setup Runbook</p>
+<section class="hero">
+<span class="badge">Access Governance Guide</span>
+<h1>Workspace ID and Token Setup Runbook</h1>
+<p class="lead">This runbook turns ad-hoc credential setup into a controlled access workflow for teams running profile automation at scale.</p>
+<p class="hero-meta">Updated: 2026-04-05 | Input references: account and API setup patterns found across getting-started and automation repositories.</p>
+<p class="disclosure">Disclosure: SaaSVerdict may earn affiliate commissions. Validate pricing and eligibility before checkout.</p>
+</section>
+<section class="section">
+<div class="panel">
+<p class="section-kicker">Core Contract</p>
+<h2>Identifiers You Must Track</h2>
+<div class="table-wrap">
+<table class="table-compact">
+<thead>
+<tr>
+<th>Field</th>
+<th>Purpose</th>
+<th>Storage rule</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>workspace_id</td>
+<td>Scope jobs to the correct team workspace</td>
+<td>Config store, read-only in runtime logs</td>
+</tr>
+<tr>
+<td>user_id</td>
+<td>Trace execution ownership</td>
+<td>Audit logs only, no public output</td>
+</tr>
+<tr>
+<td>token_version</td>
+<td>Track credential rotation events</td>
+<td>Secrets metadata, never plain logs</td>
+</tr>
+<tr>
+<td>profile_id</td>
+<td>Bind task lifecycle and cleanup events</td>
+<td>Job logs and evidence packs</td>
+</tr>
+<tr>
+<td>trace_id</td>
+<td>Correlate stages and incident reports</td>
+<td>Required on every batch and job</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section class="section">
+<p class="section-kicker">Setup Flow</p>
+<h2>Access Provisioning Sequence</h2>
+<div class="timeline">
+<div class="timeline-step"><b>Step 1:</b> Confirm account role and workspace assignment for each operator.</div>
+<div class="timeline-step"><b>Step 2:</b> Capture workspace_id and user_id from controlled interface or verified API response.</div>
+<div class="timeline-step"><b>Step 3:</b> Issue scoped token per environment and register token_version.</div>
+<div class="timeline-step"><b>Step 4:</b> Validate access with a non-destructive API call and log trace_id.</div>
+<div class="timeline-step"><b>Step 5:</b> Move credentials into secrets manager and revoke temporary copies.</div>
+</div>
+</section>
+<section class="section grid-2">
+<article class="card">
+<h2>Environment Variable Baseline</h2>
+<pre><code>MLX_BASE_URL=http://127.0.0.1:35000
+MLX_WORKSPACE_ID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+MLX_TOKEN=***
+MLX_TOKEN_VERSION=v3
+MLX_REQUEST_TIMEOUT_SEC=45</code></pre>
+<p class="small">Expose only what runtime needs. Hide tokens from debug output and UI overlays.</p>
+</article>
+<article class="card">
+<h2>Security Guardrails</h2>
+<ul class="clean">
+<li>Separate staging and production credentials.</li>
+<li>Rotate tokens after team access changes.</li>
+<li>Disable old token versions immediately after cutover.</li>
+<li>Log access events with immutable timestamps.</li>
+</ul>
+</article>
+</section>
+<section class="section">
+<div class="panel">
+<h2>Audit Record Skeleton</h2>
+<pre><code>{
+  "trace_id": "access-2026-04-05-009",
+  "workspace_id": "948bab9a-2cad-4a3f-af1f-01bfe260f85b",
+  "user_id": "19047492-ea90-4138-9afc-d2df61de2b06",
+  "token_version": "v3",
+  "event": "access_validation",
+  "status": "pass",
+  "timestamp": "2026-04-05T18:30:00Z"
+}</code></pre>
+<p class="small">A simple, consistent audit record saves hours during incident response.</p>
+</div>
+</section>
+<section class="section">
+<p class="section-kicker">Common Mistakes</p>
+<h2>Access Setup Failures That Cause Production Pain</h2>
+<div class="decision-grid">
+<article class="decision-card">
+<h3>Token reuse everywhere</h3>
+<p class="small">One leaked key can break every environment at once.</p>
+</article>
+<article class="decision-card">
+<h3>No token version tracking</h3>
+<p class="small">Teams cannot know which jobs used stale credentials.</p>
+</article>
+<article class="decision-card">
+<h3>Missing workspace ownership checks</h3>
+<p class="small">Jobs run under the wrong workspace and produce invalid evidence.</p>
+</article>
+</div>
+</section>
+<section class="section">
+<div class="panel">
+<p class="section-kicker">Commercial Routing</p>
+<h2>After Access Governance Is Stable</h2>
+<p>Once access controls are stable, route users to comparison and promo pages with confidence. This improves trust and reduces low-fit traffic.</p>
+<div class="hero-actions">
+<a class="btn btn-primary" href="/compare/multilogin-alternatives/">Open alternatives comparison</a>
+<a class="btn btn-ghost" href="/promo/">Open promo verification hub</a>
+<a class="btn btn-ghost" href="/guides/multilogin-x-script-runner-playbook/">Open script runner playbook</a>
+</div>
+</div>
+</section>
+<section class="section">
+<p class="section-kicker">FAQ</p>
+<h2>Access Setup Questions</h2>
+<div class="faq-list">
+<details>
+<summary>Which identifiers are mandatory for audit?</summary>
+<p>Track workspace_id, user_id, profile_id, token_version, and trace_id for each automation run.</p>
+</details>
+<details>
+<summary>Should one token be shared across teams?</summary>
+<p>No, use scoped tokens per role or environment to reduce incident impact.</p>
+</details>
+<details>
+<summary>How often should token policy be reviewed?</summary>
+<p>Quarterly at minimum, and immediately after incidents or team changes.</p>
+</details>
+</div>
+</section>
+<section class="section">
+<div class="panel">
+<h2>Related Pages</h2>
+<div aria-label="Related links" class="related-links">
+<a href="/guides/multilogin-x-open-source-blueprints/">Open-source blueprints hub</a>
+<a href="/guides/multilogin-x-getting-started-roadmap/">Getting started roadmap</a>
+<a href="/guides/multilogin-x-script-runner-playbook/">Script runner playbook</a>
+<a href="/guides/laravel-multilogin-sdk-playbook/">Laravel SDK playbook</a>
+<a href="/guides/evaluation-methodology/">Evaluation methodology</a>
+</div>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="container footer-top-grid">
+<div class="footer-brand-block">
+<a class="logo" href="/">SaaS<span>></span></a>
+<p class="small">Reliability-first publication for antidetect browser operations, automation workflows, and decision-grade implementation guidance.</p>
+<p class="small">Contact: <a href="mailto:admin@saasverdict.com">admin@saasverdict.com</a></p>
+<div aria-label="Publication principles" class="footer-badges">
+<span>Updated monthly</span>
+<span>Evidence-first</span>
+<span>Implementation-ready</span>
+</div>
+</div>
+<div class="footer-col">
+<p class="footer-title">Start Here</p>
+<div class="footer-links">
+<a href="/tools/">Tools hub</a>
+<a href="/compare/">Comparison hub</a>
+<a href="/guides/">Guides hub</a>
+<a href="/promo/">Promo verification</a>
+<a href="/tools/antidetect-browsers/">2026 rankings</a>
+<a href="/compare/multilogin-alternatives/">Multilogin alternatives</a>
+<a href="/tools/multilogin-discount/">Discount framework</a>
+</div>
+</div>
+<div class="footer-col">
+<p class="footer-title">Technical Playbooks</p>
+<div class="footer-links">
+<a href="/guides/multilogin-x-api-playwright/">API + Playwright</a>
+<a href="/guides/antidetection-ops-sop/">Ops SOP</a>
+<a href="/guides/detection-tests/">Detection tests</a>
+<a href="/guides/connection-leak-tests/">Leak tests</a>
+<a href="/guides/antidetect-libs-playbook/">Anti-detect libs</a>
+<a href="/guides/mlx-api-hub/">API knowledge hub</a>
+<a href="/guides/benchmark-reports/">Benchmark reports</a>
+</div>
+</div>
+<div class="footer-col">
+<p class="footer-title">Trust and Company</p>
+<div class="footer-links">
+<a href="/guides/evaluation-methodology/">Methodology</a>
+<a href="/guides/methodology-changelog/">Methodology changelog</a>
+<a href="/editorial-policy/">Editorial policy</a>
+<a href="/about/">About</a>
+<a href="/contact/">Contact</a>
+<a href="/privacy-policy/">Privacy</a>
+<a href="/terms/">Terms</a>
+</div>
+</div>
+</div>
+<div class="container footer-bottom-row">
+<p class="small">(c) <span data-year=""></span> SaaSVerdict. All rights reserved.</p>
+<div class="footer-mini-links">
+<a href="/feeds/lab-updates.xml">Lab updates RSS</a>
+<a href="/sitemap.xml">XML sitemap</a>
+<a href="/tools/benchmark-release-checker/">Release checker</a>
+<a href="/guides/">Guides</a>
+<a href="/compare/">Compare</a>
+</div>
+</div>
+</footer>
+<script defer="" src="/assets/js/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SaaSVerdict Lab Updates</title>
+    <link>https://saasverdict.com/guides/benchmark-reports/</link>
+    <description>Monthly benchmark releases, pricing playbooks, methodology updates, and evidence workflow tooling.</description>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 05 Apr 2026 19:40:00 +0000</lastBuildDate>
+    <atom:link href="https://saasverdict.com/feeds/lab-updates.xml" rel="self" type="application/rss+xml"/>
+
+    <item>
+      <title>Multilogin API Knowledge Hub Conversion Wave Published</title>
+      <link>https://saasverdict.com/guides/mlx-api-hub/</link>
+      <guid isPermaLink="true">https://saasverdict.com/guides/mlx-api-hub/</guid>
+      <pubDate>Sun, 05 Apr 2026 19:40:00 +0000</pubDate>
+      <description>New large-scale conversion wave with 7 category hubs, 49 rewritten API playbooks, and 606 local SEO-renamed reference images.</description>
+    </item>
+
+    <item>
+      <title>Getting Started Roadmap Guide Published</title>
+      <link>https://saasverdict.com/guides/multilogin-x-getting-started-roadmap/</link>
+      <guid isPermaLink="true">https://saasverdict.com/guides/multilogin-x-getting-started-roadmap/</guid>
+      <pubDate>Sun, 05 Apr 2026 19:05:00 +0000</pubDate>
+      <description>New 14-day onboarding roadmap from account setup to stable pilot with acceptance gates and evidence checkpoints.</description>
+    </item>
+
+    <item>
+      <title>Workspace and Token Setup Runbook Published</title>
+      <link>https://saasverdict.com/guides/workspace-id-and-token-setup-runbook/</link>
+      <guid isPermaLink="true">https://saasverdict.com/guides/workspace-id-and-token-setup-runbook/</guid>
+      <pubDate>Sun, 05 Apr 2026 19:00:00 +0000</pubDate>
+      <description>Access-governance guide for workspace IDs, user IDs, token lifecycle controls, and audit-ready automation logging.</description>
+    </item>
+
+    <item>
+      <title>Multilogin X Script Runner Playbook Published</title>
+      <link>https://saasverdict.com/guides/multilogin-x-script-runner-playbook/</link>
+      <guid isPermaLink="true">https://saasverdict.com/guides/multilogin-x-script-runner-playbook/</guid>
+      <pubDate>Sun, 05 Apr 2026 18:55:00 +0000</pubDate>
+      <description>Batch execution playbook with payload schema controls, failure thresholds, and quarantine strategy for safer script operations.</description>
+    </item>
+
+    <item>
+      <title>OpenMultiLogin Risk and Migration Guide Published</title>
+      <link>https://saasverdict.com/guides/openmultilogin-risk-and-migration-guide/</link>
+      <guid isPermaLink="true">https://saasverdict.com/guides/openmultilogin-risk-and-migration-guide/</guid>
+      <pubDate>Sun, 05 Apr 2026 18:50:00 +0000</pubDate>
+      <description>Risk scoring and phased migration framework for teams evaluating fork-based workflows versus managed operations paths.</description>
+    </item>
+
+    <item>
+      <title>Open-Source Blueprints Hub Published</title>
+      <link>https://saasverdict.com/guides/multilogin-x-open-source-blueprints/</link>
+      <guid isPermaLink="true">https://saasverdict.com/guides/multilogin-x-open-source-blueprints/</guid>
+      <pubDate>Sun, 05 Apr 2026 18:00:00 +0000</pubDate>
+      <description>New cluster converting open-source repository themes into production guides for SDK integration, cookie workflow governance, and proxy bootstrap reliability.</description>
+    </item>
+
+    <item>
+      <title>Laravel Multilogin SDK Playbook Released</title>
+      <link>https://saasverdict.com/guides/laravel-multilogin-sdk-playbook/</link>
+      <guid isPermaLink="true">https://saasverdict.com/guides/laravel-multilogin-sdk-playbook/</guid>
+      <pubDate>Sun, 05 Apr 2026 17:50:00 +0000</pubDate>
+      <description>Queue-safe Laravel implementation guide for profile lifecycle orchestration, timeout policy, and deterministic cleanup controls.</description>
+    </item>
+
+    <item>
+      <title>Cookie Automation Runbook Released</title>
+      <link>https://saasverdict.com/guides/cookie-automation-runbook/</link>
+      <guid isPermaLink="true">https://saasverdict.com/guides/cookie-automation-runbook/</guid>
+      <pubDate>Sun, 05 Apr 2026 17:40:00 +0000</pubDate>
+      <description>Evidence-first cookie workflow guide covering metadata normalization, repeated-session acceptance gates, and rollback checkpoints.</description>
+    </item>
+
+    <item>
+      <title>Proxy Profile Bootstrap Playbook Released</title>
+      <link>https://saasverdict.com/guides/proxy-profile-bootstrap-playbook/</link>
+      <guid isPermaLink="true">https://saasverdict.com/guides/proxy-profile-bootstrap-playbook/</guid>
+      <pubDate>Sun, 05 Apr 2026 17:35:00 +0000</pubDate>
+      <description>Proxy quality contract and profile bootstrap SOP with health-gate, quarantine lane, and drift-control guidance for scale operations.</description>
+    </item>
+
+    <item>
+      <title>May 2026 Benchmark Preview Published</title>
+      <link>https://saasverdict.com/guides/benchmark-reports/2026-05/</link>
+      <guid isPermaLink="true">https://saasverdict.com/guides/benchmark-reports/2026-05/</guid>
+      <pubDate>Sun, 05 Apr 2026 16:20:00 +0000</pubDate>
+      <description>Early May reliability trend preview across 22 platforms with delta matrix versus April baseline and release-gate checks.</description>
+    </item>
+
+    <item>
+      <title>Best Multilogin Alternatives Page Published</title>
+      <link>https://saasverdict.com/compare/multilogin-alternatives/</link>
+      <guid isPermaLink="true">https://saasverdict.com/compare/multilogin-alternatives/</guid>
+      <pubDate>Sun, 05 Apr 2026 11:15:00 +0000</pubDate>
+      <description>New high-intent shortlist page mapping Multilogin alternatives by risk profile, API readiness, and operating cost checks.</description>
+    </item>
+
+    <item>
+      <title>Antidetect Browser Pricing Playbook Released</title>
+      <link>https://saasverdict.com/guides/antidetect-browser-pricing-playbook/</link>
+      <guid isPermaLink="true">https://saasverdict.com/guides/antidetect-browser-pricing-playbook/</guid>
+      <pubDate>Sun, 05 Apr 2026 11:20:00 +0000</pubDate>
+      <description>Decision framework for monthly versus annual plans using total cost, failure overhead, and governance risk modeling.</description>
+    </item>
+
+    <item>
+      <title>Benchmark Release Checker Added</title>
+      <link>https://saasverdict.com/tools/benchmark-release-checker/</link>
+      <guid isPermaLink="true">https://saasverdict.com/tools/benchmark-release-checker/</guid>
+      <pubDate>Sat, 04 Apr 2026 14:00:00 +0000</pubDate>
+      <description>Free publish-gate tool to validate monthly benchmark readiness before release.</description>
+    </item>
+
+    <item>
+      <title>Benchmark Report Template Published</title>
+      <link>https://saasverdict.com/guides/benchmark-reports/report-template/</link>
+      <guid isPermaLink="true">https://saasverdict.com/guides/benchmark-reports/report-template/</guid>
+      <pubDate>Sat, 04 Apr 2026 12:30:00 +0000</pubDate>
+      <description>Reusable monthly benchmark release blueprint with evidence gates, YAML front-matter, and traceability checklist.</description>
+    </item>
+
+    <item>
+      <title>April 2026 Benchmark Baseline Released</title>
+      <link>https://saasverdict.com/guides/benchmark-reports/2026-04/</link>
+      <guid isPermaLink="true">https://saasverdict.com/guides/benchmark-reports/2026-04/</guid>
+      <pubDate>Sat, 04 Apr 2026 10:00:00 +0000</pubDate>
+      <description>First full monthly baseline under methodology v1.2 with evidence-level annotations and drift notes.</description>
+    </item>
+
+    <item>
+      <title>Methodology v1.2 Changelog Published</title>
+      <link>https://saasverdict.com/guides/methodology-changelog/</link>
+      <guid isPermaLink="true">https://saasverdict.com/guides/methodology-changelog/</guid>
+      <pubDate>Sat, 04 Apr 2026 09:00:00 +0000</pubDate>
+      <description>Public version history for scoring changes, blocker updates, and impact notes.</description>
+    </item>
+
+    <item>
+      <title>Evidence Pack Builder Added</title>
+      <link>https://saasverdict.com/tools/evidence-pack-builder/</link>
+      <guid isPermaLink="true">https://saasverdict.com/tools/evidence-pack-builder/</guid>
+      <pubDate>Sat, 04 Apr 2026 11:00:00 +0000</pubDate>
+      <description>Free tool for generating SOP-ready YAML evidence packages before recommendation or procurement approval.</description>
+    </item>
+  </channel>
+</rss>

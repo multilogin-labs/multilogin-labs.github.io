@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /go/
+
+# Crawl primary static assets and HTML pages
+Allow: /assets/
+Allow: /feeds/
+
+Sitemap: https://saasverdict.com/sitemap.xml

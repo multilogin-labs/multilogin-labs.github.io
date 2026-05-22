@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Detection Tests for Browser Fingerprint QA (2026) | SaaSVerdict</title>
+<meta content="Practical detection-test stack for browser fingerprint QA: Everything, automation, canvas, captcha, and connection checks before scaling or checkout." name="description"/>
+<meta content="index,follow,max-image-preview:large" name="robots"/>
+<link href="https://saasverdict.com/guides/detection-tests/" rel="canonical"/>
+<meta content="Detection Tests for Browser Fingerprint QA (2026)" property="og:title"/>
+<meta content="Run this detection bundle to validate profile stability before procurement and scale." property="og:description"/>
+<meta content="https://saasverdict.com/guides/detection-tests/" property="og:url"/>
+<meta content="article" property="og:type"/>
+<meta content="SaaSVerdict" property="og:site_name"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Detection Tests for Browser Fingerprint QA" name="twitter:title"/>
+<meta content="Evidence-first test stack for anti-detect QA and safer purchase decisions." name="twitter:description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Space+Grotesk:wght@500;700&amp;display=swap" rel="stylesheet"/>
+<link href="/assets/css/site.css" rel="stylesheet"/>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "TechArticle",
+          "headline": "Detection Tests for Browser Fingerprint QA (2026)",
+          "dateModified": "2026-04-04",
+          "author": {"@type": "Organization", "name": "SaaSVerdict"},
+          "publisher": {"@type": "Organization", "name": "SaaSVerdict"},
+          "mainEntityOfPage": "https://saasverdict.com/guides/detection-tests/"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://saasverdict.com/"},
+            {"@type": "ListItem", "position": 2, "name": "Guides", "item": "https://saasverdict.com/guides/"},
+            {"@type": "ListItem", "position": 3, "name": "Detection Tests", "item": "https://saasverdict.com/guides/detection-tests/"}
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Which detection tests should I run first?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Start with CreepJS, Pixelscan, and BrowserLeaks for broad signal coverage. Then validate automation and connection behavior in specialized tests."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can I go to checkout if one test fails?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Do not finalize procurement when critical identity, automation, or network signals are inconsistent across repeated runs. Fix first, then retest."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How does this page support safer affiliate decisions?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "This page turns test evidence into a clear path: compare options, verify promo claims, then use official checkout only after stability criteria pass."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<div aria-live="polite" class="toast" id="site-toast"></div>
+<div class="site-announcement">
+Use SAAS50 for 50% off Multilogin plans or MIN50 for 50% off cloud phone - <a href="/go/multilogin" rel="noopener noreferrer" target="_blank">official checkout</a>
+</div>
+<header class="site-header">
+<div class="container nav-wrap">
+<a class="logo" href="/">SaaS<span>Verdict</span></a>
+<nav aria-label="Main navigation" class="nav-links">
+<a href="/tools/">Tools</a>
+<a href="/compare/">Compare</a>
+<a href="/promo/">Promo</a>
+<a aria-current="page" href="/guides/">Guides</a>
+<a href="/contact/">Contact</a>
+</nav>
+</div>
+</header>
+<main class="container" id="main-content">
+<p class="breadcrumb"><a href="/">Home</a> / <a href="/guides/">Guides</a> / Detection Tests</p>
+<section class="hero">
+<span class="badge">Detection Stack</span>
+<h1>Detection Tests for Browser Fingerprint QA</h1>
+<p class="lead">Use this page as your operational test bundle before scale or checkout. The objective is to reduce false confidence from single-tool passes and catch drift early.</p>
+<p class="hero-meta">Updated: 2026-04-04 | Workflow: test evidence -&gt; compare -&gt; promo verification -&gt; official checkout.</p>
+<p class="disclosure">Disclosure: SaaSVerdict may earn affiliate commissions. Validate pricing and eligibility before checkout.</p>
+</section>
+<section class="section">
+<p class="section-kicker">Everything Bundle</p>
+<h2>Core Detection Tests (Run Every Candidate)</h2>
+<div class="table-wrap">
+<table class="table-compact">
+<thead>
+<tr>
+<th>Tool</th>
+<th>Primary purpose</th>
+<th>What to monitor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://abrahamjuliot.github.io/creepjs/" rel="noopener noreferrer" target="_blank">Creep JS</a></td>
+<td>Advanced fingerprint and lie diagnostics</td>
+<td>Large lie clusters, unstable key surfaces</td>
+</tr>
+<tr>
+<td><a href="https://pixelscan.net/" rel="noopener noreferrer" target="_blank">Pixelscan</a></td>
+<td>Quick anti-detect sanity check</td>
+<td>Proxy and automation warning flags</td>
+</tr>
+<tr>
+<td><a href="https://fv.pro/check-privacy/general" rel="noopener noreferrer" target="_blank">F.vision</a></td>
+<td>Legacy privacy cross-check</td>
+<td>Conflicts versus modern test outputs</td>
+</tr>
+<tr>
+<td><a href="https://coveryourtracks.eff.org/" rel="noopener noreferrer" target="_blank">Cover Your Tracks</a></td>
+<td>Fingerprint uniqueness context</td>
+<td>High uniqueness persistence after retries</td>
+</tr>
+<tr>
+<td><a href="https://amiunique.org/fingerprint" rel="noopener noreferrer" target="_blank">AmIUnique Fingerprint</a></td>
+<td>Fingerprint entropy comparison</td>
+<td>Outlier uniqueness under stable environment</td>
+</tr>
+<tr>
+<td><a href="https://bot.sannysoft.com/" rel="noopener noreferrer" target="_blank">Sannysoft Fingerprint</a></td>
+<td>Automation surface checks</td>
+<td>Repeated anti-bot failures</td>
+</tr>
+<tr>
+<td><a href="https://browserleaks.com/" rel="noopener noreferrer" target="_blank">BrowserLeaks</a></td>
+<td>Multi-surface leak testing</td>
+<td>WebRTC, canvas, and DNS inconsistencies</td>
+</tr>
+<tr>
+<td><a href="https://audiofingerprint.openwpm.com/" rel="noopener noreferrer" target="_blank">Audio fingerprint</a></td>
+<td>Audio stack stability</td>
+<td>Drift across repeated runs</td>
+</tr>
+<tr>
+<td><a href="https://webbrowsertools.com/" rel="noopener noreferrer" target="_blank">WebbrowserTools</a></td>
+<td>Rapid broad diagnostics</td>
+<td>Unexpected value jumps between tests</td>
+</tr>
+<tr>
+<td><a href="https://reviewer.eugenebos.com/test" rel="noopener noreferrer" target="_blank">Raw custom test harness</a></td>
+<td>Plain-code visibility and debugging</td>
+<td>Low-level mismatches hidden in summaries</td>
+</tr>
+<tr>
+<td><a href="https://www.browserscan.net/en" rel="noopener noreferrer" target="_blank">BrowserScan</a></td>
+<td>Final consistency cross-check</td>
+<td>Disagreement with previous baseline tests</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="comparison-note">Minimum rule: run at least 3 repeated sessions on the same profile template and quarantine any setup with critical drift.</p>
+</section>
+<section class="section grid-2">
+<article class="card">
+<h2>Automation-Specific Tests</h2>
+<ul class="clean">
+<li><a href="https://bot-detector.rebrowser.net/" rel="noopener noreferrer" target="_blank">Rebrowser bot detector</a></li>
+<li><a href="https://kaliiiiiiiiii.github.io/brotector/" rel="noopener noreferrer" target="_blank">Brotector</a></li>
+<li><a href="https://bot.incolumitas.com/" rel="noopener noreferrer" target="_blank">Behavioral Bot Classification</a></li>
+<li><a href="https://pixelscan.net/bot-check" rel="noopener noreferrer" target="_blank">Pixelscan Bot detector</a></li>
+</ul>
+</article>
+<article class="card">
+<h2>Canvas and Rendering</h2>
+<ul class="clean">
+<li><a href="https://data.bablosoft.com/canvas-inspector-3/distr/CanvasInspectorInstall.exe" rel="noopener noreferrer" target="_blank">Canvas inspector</a></li>
+<li><a href="https://kkapsner.github.io/CanvasBlocker/test/detectionTest.html" rel="noopener noreferrer" target="_blank">Canvas Tampering Detection</a></li>
+</ul>
+</article>
+<article class="card">
+<h2>Captcha and Scoring</h2>
+<ul class="clean">
+<li><a href="https://antcpt.com/score_detector/" rel="noopener noreferrer" target="_blank">ReCaptcha score</a></li>
+<li><a href="https://nowsecure.nl" rel="noopener noreferrer" target="_blank">Cloudflare captcha check</a></li>
+</ul>
+</article>
+<article class="card">
+<h2>Connection and Leak Tests</h2>
+<ul class="clean">
+<li><a href="https://proxydetect.live/" rel="noopener noreferrer" target="_blank">ProxyDetect</a></li>
+<li><a href="https://iproyal.com/webrtc-leak-test/" rel="noopener noreferrer" target="_blank">IPRoyal WebRTC leak</a></li>
+<li><a href="https://browserleaks.com/webrtc" rel="noopener noreferrer" target="_blank">BrowserLeaks WebRTC</a></li>
+<li><a href="https://github.com/NikolaiT/zardaxt" rel="noopener noreferrer" target="_blank">NikolaiT zardaxt</a></li>
+<li><a href="https://www.ipqualityscore.com/" rel="noopener noreferrer" target="_blank">ipQualityScore</a></li>
+<li><a href="https://fingerbank.org/" rel="noopener noreferrer" target="_blank">FingerBank</a></li>
+<li><a href="https://dnsleaktest.com/results.html" rel="noopener noreferrer" target="_blank">DnsLeakTest</a></li>
+<li><a href="https://browserleaks.com/dns" rel="noopener noreferrer" target="_blank">BrowserLeaks DNS leak</a></li>
+</ul>
+<p class="small">Need the full connection-only playbook? <a href="/guides/connection-leak-tests/">Open connection leak tests guide</a>.</p>
+</article>
+</section>
+<section class="section">
+<div class="panel">
+<p class="section-kicker">Conversion Path</p>
+<h2>Turn Test Evidence into Safer Affiliate Decisions</h2>
+<div class="timeline">
+<div class="timeline-step"><b>Step 1:</b> Run detection bundle and keep evidence snapshots.</div>
+<div class="timeline-step"><b>Step 2:</b> Run connection leak validation for WebRTC, DNS, and proxy consistency.</div>
+<div class="timeline-step"><b>Step 3:</b> Validate tradeoffs in compare pages based on your strictest risk.</div>
+<div class="timeline-step"><b>Step 4:</b> Use official checkout only when reliability criteria pass consistently.</div>
+</div>
+<div class="hero-actions">
+<a class="btn btn-ghost" href="/guides/antidetection-ops-sop/">Open ops SOP guide</a>
+<a class="btn btn-ghost" href="/guides/evaluation-methodology/">Review evaluation methodology</a>
+<a class="btn btn-ghost" href="/guides/connection-leak-tests/">Open connection leak tests</a>
+<a class="btn btn-primary" href="/compare/">Open compare hub</a>
+<a class="btn btn-ghost" href="/promo/">Open promo verification hub</a>
+<a class="btn btn-ghost" href="/tools/multilogin-discount/">Open Multilogin discount framework</a>
+<a class="btn btn-primary" href="/go/multilogin" rel="noopener noreferrer" target="_blank">Open official Multilogin checkout</a>
+</div>
+</div>
+</section>
+<section class="section">
+<p class="section-kicker">FAQ</p>
+<h2>Detection Tests Questions</h2>
+<div class="faq-list">
+<details>
+<summary>Which detection tests should I run first?</summary>
+<p>Start with CreepJS, Pixelscan, and BrowserLeaks for broad signal coverage. Then validate automation and connection behavior in specialized tests.</p>
+</details>
+<details>
+<summary>Can I go to checkout if one test fails?</summary>
+<p>No for critical failures. Fix inconsistent identity, automation, or connection signals first, then rerun tests before procurement.</p>
+</details>
+<details>
+<summary>How does this page support safer affiliate decisions?</summary>
+<p>It enforces evidence-first routing: compare, promo verification, and only then official checkout if reliability signals remain stable.</p>
+</details>
+</div>
+<div aria-label="Related resources" class="related-links">
+<a href="/guides/antidetection-ops-sop/">Antidetection ops SOP guide</a>
+<a href="/guides/evaluation-methodology/">Evaluation methodology guide</a>
+<a href="/guides/browser-fingerprint-checklist/">Fingerprint checklist</a>
+<a href="/guides/antidetect-libs-playbook/">Anti-detect libs playbook</a>
+<a href="/guides/connection-leak-tests/">Connection leak tests guide</a>
+<a href="/tools/antidetect-browsers/">Antidetect rankings</a>
+<a href="/compare/">Compare hub</a>
+<a href="/promo/">Promo verification hub</a>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="container footer-top-grid">
+<div class="footer-brand-block">
+<a class="logo" href="/">SaaS<span>></span></a>
+<p class="small">Reliability-first publication for antidetect browser operations, automation workflows, and decision-grade implementation guidance.</p>
+<p class="small">Contact: <a href="mailto:admin@saasverdict.com">admin@saasverdict.com</a></p>
+<div aria-label="Publication principles" class="footer-badges">
+<span>Updated monthly</span>
+<span>Evidence-first</span>
+<span>Implementation-ready</span>
+</div>
+</div>
+<div class="footer-col">
+<p class="footer-title">Start Here</p>
+<div class="footer-links">
+<a href="/tools/">Tools hub</a>
+<a href="/compare/">Comparison hub</a>
+<a href="/guides/">Guides hub</a>
+<a href="/promo/">Promo verification</a>
+<a href="/tools/antidetect-browsers/">2026 rankings</a>
+<a href="/compare/multilogin-alternatives/">Multilogin alternatives</a>
+<a href="/tools/multilogin-discount/">Discount framework</a>
+</div>
+</div>
+<div class="footer-col">
+<p class="footer-title">Technical Playbooks</p>
+<div class="footer-links">
+<a href="/guides/multilogin-x-api-playwright/">API + Playwright</a>
+<a href="/guides/antidetection-ops-sop/">Ops SOP</a>
+<a href="/guides/detection-tests/">Detection tests</a>
+<a href="/guides/connection-leak-tests/">Leak tests</a>
+<a href="/guides/antidetect-libs-playbook/">Anti-detect libs</a>
+<a href="/guides/mlx-api-hub/">API knowledge hub</a>
+<a href="/guides/benchmark-reports/">Benchmark reports</a>
+</div>
+</div>
+<div class="footer-col">
+<p class="footer-title">Trust and Company</p>
+<div class="footer-links">
+<a href="/guides/evaluation-methodology/">Methodology</a>
+<a href="/guides/methodology-changelog/">Methodology changelog</a>
+<a href="/editorial-policy/">Editorial policy</a>
+<a href="/about/">About</a>
+<a href="/contact/">Contact</a>
+<a href="/privacy-policy/">Privacy</a>
+<a href="/terms/">Terms</a>
+</div>
+</div>
+</div>
+<div class="container footer-bottom-row">
+<p class="small">(c) <span data-year=""></span> SaaSVerdict. All rights reserved.</p>
+<div class="footer-mini-links">
+<a href="/feeds/lab-updates.xml">Lab updates RSS</a>
+<a href="/sitemap.xml">XML sitemap</a>
+<a href="/tools/benchmark-release-checker/">Release checker</a>
+<a href="/guides/">Guides</a>
+<a href="/compare/">Compare</a>
+</div>
+</div>
+</footer>
+<script defer="" src="/assets/js/site.js"></script>
+</body>
+</html>

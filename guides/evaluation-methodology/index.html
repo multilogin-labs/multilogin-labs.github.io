@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Evaluation Methodology 2026: Reproducible Scoring and Evidence Protocol | SaaSVerdict</title>
+<meta content="Transparent scoring framework for antidetect browser evaluations: weighted criteria, reproducibility rules, evidence grading, correction SLAs, and disclosure controls." name="description"/>
+<meta content="index,follow,max-image-preview:large" name="robots"/>
+<link href="https://saasverdict.com/guides/evaluation-methodology/" rel="canonical"/>
+<meta content="Evaluation Methodology 2026 | SaaSVerdict" property="og:title"/>
+<meta content="How SaaSVerdict builds reproducible verdicts with weighted criteria and evidence-first validation." property="og:description"/>
+<meta content="https://saasverdict.com/guides/evaluation-methodology/" property="og:url"/>
+<meta content="article" property="og:type"/>
+<meta content="SaaSVerdict" property="og:site_name"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Evaluation Methodology 2026 | SaaSVerdict" name="twitter:title"/>
+<meta content="Read the full reproducibility and scoring protocol behind SaaSVerdict rankings and comparisons." name="twitter:description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Space+Grotesk:wght@500;700&amp;display=swap" rel="stylesheet"/>
+<link href="/assets/css/site.css" rel="stylesheet"/>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "TechArticle",
+          "headline": "Evaluation Methodology 2026: Reproducible Scoring and Evidence Protocol",
+          "dateModified": "2026-04-04",
+          "author": {"@type": "Organization", "name": "SaaSVerdict"},
+          "publisher": {"@type": "Organization", "name": "SaaSVerdict"},
+          "mainEntityOfPage": "https://saasverdict.com/guides/evaluation-methodology/"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://saasverdict.com/"},
+            {"@type": "ListItem", "position": 2, "name": "Guides", "item": "https://saasverdict.com/guides/"},
+            {"@type": "ListItem", "position": 3, "name": "Evaluation Methodology", "item": "https://saasverdict.com/guides/evaluation-methodology/"}
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "How many repeated runs are required before publishing a verdict?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "At least three repeated clean runs per critical flow are required, and any critical contradiction blocks publication until resolved."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do affiliate relationships influence scoring weights?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. Commercial relationships are disclosed but do not alter scoring weights or blocker criteria."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How are corrections handled after publication?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Verified material errors are corrected with revision notes and reflected in updated metadata and methodology records."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How often is this methodology reviewed?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The methodology is reviewed monthly and whenever browser, proxy, or automation ecosystem changes can affect reliability signals."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<header class="site-header">
+<div class="container nav-wrap">
+<a class="logo" href="/">SaaS<span>Verdict</span></a>
+<nav aria-label="Main navigation" class="nav-links">
+<a href="/tools/">Tools</a>
+<a href="/compare/">Compare</a>
+<a href="/promo/">Promo</a>
+<a aria-current="page" href="/guides/">Guides</a>
+<a href="/contact/">Contact</a>
+</nav>
+</div>
+</header>
+<main class="container" id="main-content">
+<p class="breadcrumb"><a href="/">Home</a> / <a href="/guides/">Guides</a> / Evaluation Methodology</p>
+<section class="hero">
+<span class="badge">Trust Framework</span>
+<h1>Evaluation Methodology: Reproducible Verdicts, Not Marketing Claims</h1>
+<p class="lead">This page documents how SaaSVerdict converts test evidence into rankings, comparisons, and procurement guidance with explicit scoring weights, blocker rules, and correction workflows.</p>
+<p class="hero-meta">Updated: 2026-04-04 | Scope: lawful QA, account safety, and reliability-led decision support.</p>
+<p class="disclosure">Disclosure: SaaSVerdict may earn affiliate commissions. Validate pricing and eligibility before checkout.</p>
+</section>
+<section class="section">
+<div class="panel">
+<p class="section-kicker">Why This Exists</p>
+<h2>What Makes a Verdict Credible</h2>
+<div class="timeline">
+<div class="timeline-step"><b>Credibility rule 1:</b> repeatable tests across more than one run.</div>
+<div class="timeline-step"><b>Credibility rule 2:</b> clear separation between signal evidence and editorial interpretation.</div>
+<div class="timeline-step"><b>Credibility rule 3:</b> visible no-buy conditions, not just conversion paths.</div>
+</div>
+<p class="notice">Methodology protects readers from price-only decisions and protects operators from avoidable reliability debt.</p>
+</div>
+</section>
+<section class="section">
+<div class="panel">
+<p class="section-kicker">Scoring Model</p>
+<h2>Weighted Criteria Used Across Reviews</h2>
+<div class="progress-list">
+<div class="progress-row">
+<div>
+<div class="progress-label">Profile integrity and session consistency</div>
+<div class="progress-track"><div class="progress-fill" style="width: 38%;"></div></div>
+</div>
+<strong>38%</strong>
+</div>
+<div class="progress-row">
+<div>
+<div class="progress-label">API lifecycle reliability and observability</div>
+<div class="progress-track"><div class="progress-fill alt" style="width: 26%;"></div></div>
+</div>
+<strong>26%</strong>
+</div>
+<div class="progress-row">
+<div>
+<div class="progress-label">Operational cost under sustained usage</div>
+<div class="progress-track"><div class="progress-fill" style="width: 21%;"></div></div>
+</div>
+<strong>21%</strong>
+</div>
+<div class="progress-row">
+<div>
+<div class="progress-label">Team governance and handoff resilience</div>
+<div class="progress-track"><div class="progress-fill alt" style="width: 15%;"></div></div>
+</div>
+<strong>15%</strong>
+</div>
+</div>
+<p class="small">Weights may be adjusted only through documented methodology updates, never by campaign priorities.</p>
+</div>
+</section>
+<section class="section">
+<p class="section-kicker">Reproducibility Protocol</p>
+<h2>Minimum Conditions Before Publication</h2>
+<div class="table-wrap">
+<table class="table-compact">
+<thead>
+<tr>
+<th>Category</th>
+<th>Requirement</th>
+<th>Blocker condition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Run count</td>
+<td>At least 3 repeated runs per critical workflow</td>
+<td>Critical signals drift between repeated runs</td>
+</tr>
+<tr>
+<td>Signal coherence</td>
+<td>Main thread, worker, and network narratives stay consistent</td>
+<td>Identity contradictions across runtime layers</td>
+</tr>
+<tr>
+<td>Connection hygiene</td>
+<td>WebRTC, DNS, and proxy checks stay stable</td>
+<td>Persistent leak in production-relevant flow</td>
+</tr>
+<tr>
+<td>Documentation quality</td>
+<td>Assumptions, caveats, and no-buy criteria are visible</td>
+<td>Missing caveats on known reliability limitations</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section class="section grid-2">
+<article class="card">
+<h2>Evidence Quality Levels</h2>
+<ul class="clean">
+<li><b>Level A:</b> repeated clean runs with no critical contradictions.</li>
+<li><b>Level B:</b> minor non-critical drift with explicit caveats.</li>
+<li><b>Level C:</b> unstable signals requiring no-buy guidance.</li>
+</ul>
+<p class="comparison-note">Only Level A and qualified Level B evidence can support procurement recommendations.</p>
+</article>
+<article class="card">
+<h2>Decision Output Template</h2>
+<pre><code>stack_id: candidate-2026-q2
+run_count: 3
+signal_coherence: pass
+connection_hygiene: pass
+evidence_level: A
+known_limits:
+  - elevated variance on weak residential pools
+no_buy_conditions:
+  - persistent DNS mismatch
+  - worker or runtime identity contradiction
+recommendation_state: eligible_after_disclosure</code></pre>
+</article>
+</section>
+<section class="section">
+<div class="panel">
+<p class="section-kicker">Corrections and Freshness</p>
+<h2>Update SLA and Revision Rules</h2>
+<div class="timeline">
+<div class="timeline-step"><b>Routine review:</b> monthly methodology and content audit.</div>
+<div class="timeline-step"><b>Urgent correction:</b> material errors are corrected after verification with revision notes.</div>
+<div class="timeline-step"><b>Major change:</b> scoring logic updates trigger metadata refresh and cross-page alignment.</div>
+</div>
+<p class="small">Report potential issues at <a href="mailto:admin@saasverdict.com">admin@saasverdict.com</a> with URL, evidence, and impact summary.</p>
+</div>
+</section>
+<section class="section">
+<div class="panel">
+<p class="section-kicker">Version Traceability</p>
+<h2>How Methodology Changes Are Published</h2>
+<div class="timeline">
+<div class="timeline-step"><b>Rule 1:</b> every scoring or blocker change requires version bump.</div>
+<div class="timeline-step"><b>Rule 2:</b> every version bump gets impact note in changelog.</div>
+<div class="timeline-step"><b>Rule 3:</b> monthly benchmark reports declare active methodology version.</div>
+</div>
+<div aria-label="Version traceability links" class="related-links">
+<a href="/guides/methodology-changelog/">Methodology changelog</a>
+<a href="/guides/benchmark-reports/">Benchmark reports hub</a>
+<a href="/guides/benchmark-reports/2026-05/">May 2026 benchmark preview</a>
+<a href="/guides/benchmark-reports/2026-04/">April 2026 benchmark baseline</a>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="panel">
+<p class="section-kicker">Disclosure Controls</p>
+<h2>How We Prevent Commercial Bias</h2>
+<ul class="clean">
+<li>Affiliate and partnership context is disclosed in relevant pages.</li>
+<li>Commercial relationships cannot alter blocker rules.</li>
+<li>No-buy criteria remain visible even when promotions exist.</li>
+<li>Recommendations require evidence grade and caveats.</li>
+</ul>
+<div aria-label="Trust policy links" class="related-links">
+<a href="/editorial-policy/">Editorial policy</a>
+<a href="/about/">About the review process</a>
+<a href="/contact/">Submit correction evidence</a>
+</div>
+</div>
+</section>
+<section class="section">
+<p class="section-kicker">Reproduce in One Hour</p>
+<h2>Fast Path for Your Team</h2>
+<div class="timeline">
+<div class="timeline-step"><b>Step 1:</b> run <a href="/guides/detection-tests/">detection tests</a> and collect baseline artifacts.</div>
+<div class="timeline-step"><b>Step 2:</b> run <a href="/guides/connection-leak-tests/">connection leak checks</a> with repeated sessions.</div>
+<div class="timeline-step"><b>Step 3:</b> apply <a href="/guides/antidetection-ops-sop/">ops SOP gates</a> and document no-buy criteria.</div>
+<div class="timeline-step"><b>Step 4:</b> use <a href="/compare/">compare pages</a> and <a href="/promo/">promo verification pages</a> only after evidence stabilizes.</div>
+</div>
+</section>
+<section class="section">
+<p class="section-kicker">FAQ</p>
+<h2>Methodology Questions</h2>
+<div class="faq-list">
+<details>
+<summary>How many repeated runs are required before publishing a verdict?</summary>
+<p>At least three repeated clean runs per critical flow are required, and any critical contradiction blocks publication until resolved.</p>
+</details>
+<details>
+<summary>Do affiliate relationships influence scoring weights?</summary>
+<p>No. Commercial relationships are disclosed but do not alter scoring weights or blocker criteria.</p>
+</details>
+<details>
+<summary>How are corrections handled after publication?</summary>
+<p>Verified material errors are corrected with revision notes and reflected in updated metadata and methodology records.</p>
+</details>
+<details>
+<summary>How often is this methodology reviewed?</summary>
+<p>The methodology is reviewed monthly and whenever browser, proxy, or automation ecosystem changes can affect reliability signals.</p>
+</details>
+</div>
+<div aria-label="Related resources" class="related-links">
+<a href="/guides/">Guides hub</a>
+<a href="/guides/antidetect-libs-playbook/">Anti-detect libs playbook</a>
+<a href="/guides/antidetection-ops-sop/">Antidetection ops SOP guide</a>
+<a href="/guides/methodology-changelog/">Methodology changelog</a>
+<a href="/guides/benchmark-reports/">Benchmark reports hub</a>
+<a href="/guides/benchmark-reports/report-template/">Benchmark report template</a>
+<a href="/guides/detection-tests/">Detection tests guide</a>
+<a href="/guides/connection-leak-tests/">Connection leak tests guide</a>
+<a href="/compare/">Compare hub</a>
+<a href="/tools/fingerprint-readiness-score/">Fingerprint readiness score</a>
+<a href="/tools/evidence-pack-builder/">Evidence pack builder</a>
+<a href="/tools/benchmark-release-checker/">Benchmark publication gate checker</a>
+<a href="/feeds/lab-updates.xml">Lab updates RSS</a>
+<a href="/tools/multilogin-discount/">Multilogin discount codes</a>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="container footer-top-grid">
+<div class="footer-brand-block">
+<a class="logo" href="/">SaaS<span>></span></a>
+<p class="small">Reliability-first publication for antidetect browser operations, automation workflows, and decision-grade implementation guidance.</p>
+<p class="small">Contact: <a href="mailto:admin@saasverdict.com">admin@saasverdict.com</a></p>
+<div aria-label="Publication principles" class="footer-badges">
+<span>Updated monthly</span>
+<span>Evidence-first</span>
+<span>Implementation-ready</span>
+</div>
+</div>
+<div class="footer-col">
+<p class="footer-title">Start Here</p>
+<div class="footer-links">
+<a href="/tools/">Tools hub</a>
+<a href="/compare/">Comparison hub</a>
+<a href="/guides/">Guides hub</a>
+<a href="/promo/">Promo verification</a>
+<a href="/tools/antidetect-browsers/">2026 rankings</a>
+<a href="/compare/multilogin-alternatives/">Multilogin alternatives</a>
+<a href="/tools/multilogin-discount/">Multilogin discount codes</a>
+</div>
+</div>
+<div class="footer-col">
+<p class="footer-title">Technical Playbooks</p>
+<div class="footer-links">
+<a href="/guides/multilogin-x-api-playwright/">API + Playwright</a>
+<a href="/guides/antidetection-ops-sop/">Ops SOP</a>
+<a href="/guides/detection-tests/">Detection tests</a>
+<a href="/guides/connection-leak-tests/">Leak tests</a>
+<a href="/guides/antidetect-libs-playbook/">Anti-detect libs</a>
+<a href="/guides/mlx-api-hub/">API knowledge hub</a>
+<a href="/guides/benchmark-reports/">Benchmark reports</a>
+</div>
+</div>
+<div class="footer-col">
+<p class="footer-title">Trust and Company</p>
+<div class="footer-links">
+<a href="/guides/evaluation-methodology/">Methodology</a>
+<a href="/guides/methodology-changelog/">Methodology changelog</a>
+<a href="/editorial-policy/">Editorial policy</a>
+<a href="/about/">About</a>
+<a href="/contact/">Contact</a>
+<a href="/privacy-policy/">Privacy</a>
+<a href="/terms/">Terms</a>
+</div>
+</div>
+</div>
+<div class="container footer-bottom-row">
+<p class="small">(c) <span data-year=""></span> SaaSVerdict. All rights reserved.</p>
+<div class="footer-mini-links">
+<a href="/feeds/lab-updates.xml">Lab updates RSS</a>
+<a href="/sitemap.xml">XML sitemap</a>
+<a href="/tools/benchmark-release-checker/">Release checker</a>
+<a href="/guides/">Guides</a>
+<a href="/compare/">Compare</a>
+</div>
+</div>
+</footer>
+<script defer="" src="/assets/js/site.js"></script>
+</body>
+</html>

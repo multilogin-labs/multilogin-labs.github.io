@@ -1,0 +1,14 @@
+{
+  "sitemap_count": 140,
+  "published_count": 139,
+  "missing_count": 1,
+  "extra_count": 0,
+  "missing_samples": [
+    {
+      "title": "Telegraph posts index — SaaSVerdict",
+      "path": "telegraph-index.html",
+      "orig_url": "https://saasverdict.com/telegraph-index.html"
+    }
+  ],
+  "extra_samples": []
+}
