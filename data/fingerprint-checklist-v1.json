@@ -1,0 +1,14 @@
+{
+  "schema": "multilogin-labs/checklist/v1",
+  "id": "fingerprint-readiness-v1",
+  "updated": "2026-05-22",
+  "items": [
+    {"id": "runs", "label": "Repeated clean sessions per critical flow", "weight": 20, "pass_rule": ">=3 consecutive clean runs"},
+    {"id": "proxy", "label": "Stable proxy source, one profile per proxy during validation", "weight": 15, "pass_rule": "no cross-profile proxy reuse in pilot"},
+    {"id": "worker", "label": "Worker vs main-thread parity check", "weight": 20, "pass_rule": "no critical signal drift"},
+    {"id": "leaks", "label": "Connection leak test after rotation", "weight": 20, "pass_rule": "leak test guide pass"},
+    {"id": "governance", "label": "Role policy documented for team seats", "weight": 15, "pass_rule": "RBAC matrix attached"},
+    {"id": "evidence", "label": "Evidence pack exported", "weight": 10, "pass_rule": "pack generated via lab tool"}
+  ],
+  "tool_url": "https://multilogin-labs.github.io/tools/fingerprint-readiness-score/"
+}

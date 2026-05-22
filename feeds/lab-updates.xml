@@ -5,15 +5,15 @@
     <link>https://multilogin-labs.github.io/guides/benchmark-reports/</link>
     <description>Monthly benchmark releases, pricing playbooks, methodology updates, and evidence workflow tooling.</description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 05 Apr 2026 19:40:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 22 May 2026 12:00:00 +0000</lastBuildDate>
     <atom:link href="https://multilogin-labs.github.io/feeds/lab-updates.xml" rel="self" type="application/rss+xml"/>
 
     <item>
-      <title>Multilogin API Knowledge Hub Conversion Wave Published</title>
-      <link>https://multilogin-labs.github.io/guides/mlx-api-hub/</link>
-      <guid isPermaLink="true">https://multilogin-labs.github.io/guides/mlx-api-hub/</guid>
-      <pubDate>Sun, 05 Apr 2026 19:40:00 +0000</pubDate>
-      <description>New large-scale conversion wave with 7 category hubs, 49 rewritten API playbooks, and 606 local SEO-renamed reference images.</description>
+      <title>MLX API Integration Map + Open Datasets Published</title>
+      <link>https://multilogin-labs.github.io/guides/mlx-api-integration-map/</link>
+      <guid isPermaLink="true">https://multilogin-labs.github.io/guides/mlx-api-integration-map/</guid>
+      <pubDate>Fri, 22 May 2026 12:00:00 +0000</pubDate>
+      <description>Replaced duplicate doc mirrors with one integration map, added /data JSON benchmarks, and consolidated promo/compare hubs for indexable unique URLs.</description>
     </item>
 
     <item>

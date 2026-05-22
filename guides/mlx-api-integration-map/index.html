@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Multilogin X API Integration Map: CLI, REST, and Automation Bridges | multilogin-labs</title>
+<meta content="Original integration map for Multilogin X: how CLI, developer API, Postman, Python, and Playwright paths connect—with go-live gates before you mirror official docs." name="description"/>
+<meta content="index,follow,max-image-preview:large" name="robots"/>
+<link href="https://multilogin-labs.github.io/guides/mlx-api-integration-map/" rel="canonical"/>
+<meta content="Multilogin X API Integration Map" property="og:title"/>
+<meta content="Operations-first map from workspace setup to automation bridges—not a docs mirror." property="og:description"/>
+<meta content="https://multilogin-labs.github.io/guides/mlx-api-integration-map/" property="og:url"/>
+<meta content="article" property="og:type"/>
+<meta content="multilogin-labs" property="og:site_name"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Space+Grotesk:wght@500;700&amp;display=swap" rel="stylesheet"/>
+<link href="/assets/css/site.css" rel="stylesheet"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "Multilogin X API Integration Map",
+      "dateModified": "2026-05-22",
+      "author": {"@type": "Organization", "name": "multilogin-labs"},
+      "publisher": {"@type": "Organization", "name": "multilogin-labs"},
+      "mainEntityOfPage": "https://multilogin-labs.github.io/guides/mlx-api-integration-map/"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://multilogin-labs.github.io/"},
+        {"@type": "ListItem", "position": 2, "name": "Guides", "item": "https://multilogin-labs.github.io/guides/"},
+        {"@type": "ListItem", "position": 3, "name": "API Integration Map", "item": "https://multilogin-labs.github.io/guides/mlx-api-integration-map/"}
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<header class="site-header">
+<div class="container nav-wrap">
+<a class="logo" href="/">multi<span>login-labs</span></a>
+<nav aria-label="Main navigation" class="nav-links">
+<a href="/tools/">Tools</a>
+<a href="/compare/">Compare</a>
+<a href="/promo/">Promo</a>
+<a aria-current="page" href="/guides/">Guides</a>
+<a href="/contact/">Contact</a>
+</nav>
+</div>
+</header>
+<main class="container" id="main-content">
+<p class="breadcrumb"><a href="/">Home</a> / <a href="/guides/">Guides</a> / API Integration Map</p>
+<section class="hero">
+<span class="badge">Original Lab Map</span>
+<h1>Multilogin X API integration map</h1>
+<p class="lead">This page is an original routing map for automation teams. It does not duplicate vendor documentation—it shows how paths connect and which gates to pass before scale.</p>
+<p class="hero-meta">Updated: 2026-05-22 | Use official Multilogin docs for endpoint syntax; use this map for rollout order.</p>
+<p class="disclosure">Disclosure: multilogin-labs may earn affiliate commissions. Validate pricing and eligibility before checkout.</p>
+</section>
+<section class="section">
+<p class="section-kicker">Integration lanes</p>
+<h2>Four lanes, one workspace contract</h2>
+<div class="grid-2">
+<article class="card">
+<h3>Lane A — Workspace bootstrap</h3>
+<ul class="clean">
+<li>Collect workspace ID, folder IDs, and token scope.</li>
+<li>Run <a href="/guides/workspace-id-and-token-setup-runbook/">token setup runbook</a> before any API traffic.</li>
+<li>Block automation if proxy profile is not frozen for pilot.</li>
+</ul>
+</article>
+<article class="card">
+<h3>Lane B — CLI operations</h3>
+<ul class="clean">
+<li>Profile create/start/stop via CLI for repeatable ops.</li>
+<li>Pair with <a href="/guides/multilogin-x-script-runner-playbook/">script runner playbook</a>.</li>
+<li>Log trace_id + profile_id on every command.</li>
+</ul>
+</article>
+<article class="card">
+<h3>Lane C — Low-code (Postman / extensions)</h3>
+<ul class="clean">
+<li>Validate payloads in Postman before production scripts.</li>
+<li>Export cookie flows only after session parity checks.</li>
+</ul>
+</article>
+<article class="card">
+<h3>Lane D — Code bridges</h3>
+<ul class="clean">
+<li>Python for batch profile ops; Playwright for UI flows.</li>
+<li>Start from <a href="/guides/multilogin-x-api-playwright/">API + Playwright guide</a>.</li>
+<li>Snippets in <a href="https://github.com/multilogin-labs/multilogin-labs.github.io/tree/main/snippets">repo /snippets</a>.</li>
+</ul>
+</article>
+</div>
+</section>
+<section class="section">
+<div class="panel">
+<p class="section-kicker">Official references (nofollow)</p>
+<h2>Vendor documentation links</h2>
+<p class="small">Use these for exact API fields and UI steps. Our lab content stays on methodology and gates.</p>
+<ul class="clean">
+<li><a href="https://docs.multilogin.com/" rel="nofollow noopener noreferrer" target="_blank">Multilogin documentation</a></li>
+<li><a href="https://app.multilogin.com/" rel="nofollow noopener noreferrer" target="_blank">Multilogin app</a></li>
+</ul>
+</div>
+</section>
+<section class="section">
+<p class="section-kicker">Go-live gates</p>
+<h2>Minimum gates before production API scale</h2>
+<div class="timeline">
+<div class="timeline-step"><b>Gate 1:</b> <a href="/guides/detection-tests/">Detection tests</a> pass on target domains.</div>
+<div class="timeline-step"><b>Gate 2:</b> <a href="/guides/connection-leak-tests/">Connection leak tests</a> clean after proxy rotation.</div>
+<div class="timeline-step"><b>Gate 3:</b> <a href="/tools/fingerprint-readiness-score/">Readiness score</a> ≥ pilot threshold.</div>
+<div class="timeline-step"><b>Gate 4:</b> <a href="/guides/antidetection-ops-sop/">Ops SOP</a> signed off for team rollout.</div>
+</div>
+</section>
+<section class="section">
+<div class="panel">
+<h2>Related lab resources</h2>
+<div class="related-links">
+<a href="/data/benchmark-2026-04.json">April 2026 benchmark dataset</a>
+<a href="/guides/openmultilogin-risk-and-migration-guide/">Open-source fork risk guide</a>
+<a href="/guides/cookie-automation-runbook/">Cookie automation runbook</a>
+<a href="/tools/evidence-pack-builder/">Evidence pack builder</a>
+</div>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="container footer-bottom-row">
+<p class="small">© <span data-year=""></span> multilogin-labs</p>
+<a href="/sitemap.xml">Sitemap</a>
+</div>
+</footer>
+<script defer src="/assets/js/site.js"></script>
+</body>
+</html>
