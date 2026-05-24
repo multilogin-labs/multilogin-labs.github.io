@@ -28,6 +28,9 @@ jobs:
       - name: SEO optimize (links, sitemap, redirects)
         run: python3 scripts/seo_optimize.py
 
+      - name: Enhance pages (OG, RSS, footer discovery)
+        run: python3 scripts/enhance_pages.py
+
       - name: Regenerate sitemap (dry diff)
         run: |
           python3 scripts/migrate_site.py

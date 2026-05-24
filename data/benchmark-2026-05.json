@@ -1,0 +1,21 @@
+{
+  "schema": "multilogin-labs/benchmark/v1",
+  "report_id": "2026-05",
+  "methodology_version": "1.2",
+  "published": "2026-05-01",
+  "status": "preview",
+  "platforms_tested": 22,
+  "summary": {
+    "band_a_count": 9,
+    "band_b_count": 8,
+    "blocker_platforms": 3,
+    "governance_drift_profiles": 12
+  },
+  "bands": [
+    {"band": "A", "score_min": 8.5, "score_max": 10.0, "evidence": "Level A", "procurement": "eligible after local validation"},
+    {"band": "B", "score_min": 7.0, "score_max": 8.4, "evidence": "Level B", "procurement": "pilot-first"},
+    {"band": "C", "score_min": 0.0, "score_max": 6.9, "evidence": "Level C or blockers", "procurement": "no-buy for critical workflows"}
+  ],
+  "full_matrix_url": "https://multilogin-labs.github.io/data/benchmark-matrix-2026-05.json",
+  "explorer_url": "https://multilogin-labs.github.io/tools/benchmark-explorer/"
+}

@@ -182,6 +182,7 @@ def collect_indexable_urls() -> list[tuple[str, str, str]]:
         "benchmark-2026-04.json",
         "benchmark-matrix-2026-04.json",
         "benchmark-matrix-2026-05.json",
+        "benchmark-2026-05.json",
         "fingerprint-checklist-v1.json",
     ):
         if (ROOT / "data" / data_file).exists():

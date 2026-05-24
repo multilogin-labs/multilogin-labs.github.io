@@ -2,6 +2,17 @@
 
 All notable changes to this repository are documented here.
 
+## [2026.05.24b] — Social, discovery, indexing guide
+
+### Added
+- `scripts/enhance_pages.py` — OG image, RSS link, footer sitemap/catalog on all indexable pages
+- Guide: `/guides/google-search-indexing/`
+- `data/benchmark-2026-05.json` summary · `snippets/env-check.sh`
+- `security.txt` (RFC 9116)
+
+### Changed
+- Snippets hub expanded · 404 links to HTML sitemap · RSS feed updated
+
 ## [2026.05.24] — Google indexing pass
 
 ### Added

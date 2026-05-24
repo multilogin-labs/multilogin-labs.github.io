@@ -5,8 +5,16 @@
     <link>https://multilogin-labs.github.io/guides/benchmark-reports/</link>
     <description>Monthly benchmark releases, pricing playbooks, methodology updates, and evidence workflow tooling.</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 22 May 2026 12:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 24 May 2026 10:00:00 +0000</lastBuildDate>
     <atom:link href="https://multilogin-labs.github.io/feeds/lab-updates.xml" rel="self" type="application/rss+xml"/>
+
+    <item>
+      <title>Benchmark Explorer + Google Indexing Guide</title>
+      <link>https://multilogin-labs.github.io/tools/benchmark-explorer/</link>
+      <guid isPermaLink="true">https://multilogin-labs.github.io/tools/benchmark-explorer/</guid>
+      <pubDate>Sat, 24 May 2026 10:00:00 +0000</pubDate>
+      <description>Interactive benchmark matrix explorer with CSV export, HTML sitemap, and published indexing guide for Search Console workflows.</description>
+    </item>
 
     <item>
       <title>MLX API Integration Map + Open Datasets Published</title>

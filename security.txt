@@ -1,0 +1,5 @@
+Contact: mailto:admin@multilogin-labs.github.io
+Expires: 2027-05-24T00:00:00.000Z
+Preferred-Languages: en
+Canonical: https://multilogin-labs.github.io/security.txt
+Policy: https://multilogin-labs.github.io/SECURITY.md
