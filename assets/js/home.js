@@ -1,14 +1,32 @@
 (function () {
   "use strict";
 
-  var year = String(new Date().getFullYear());
   document.querySelectorAll("[data-year]").forEach(function (n) {
-    n.textContent = year;
+    n.textContent = String(new Date().getFullYear());
   });
 
-  function copyText(code) {
+  function showToast(msg) {
+    var toast = document.getElementById("site-toast");
+    if (!toast) return;
+    toast.textContent = msg;
+    toast.style.display = "block";
+    setTimeout(function () {
+      toast.style.display = "none";
+    }, 2200);
+  }
+
+  function copyText(code, el) {
+    var done = function () {
+      if (el) {
+        el.classList.add("is-copied");
+        setTimeout(function () {
+          el.classList.remove("is-copied");
+        }, 1200);
+      }
+      showToast(code + " copied — paste at checkout");
+    };
     if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(code).catch(fallback);
+      navigator.clipboard.writeText(code).then(done).catch(fallback);
     } else {
       fallback();
     }
@@ -19,31 +37,33 @@
       t.select();
       document.execCommand("copy");
       document.body.removeChild(t);
-    }
-    var toast = document.getElementById("site-toast");
-    if (toast) {
-      toast.textContent = code + " copied";
-      toast.style.display = "block";
-      setTimeout(function () {
-        toast.style.display = "none";
-      }, 2200);
+      done();
     }
   }
 
   document.querySelectorAll("[data-copy-code]").forEach(function (btn) {
-    btn.addEventListener("click", function () {
-      copyText(btn.getAttribute("data-copy-code"));
-    });
+    var activate = function () {
+      copyText(btn.getAttribute("data-copy-code"), btn);
+    };
+    btn.addEventListener("click", activate);
+    if (btn.getAttribute("tabindex") === "0") {
+      btn.addEventListener("keydown", function (e) {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          activate();
+        }
+      });
+    }
   });
 
   var sticky = document.getElementById("aff-sticky");
   if (sticky) {
     document.body.classList.add("has-aff-sticky");
-    function onScroll() {
-      sticky.hidden = window.scrollY < 240;
-    }
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
+    var toggle = function () {
+      sticky.hidden = window.scrollY < 180;
+    };
+    toggle();
+    window.addEventListener("scroll", toggle, { passive: true });
   }
 
   function loadGtag() {
@@ -62,8 +82,8 @@
   }
 
   if ("requestIdleCallback" in window) {
-    requestIdleCallback(loadGtag, { timeout: 3500 });
+    requestIdleCallback(loadGtag, { timeout: 4000 });
   } else {
-    setTimeout(loadGtag, 1800);
+    setTimeout(loadGtag, 2000);
   }
 })();

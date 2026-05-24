@@ -133,6 +133,17 @@ h1 {
   margin: 0.4rem 0 0.85rem;
 }
 
+h1 .copy-code {
+  display: inline;
+  padding: 0.05em 0.3em;
+  border-radius: 0.35rem;
+  background: rgba(42, 157, 143, 0.12);
+  border: 1px dashed var(--primary);
+  cursor: pointer;
+  font-size: inherit;
+  min-height: auto;
+}
+
 h2 {
   font-size: clamp(1.25rem, 2.8vw, 1.75rem);
   margin: 0 0 0.65rem;

@@ -2,6 +2,15 @@
 
 All notable changes to this repository are documented here.
 
+## [2026.05.24k] — Homepage audit pass
+
+### Changed (index.html only)
+- CLS fix: checkout image `aspect-ratio` 1024×729, `object-fit: contain`
+- Self-hosted YouTube thumb; removed i.ytimg.com on LCP path
+- JSON-LD: BreadcrumbList, ImageObject, 5 FAQ items aligned with page, WebPage→FAQ link
+- Proof strip (€9→€4.50), figcaption, clickable SAAS50 in H1, nav CTA pill
+- Trimmed compare section; footer links; copy feedback on buttons
+
 ## [2026.05.24j] — Checkout proof image + YouTube redeem
 
 ### Added
