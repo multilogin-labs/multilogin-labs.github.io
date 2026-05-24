@@ -41,7 +41,7 @@ def main() -> int:
         try:
             data = json.loads(m.group(1))
             types = [n.get("@type") for n in data.get("@graph", [])]
-            for want in ("FAQPage", "VideoObject", "ImageObject", "Offer"):
+            for want in ("FAQPage", "VideoObject", "ImageObject", "Offer", "HowTo"):
                 if want not in types:
                     print(f"FAIL: JSON-LD missing @type {want}", file=sys.stderr)
                     ok = False

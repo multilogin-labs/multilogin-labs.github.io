@@ -106,6 +106,34 @@
       "seller": { "@id": "https://multilogin-labs.github.io/#organization" }
     },
     {
+      "@type": "HowTo",
+      "@id": "https://multilogin-labs.github.io/#howto-saas50",
+      "name": "How to apply Multilogin promo code SAAS50 at checkout",
+      "description": "Redeem SAAS50 or MIN50 on the official Multilogin checkout and verify the discount line before payment.",
+      "totalTime": "PT3M",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Open official checkout",
+          "text": "Use the Multilogin checkout on multilogin.com (affiliate link from this site).",
+          "url": "https://multilogin-labs.github.io/go/multilogin/"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Enter and apply the code",
+          "text": "Type SAAS50 for subscription plans or MIN50 for cloud phone, then click Apply."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Verify total before paying",
+          "text": "Confirm promo code applied, discount row (−50% on eligible subtotal), VAT, and Total due match expectations."
+        }
+      ]
+    },
+    {
       "@type": "BreadcrumbList",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://multilogin-labs.github.io/" },
@@ -180,15 +208,15 @@
 <div class="container hero-grid">
 <div class="hero-copy">
 <p class="eyebrow">Screenshot proof · May 2026</p>
-<h1 id="hero-title">Multilogin promo code <span class="copy-code" data-copy-code="SAAS50" tabindex="0" role="button">SAAS50</span> — 50% off</h1>
+<h1 id="hero-title">Multilogin promo code <span class="copy-code" data-copy-code="SAAS50" tabindex="0" role="button" aria-label="Copy promo code SAAS50">SAAS50</span> — 50% off</h1>
 <p class="lead">Use <strong>SAAS50</strong> on plans or <strong>MIN50</strong> on cloud phone. Match the live invoice to our checkout screenshot—promo line must show before you pay.</p>
 <div class="proof-strip">
 <span>Example:</span> <strong>€9 → €4.50</strong> subtotal with SAAS50 · <strong>Promo code applied</strong> ✓
 </div>
 <div class="hero-actions">
 <a class="btn btn-primary" href="/go/multilogin" rel="sponsored noopener noreferrer" target="_blank">Get 50% off now</a>
-<button type="button" class="btn btn-ghost copy-code" data-copy-code="SAAS50">Copy SAAS50</button>
-<button type="button" class="btn btn-ghost copy-code" data-copy-code="MIN50">Copy MIN50</button>
+<button type="button" class="btn btn-ghost copy-code" data-copy-code="SAAS50" aria-label="Copy SAAS50 to clipboard">Copy SAAS50</button>
+<button type="button" class="btn btn-ghost copy-code" data-copy-code="MIN50" aria-label="Copy MIN50 to clipboard">Copy MIN50</button>
 </div>
 <div class="meta-row">
 <span class="meta-pill">Updated 2026-05-24</span>
@@ -209,19 +237,19 @@
 </aside>
 </div>
 </section>
-<section class="section container" id="multilogin-price">
-<h2>Redeem SAAS50 in 3 steps</h2>
-<ol class="clean">
-<li><a href="/go/multilogin" rel="sponsored noopener noreferrer" target="_blank">Open official Multilogin checkout</a>.</li>
-<li>Enter <strong>SAAS50</strong> (plans) or <strong>MIN50</strong> (cloud phone) → click <strong>Apply</strong>.</li>
-<li>Verify subtotal, promo discount, VAT, and <strong>Total due</strong> — then pay.</li>
+<section class="section container" id="multilogin-price" aria-labelledby="steps-title">
+<h2 id="steps-title">Redeem SAAS50 in 3 steps</h2>
+<ol class="steps">
+<li><strong>Open checkout</strong> — <a href="/go/multilogin" rel="sponsored noopener noreferrer" target="_blank">official Multilogin billing</a> on multilogin.com.</li>
+<li><strong>Apply code</strong> — enter <strong>SAAS50</strong> (plans) or <strong>MIN50</strong> (cloud phone), then <strong>Apply</strong>.</li>
+<li><strong>Verify invoice</strong> — promo row, −50% discount, VAT, and <strong>Total due</strong> before Pay now.</li>
 </ol>
 <div class="video-proof" id="redeem-video">
 <h3>Video: how to redeem Multilogin promo code</h3>
 <p class="small">Step-by-step on YouTube (opens new tab).</p>
 <a class="video-facade" href="https://www.youtube.com/watch?v=pBd_7lASYdM" rel="noopener noreferrer" target="_blank" title="Watch Multilogin SAAS50 redeem tutorial">
 <img src="/assets/img/multilogin-saas50-redeem-video-thumb.webp" width="480" height="360" alt="Video thumbnail: redeem Multilogin SAAS50 promo code at checkout" loading="lazy" decoding="async"/>
-<span aria-hidden="true">▶ Play on YouTube</span>
+<span class="play-badge" aria-hidden="true"><span class="play-icon">▶</span> Watch on YouTube</span>
 </a>
 </div>
 </section>
@@ -273,7 +301,7 @@
 <p class="small">Official checkout · confirm discount line · keep invoice proof</p>
 <div class="hero-actions">
 <a class="btn btn-primary" href="/go/multilogin" rel="sponsored noopener noreferrer" target="_blank">Open checkout — 50% off</a>
-<button type="button" class="btn btn-ghost copy-code" data-copy-code="SAAS50">Copy SAAS50</button>
+<button type="button" class="btn btn-ghost copy-code" data-copy-code="SAAS50" aria-label="Copy SAAS50 to clipboard">Copy SAAS50</button>
 </div>
 </div>
 </section>
@@ -295,7 +323,7 @@
 <div class="toast" id="site-toast" role="status" aria-live="polite"></div>
 <aside class="aff-sticky" id="aff-sticky" hidden aria-label="Quick checkout">
 <a class="btn btn-primary" href="/go/multilogin" rel="sponsored noopener noreferrer" target="_blank">50% off — checkout</a>
-<button type="button" class="btn btn-ghost copy-code" data-copy-code="SAAS50">Copy SAAS50</button>
+<button type="button" class="btn btn-ghost copy-code" data-copy-code="SAAS50" aria-label="Copy SAAS50 to clipboard">Copy SAAS50</button>
 </aside>
 <script defer src="/assets/js/home.js"></script>
 <script type="speculationrules">{"prefetch":[{"source":"document","where":{"href_matches":"/go/multilogin*"},"eagerness":"moderate"}]}</script>

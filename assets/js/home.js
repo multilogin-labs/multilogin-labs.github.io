@@ -86,4 +86,15 @@
   } else {
     setTimeout(loadGtag, 2000);
   }
+
+  document.querySelectorAll('a[href*="/go/multilogin"]').forEach(function (link) {
+    link.addEventListener("click", function () {
+      if (typeof window.gtag !== "function") return;
+      window.gtag("event", "select_promotion", {
+        promotion_id: "multilogin_checkout",
+        promotion_name: "SAAS50",
+        creative_name: "homepage",
+      });
+    });
+  });
 })();
