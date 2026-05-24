@@ -12,7 +12,7 @@ INDEX = ROOT / "index.html"
 def main() -> int:
     text = INDEX.read_text(encoding="utf-8")
     ok = True
-    for needle in ("home.css", "home.js", "multilogin-saas50-"):
+    for needle in ("home.css", "home.js", "multilogin-promo-code-saas50-checkout-proof"):
         if needle not in text:
             print(f"FAIL: index.html missing {needle}", file=sys.stderr)
             ok = False

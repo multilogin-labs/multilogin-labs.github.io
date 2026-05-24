@@ -2,6 +2,12 @@
 
 All notable changes to this repository are documented here.
 
+## [2026.05.24j] — Checkout proof image + YouTube redeem
+
+### Added
+- `multilogin-promo-code-saas50-checkout-proof` (jpg + webp 480/800/1024) — live SAAS50 screenshot
+- Homepage: YouTube redeem tutorial ([youtu.be/pBd_7lASYdM](https://youtu.be/pBd_7lASYdM)) + VideoObject schema
+
 ## [2026.05.24i] — Homepage-only perf + SEO slim
 
 ### Added
