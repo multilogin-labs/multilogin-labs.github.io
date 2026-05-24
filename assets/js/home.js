@@ -88,7 +88,7 @@
     setTimeout(loadGtag, 3500);
   }
 
-  document.querySelectorAll('a[href*="/go/multilogin"]').forEach(function (link) {
+  document.querySelectorAll('a[href*="multilogin.com/pricing"]').forEach(function (link) {
     link.addEventListener("click", function () {
       if (typeof window.gtag !== "function") return;
       window.gtag("event", "select_promotion", {
