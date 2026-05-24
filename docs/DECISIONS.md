@@ -12,6 +12,8 @@ These rules apply without per-change approval. Maintenance: `python3 scripts/sit
 | Lab GitHub CTA on home | **Removed** — not part of aff funnel |
 | Home performance | System fonts, responsive WebP srcset, `content-visibility`, deferred gtag |
 | Home SEO | Single JSON-LD `@graph`, `Offer` + `FAQPage`, no `keywords` meta |
+| Sitewide fonts | **Removed** Google Fonts — `optimize_perf.py` on every build |
+| Aff funnel pages | Home, promo, discount proof, alternatives, tools hub — sticky CTA + unified nav |
 
 ## Content & SEO
 

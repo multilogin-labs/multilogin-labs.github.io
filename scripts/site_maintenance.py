@@ -9,6 +9,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 
 STEPS: list[tuple[str, list[str]]] = [
+    ("Performance (remove blocking fonts)", ["python3", "scripts/optimize_perf.py"]),
+    ("Affiliate funnel pages", ["python3", "scripts/aff_funnel.py"]),
     ("Enhance pages (OG, breadcrumbs, dates)", ["python3", "scripts/enhance_pages.py"]),
     ("SEO optimize (redirects, sitemap, links)", ["python3", "scripts/seo_optimize.py"]),
     ("Validate datasets", ["python3", "scripts/validate_data.py"]),

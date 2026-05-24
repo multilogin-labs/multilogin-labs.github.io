@@ -58,8 +58,25 @@
     }, 2600);
   }
 
+  function wireAffSticky() {
+    var bar = document.getElementById("aff-sticky");
+    if (!bar) {
+      return;
+    }
+
+    document.body.classList.add("has-aff-sticky");
+
+    function toggle() {
+      bar.hidden = window.scrollY < 280;
+    }
+
+    toggle();
+    window.addEventListener("scroll", toggle, { passive: true });
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     setYear();
     wireCopyButtons();
+    wireAffSticky();
   });
 })();

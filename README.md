@@ -2,10 +2,10 @@
 
 # multilogin-labs
 
-### Open antidetect operations lab
+### Multilogin promo codes + antidetect deals
 
-Benchmarks · datasets · free tools · evidence-first playbooks  
-**No doc mirrors · No coupon spam pages**
+**SAAS50** (plans) · **MIN50** (cloud phone) · official checkout verification  
+Benchmarks &amp; tools for teams still comparing vendors
 
 [![GitHub Pages](https://img.shields.io/badge/Pages-live-2a9d8f?style=for-the-badge&logo=github)](https://multilogin-labs.github.io/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](./LICENSE)

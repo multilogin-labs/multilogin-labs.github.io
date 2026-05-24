@@ -27,7 +27,7 @@ html {
 
 body {
   margin: 0;
-  font-family: "Manrope", "Segoe UI", sans-serif;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   color: var(--text);
   line-height: 1.75;
   font-size: 16px;
@@ -1394,6 +1394,52 @@ code {
   font-size: 1.1rem;
   font-weight: 700;
   margin: 0 0 0.5rem;
+}
+
+/* Affiliate sticky CTA (mobile conversion) */
+body.has-aff-sticky {
+  padding-bottom: 4.5rem;
+}
+
+.aff-sticky {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 90;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1rem calc(0.65rem + env(safe-area-inset-bottom, 0px));
+  background: rgba(253, 247, 241, 0.97);
+  border-top: 1px solid var(--line);
+  box-shadow: 0 -10px 28px rgba(15, 23, 42, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.aff-sticky[hidden] {
+  display: none;
+}
+
+.aff-sticky .btn {
+  margin: 0;
+  flex: 1 1 auto;
+  min-width: 10rem;
+  max-width: 20rem;
+  text-align: center;
+}
+
+.aff-sticky-copy {
+  flex: 0 1 auto;
+  font-size: 0.9rem;
+  padding: 0.55rem 1rem;
+}
+
+.aff-page main .section {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 400px;
 }
 
 @media (max-width: 720px) {

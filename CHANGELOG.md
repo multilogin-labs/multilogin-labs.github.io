@@ -2,6 +2,18 @@
 
 All notable changes to this repository are documented here.
 
+## [2026.05.24h] — Sitewide perf + aff funnel
+
+### Added
+- `scripts/optimize_perf.py` — strip Google Fonts + keywords meta (46 pages)
+- `scripts/aff_funnel.py` — unified aff nav, sticky CTA, OG promo image
+- Mobile sticky bar: Copy SAAS50 + checkout (home, promo, discount, alternatives)
+
+### Changed
+- System font stack sitewide (faster LCP on all pages)
+- Promo hub + tools hub lead with Multilogin codes
+- `site_maintenance.py` runs perf + aff scripts
+
 ## [2026.05.24g] — Homepage speed + SEO
 
 ### Added
