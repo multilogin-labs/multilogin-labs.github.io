@@ -2,6 +2,17 @@
 
 All notable changes to this repository are documented here.
 
+## [2026.05.24i] — Homepage-only perf + SEO slim
+
+### Added
+- `assets/css/home.css` — critical CSS (~4KB) for first paint
+- `assets/js/home.js` — copy codes, sticky CTA, idle-loaded gtag
+- `scripts/optimize_home.py` — CI guardrails for home stack
+
+### Changed
+- `index.html` rebuilt: ~40% less DOM, async `site.css`, responsive LCP preload
+- FAQ schema trimmed; enhance/aff scripts skip homepage
+
 ## [2026.05.24h] — Sitewide perf + aff funnel
 
 ### Added

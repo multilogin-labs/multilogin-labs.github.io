@@ -110,6 +110,7 @@ def patch_promo_content(path: Path) -> bool:
 
 
 def main() -> None:
+    # Homepage is optimized separately (scripts/optimize_home.py) — do not patch index.html here.
     targets = [
         ROOT / "tools" / "multilogin-discount" / "index.html",
         ROOT / "promo" / "index.html",

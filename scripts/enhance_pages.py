@@ -251,6 +251,8 @@ def sync_date_modified(text: str, mtime_iso: str) -> str:
 
 
 def patch_file(path: Path) -> bool:
+    if path.name == "index.html" and path.parent == ROOT:
+        return False
     raw = path.read_text(encoding="utf-8")
     mtime_iso = date.fromtimestamp(path.stat().st_mtime).isoformat()
     url_path = url_path_from_file(path)

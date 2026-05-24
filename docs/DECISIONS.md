@@ -2,18 +2,15 @@
 
 These rules apply without per-change approval. Maintenance: `python3 scripts/site_maintenance.py`.
 
-## Homepage (affiliate-first)
+## Homepage only (`index.html`)
 
 | Decision | Choice |
 |----------|--------|
-| Primary goal | **Multilogin SAAS50 / MIN50 conversion** via `/go/multilogin/` |
-| On home | Promo hero, proof, pricing, FAQ, compare teasers |
-| Off home (kept at URLs) | Tools, guides, datasets — linked from footer/promo only |
-| Lab GitHub CTA on home | **Removed** — not part of aff funnel |
-| Home performance | System fonts, responsive WebP srcset, `content-visibility`, deferred gtag |
-| Home SEO | Single JSON-LD `@graph`, `Offer` + `FAQPage`, no `keywords` meta |
-| Sitewide fonts | **Removed** Google Fonts — `optimize_perf.py` on every build |
-| Aff funnel pages | Home, promo, discount proof, alternatives, tools hub — sticky CTA + unified nav |
+| Goal | **SAAS50 / MIN50** → `/go/multilogin/` |
+| Stack | `home.css` (~5KB) sync + `site.css` async + `home.js` |
+| DOM | Slim: hero → 3 steps → pricing cards → compare links → FAQ → CTA |
+| CI | `optimize_home.py` blocks regressions (no blocking `site.css` in head) |
+| Other scripts | `enhance_pages` / `aff_funnel` **do not modify** `/` |
 
 ## Content & SEO
 
