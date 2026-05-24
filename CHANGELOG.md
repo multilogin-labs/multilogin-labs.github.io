@@ -2,6 +2,31 @@
 
 All notable changes to this repository are documented here.
 
+## [2026.05.24e] — Auto decisions locked
+
+### Added
+- `docs/DECISIONS.md` — policy log (redirects, SEO, data, CI)
+- `scripts/site_maintenance.py` — one command for all checks
+- `scripts/redirect_html.py` — single redirect template
+
+### Changed
+- `migrate_site.py` no longer overwrites redirects without `noindex`
+- CI runs `site_maintenance.py`; `REPO_SETUP` → `docs/REPO_SETUP.md`
+- `seo_optimize.py` normalizes `/antidetect-browsers/` redirect stub
+
+## [2026.05.24d] — Repo cleanup
+
+### Removed
+- Legacy Google verification HTML files (meta tag on home is canonical)
+- `ads.txt` (unused AdSense from clone)
+- `scripts/inject_head.py` (one-shot, completed)
+- Duplicate `.well-known/security.txt`
+- `scripts/__pycache__/`
+
+### Added
+- `docs/FILE-CLEANUP.md` — what must stay vs safe to delete
+- `.gitignore` — Python cache
+
 ## [2026.05.24c] — IndexNow, structured data, social meta
 
 ### Added

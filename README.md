@@ -41,9 +41,8 @@ python3 -m http.server 8080
 ```
 
 ```bash
-python3 scripts/seo_optimize.py      # sitemaps, internal links, noindex redirects
-python3 scripts/enhance_pages.py     # OG/Twitter, breadcrumbs, dateModified, RSS
-python3 scripts/indexnow.py --from-sitemap  # Bing/Yandex crawl notify
+python3 scripts/site_maintenance.py  # all SEO + validate + links (one command)
+python3 scripts/indexnow.py --from-sitemap  # Bing/Yandex crawl notify (after deploy)
 ```
 
 Indexing checklist: [docs/GOOGLE-INDEXING.md](./docs/GOOGLE-INDEXING.md)

@@ -7,6 +7,8 @@ import re
 from datetime import date
 from pathlib import Path
 
+from redirect_html import REDIRECT_HTML
+
 ROOT = Path(__file__).resolve().parents[1]
 BASE = "https://multilogin-labs.github.io"
 TODAY = date.today().isoformat()
@@ -47,21 +49,6 @@ PROMO_VENDORS = [
     ("whologin", "WhoLogin", "support response under incidents", "SLA for ticket response in trial"),
 ]
 
-REDIRECT_HTML = """<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8"/>
-<meta http-equiv="refresh" content="0;url={url}"/>
-<link rel="canonical" href="{canonical}"/>
-<title>Redirecting… | multilogin-labs</title>
-</head>
-<body>
-<p>Page moved. <a href="{url}">Continue to {label}</a>.</p>
-</body>
-</html>
-"""
-
-
 def text_replacements(content: str) -> str:
     content = content.replace("SaaS<span>Verdict</span>", "multi<span>login-labs</span>")
     content = content.replace("SaaS<span>></span>", "multi<span>login-labs</span>")
@@ -86,9 +73,17 @@ def patch_files():
             path.write_text(new, encoding="utf-8")
 
 
-def write_redirect(dir_path: Path, target: str, canonical: str, label: str):
+def write_redirect(
+    dir_path: Path,
+    target: str,
+    canonical: str,
+    title: str,
+    link_label: str,
+):
     dir_path.mkdir(parents=True, exist_ok=True)
-    html = REDIRECT_HTML.format(url=target, canonical=canonical, label=label)
+    html = REDIRECT_HTML.format(
+        url=target, canonical=canonical, title=title, link_label=link_label
+    )
     (dir_path / "index.html").write_text(html, encoding="utf-8")
 
 
@@ -104,7 +99,8 @@ def consolidate_compare():
             child,
             "/compare/",
             f"{BASE}/compare/",
-            "compare hub",
+            child.name.replace("-", " ").title(),
+            "Compare hub",
         )
 
 
@@ -119,7 +115,8 @@ def consolidate_promo():
             child,
             f"/promo/{anchor}",
             f"{BASE}/promo/",
-            "promo hub",
+            slug.replace("-", " ").title(),
+            "Promo verification hub",
         )
 
 
@@ -216,11 +213,10 @@ def write_sitemap():
 
 def main():
     os.chdir(ROOT)
-    consolidate_compare()
-    consolidate_promo()
     patch_files()
     write_sitemap()
-    print("Migration complete.")
+    print("Branding patch + baseline sitemap written.")
+    print("For redirects and live SEO, run: python3 scripts/site_maintenance.py")
     print(f"Sitemap URLs: {len(collect_indexable_urls())}")
 
 

@@ -19,20 +19,8 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Validate JSON datasets
-        run: python3 scripts/validate_data.py
-
-      - name: Check internal links
-        run: python3 scripts/check_links.py
-
-      - name: SEO optimize (links, sitemap, redirects)
-        run: python3 scripts/seo_optimize.py
-
-      - name: Enhance pages (OG, RSS, breadcrumbs, social meta)
-        run: python3 scripts/enhance_pages.py
-
-      - name: IndexNow key file
-        run: python3 scripts/indexnow.py --ensure-key
+      - name: Site maintenance (SEO, validate, links)
+        run: python3 scripts/site_maintenance.py
 
       - name: Regenerate sitemap (dry diff)
         run: |

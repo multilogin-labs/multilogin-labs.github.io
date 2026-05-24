@@ -20,11 +20,10 @@ Thank you for helping improve the open antidetect operations lab.
 ## Pull request checklist
 
 1. Run local preview: `python3 -m http.server 8080`
-2. `python3 scripts/enhance_pages.py` then `python3 scripts/seo_optimize.py`
-3. If you changed URLs, run `python3 scripts/migrate_site.py` to refresh `sitemap.xml`
-4. Run `python3 scripts/check_links.py` and `python3 scripts/validate_data.py` (or wait for CI)
-5. Add an entry to `CHANGELOG.md` under `[Unreleased]` or the current date tag
-6. For new JSON in `/data/`, include or update schema under `/data/schemas/`
+2. `python3 scripts/site_maintenance.py` (or wait for CI)
+3. If you changed URL inventory only, `python3 scripts/migrate_site.py` then re-run maintenance
+4. Add an entry to `CHANGELOG.md` under `[Unreleased]` or the current date tag
+5. For new JSON in `/data/`, include or update schema under `/data/schemas/`
 
 ## Dataset versioning
 

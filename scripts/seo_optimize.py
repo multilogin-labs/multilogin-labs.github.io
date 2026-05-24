@@ -6,6 +6,8 @@ import re
 from datetime import date
 from pathlib import Path
 
+from redirect_html import REDIRECT_HTML
+
 ROOT = Path(__file__).resolve().parents[1]
 BASE = "https://multilogin-labs.github.io"
 TODAY = date.today().isoformat()
@@ -20,21 +22,6 @@ COMPARE_KEEP = {
     "multilogin-vs-octo-browser",
     "multilogin-vs-undetectable",
 }
-
-REDIRECT_HTML = """<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8"/>
-<meta name="robots" content="noindex,follow"/>
-<meta http-equiv="refresh" content="0;url={url}"/>
-<link rel="canonical" href="{canonical}"/>
-<title>Moved: {title} | multilogin-labs</title>
-</head>
-<body>
-<p>This URL has moved. <a href="{url}">{link_label}</a></p>
-</body>
-</html>
-"""
 
 SITEMAP_LINK = '<link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml"/>'
 
@@ -69,6 +56,27 @@ def fix_promo_redirects():
                 canonical=f"{BASE}/promo/",
                 title=slug.replace("-", " ").title(),
                 link_label="Promo verification hub",
+            ),
+            encoding="utf-8",
+        )
+
+
+def fix_legacy_root_redirects():
+    """Root paths that moved into /tools/ or /go/."""
+    stubs = [
+        (
+            ROOT / "antidetect-browsers" / "index.html",
+            "/tools/antidetect-browsers/",
+            f"{BASE}/tools/antidetect-browsers/",
+            "Antidetect browsers ranking",
+            "Tools ranking page",
+        ),
+    ]
+    for path, url, canonical, title, label in stubs:
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(
+            REDIRECT_HTML.format(
+                url=url, canonical=canonical, title=title, link_label=label
             ),
             encoding="utf-8",
         )
@@ -332,6 +340,7 @@ def clean_compare_index():
 def main():
     fix_promo_redirects()
     fix_compare_redirects()
+    fix_legacy_root_redirects()
     clean_compare_index()
     n = patch_indexable_files()
     urls = write_sitemap_with_mtime()
