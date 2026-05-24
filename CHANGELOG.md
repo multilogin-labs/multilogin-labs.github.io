@@ -2,6 +2,13 @@
 
 All notable changes to this repository are documented here.
 
+## [2026.05.24f] — Homepage affiliate-first
+
+### Changed
+- Home repositioned: Multilogin SAAS50/MIN50 hero, checkout CTAs, proof FAQ
+- Removed lab resources / GitHub star block from home (tools/guides remain at their URLs)
+- Nav + footer tuned for promo → checkout → compare funnel
+
 ## [2026.05.24e] — Auto decisions locked
 
 ### Added

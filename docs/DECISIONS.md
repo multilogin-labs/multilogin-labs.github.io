@@ -2,6 +2,15 @@
 
 These rules apply without per-change approval. Maintenance: `python3 scripts/site_maintenance.py`.
 
+## Homepage (affiliate-first)
+
+| Decision | Choice |
+|----------|--------|
+| Primary goal | **Multilogin SAAS50 / MIN50 conversion** via `/go/multilogin/` |
+| On home | Promo hero, proof, pricing, FAQ, compare teasers |
+| Off home (kept at URLs) | Tools, guides, datasets — linked from footer/promo only |
+| Lab GitHub CTA on home | **Removed** — not part of aff funnel |
+
 ## Content & SEO
 
 | Decision | Choice | Rationale |
