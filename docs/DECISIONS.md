@@ -10,6 +10,8 @@ These rules apply without per-change approval. Maintenance: `python3 scripts/sit
 | On home | Promo hero, proof, pricing, FAQ, compare teasers |
 | Off home (kept at URLs) | Tools, guides, datasets — linked from footer/promo only |
 | Lab GitHub CTA on home | **Removed** — not part of aff funnel |
+| Home performance | System fonts, responsive WebP srcset, `content-visibility`, deferred gtag |
+| Home SEO | Single JSON-LD `@graph`, `Offer` + `FAQPage`, no `keywords` meta |
 
 ## Content & SEO
 

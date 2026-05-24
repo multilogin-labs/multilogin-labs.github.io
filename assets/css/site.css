@@ -1371,6 +1371,31 @@ code {
   margin-bottom: 0.35rem;
 }
 
+/* Homepage performance (content-visibility below fold) */
+.home-page main .section {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 420px;
+}
+
+.home-page .hero {
+  content-visibility: visible;
+  contain-intrinsic-size: auto;
+}
+
+.home-page .hero-media img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 0.75rem;
+}
+
+.home-page .hero-code-label {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem;
+}
+
 @media (max-width: 720px) {
   .sitemap-list {
     column-count: 1;

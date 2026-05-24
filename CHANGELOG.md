@@ -2,6 +2,19 @@
 
 All notable changes to this repository are documented here.
 
+## [2026.05.24g] — Homepage speed + SEO
+
+### Added
+- Responsive hero WebP (`multilogin-saas50-480/800/1200.webp`) — ~73% smaller LCP vs original
+- Schema `Offer` (SAAS50/MIN50), `primaryImageOfPage`, `dateModified`
+- Speculation Rules prefetch for `/go/multilogin`
+
+### Changed
+- No Google Fonts on home (system UI stack)
+- gtag loads after first paint; preload LCP image + CSS
+- `content-visibility: auto` on below-fold sections
+- Removed duplicate JSON-LD Article block and `keywords` meta
+
 ## [2026.05.24f] — Homepage affiliate-first
 
 ### Changed
