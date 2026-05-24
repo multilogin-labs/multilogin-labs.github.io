@@ -10,6 +10,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 STEPS: list[tuple[str, list[str]]] = [
     ("Homepage perf guardrails", ["python3", "scripts/optimize_home.py"]),
+    ("Regenerate llms.txt", ["python3", "scripts/generate_llms_txt.py"]),
     ("Performance (remove blocking fonts)", ["python3", "scripts/optimize_perf.py"]),
     ("Inner pages perf (CLS, prefetch; skip homepage)", ["python3", "scripts/optimize_inner_pages.py"]),
     ("Affiliate funnel pages", ["python3", "scripts/aff_funnel.py"]),

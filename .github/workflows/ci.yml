@@ -19,8 +19,8 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Site maintenance (perf, SEO, validate, links)
-        run: python3 scripts/site_maintenance.py
+      - name: Full site automation (maintenance + llms; homepage guard)
+        run: python3 scripts/automate_site.py
 
       - name: Regenerate sitemap (dry diff)
         run: |

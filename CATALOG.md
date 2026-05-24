@@ -52,6 +52,7 @@ curl -sL https://multilogin-labs.github.io/data/benchmark-matrix-2026-04.json | 
 | Guide | Audience |
 |-------|----------|
 | [Antidetection Ops SOP](https://multilogin-labs.github.io/guides/antidetection-ops-sop/) | Team leads defining go/no-go gates |
+| [Procurement Evidence Gate](https://multilogin-labs.github.io/guides/procurement-evidence-gate/) | Go/no-go before annual contracts |
 | [Evaluation Methodology](https://multilogin-labs.github.io/guides/evaluation-methodology/) | Scoring, blockers, evidence levels |
 | [Detection Tests](https://multilogin-labs.github.io/guides/detection-tests/) | Pre-scale signal validation |
 | [Connection Leak Tests](https://multilogin-labs.github.io/guides/connection-leak-tests/) | Proxy rotation leak checks |

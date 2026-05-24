@@ -198,7 +198,7 @@
     if (!$("benchmark-explorer")) return;
     wireControls();
     var select = $("benchmark-dataset");
-    var initial = select ? select.value : "/data/benchmark-matrix-2026-04.json";
+    var initial = select ? select.value : "/data/benchmark-matrix-2026-05.json";
     loadDataset(initial)
       .then(applyReport)
       .catch(function () {

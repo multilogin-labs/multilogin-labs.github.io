@@ -55,7 +55,9 @@ These rules apply without per-change approval. Maintenance: `python3 scripts/sit
 
 | Step | Tool |
 |------|------|
+| Full automation | `automate_site.py` (maintenance + llms + funnel; verifies `/` unchanged) |
 | Validate + SEO | `site_maintenance.py` |
+| LLM manifest | `generate_llms_txt.py` |
 | IndexNow ping | `indexnow.py --from-sitemap` on push to `main` |
 | Commit | **Human only** (not automated) |
 

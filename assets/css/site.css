@@ -1373,6 +1373,50 @@ code {
   margin-bottom: 0.35rem;
 }
 
+/* Video facade (affiliate / discount pages) */
+.video-facade {
+  display: block;
+  position: relative;
+  border-radius: 0.65rem;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  text-decoration: none;
+  max-width: 560px;
+}
+
+.video-facade img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.play-badge {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: rgba(27, 36, 48, 0.45);
+  font-weight: 800;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+.play-icon {
+  display: grid;
+  place-items: center;
+  width: 3.25rem;
+  height: 3.25rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.95);
+  color: #c4302b;
+  font-size: 1.1rem;
+  padding-left: 0.15rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+}
+
 /* Affiliate funnel pages: lighter hero (homepage uses home.css only) */
 .aff-page .hero {
   padding: 2.75rem 0 2.25rem;

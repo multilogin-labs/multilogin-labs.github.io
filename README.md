@@ -41,7 +41,8 @@ python3 -m http.server 8080
 ```
 
 ```bash
-python3 scripts/site_maintenance.py  # all SEO + validate + links (one command)
+python3 scripts/automate_site.py       # maintenance + llms.txt + funnel (homepage locked)
+python3 scripts/site_maintenance.py    # same steps without automate guard
 python3 scripts/indexnow.py --from-sitemap  # Bing/Yandex crawl notify (after deploy)
 ```
 

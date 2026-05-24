@@ -241,6 +241,12 @@
     <priority>0.84</priority>
   </url>
   <url>
+    <loc>https://multilogin-labs.github.io/guides/procurement-evidence-gate/</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.84</priority>
+  </url>
+  <url>
     <loc>https://multilogin-labs.github.io/guides/proxy-profile-bootstrap-playbook/</loc>
     <lastmod>2026-05-24</lastmod>
     <changefreq>weekly</changefreq>

@@ -9,6 +9,14 @@
     <atom:link href="https://multilogin-labs.github.io/feeds/lab-updates.xml" rel="self" type="application/rss+xml"/>
 
     <item>
+      <title>May 2026 Benchmark Preview + Procurement Evidence Gate</title>
+      <link>https://multilogin-labs.github.io/guides/benchmark-reports/2026-05/</link>
+      <guid isPermaLink="true">https://multilogin-labs.github.io/guides/benchmark-reports/2026-05/</guid>
+      <pubDate>Sun, 24 May 2026 18:00:00 +0000</pubDate>
+      <description>May matrix preview in Benchmark Explorer, procurement evidence gate guide, and automated llms.txt from open datasets.</description>
+    </item>
+
+    <item>
       <title>Benchmark Explorer + Google Indexing Guide</title>
       <link>https://multilogin-labs.github.io/tools/benchmark-explorer/</link>
       <guid isPermaLink="true">https://multilogin-labs.github.io/tools/benchmark-explorer/</guid>
