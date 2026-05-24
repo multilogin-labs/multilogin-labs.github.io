@@ -58,12 +58,13 @@
 
   var sticky = document.getElementById("aff-sticky");
   if (sticky) {
-    document.body.classList.add("has-aff-sticky");
-    var toggle = function () {
-      sticky.hidden = window.scrollY < 180;
+    var toggleSticky = function () {
+      var show = window.scrollY >= 180;
+      sticky.hidden = !show;
+      document.body.classList.toggle("has-aff-sticky", show);
     };
-    toggle();
-    window.addEventListener("scroll", toggle, { passive: true });
+    toggleSticky();
+    window.addEventListener("scroll", toggleSticky, { passive: true });
   }
 
   function loadGtag() {
@@ -82,9 +83,9 @@
   }
 
   if ("requestIdleCallback" in window) {
-    requestIdleCallback(loadGtag, { timeout: 4000 });
+    requestIdleCallback(loadGtag, { timeout: 8000 });
   } else {
-    setTimeout(loadGtag, 2000);
+    setTimeout(loadGtag, 3500);
   }
 
   document.querySelectorAll('a[href*="/go/multilogin"]').forEach(function (link) {

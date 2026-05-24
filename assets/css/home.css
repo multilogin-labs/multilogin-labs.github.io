@@ -280,10 +280,12 @@ h3 { font-size: 1.1rem; margin: 0 0 0.5rem; }
   color: var(--text-dim);
 }
 
+section[id] {
+  scroll-margin-top: 4.5rem;
+}
+
 .section {
   padding: 1.75rem 0;
-  content-visibility: auto;
-  contain-intrinsic-size: auto 320px;
 }
 
 .grid-3 {

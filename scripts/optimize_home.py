@@ -24,8 +24,8 @@ def main() -> int:
             print(f"FAIL: index.html missing {needle}", file=sys.stderr)
             ok = False
     head = text.split("</head>", 1)[0]
-    if '<link href="/assets/css/site.css" rel="stylesheet"/>' in head:
-        print("FAIL: blocking site.css in <head>", file=sys.stderr)
+    if "site.css" in head:
+        print("FAIL: homepage must not load site.css (async load causes CLS)", file=sys.stderr)
         ok = False
     if "site.js" in text:
         print("FAIL: index should use home.js", file=sys.stderr)

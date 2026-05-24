@@ -1385,9 +1385,9 @@ code {
 .home-page .hero-media img {
   width: 100%;
   height: auto;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-  border-radius: 0.75rem;
+  aspect-ratio: 1024 / 729;
+  object-fit: contain;
+  background: #f8fafc;
 }
 
 .home-page .hero-code-label {
