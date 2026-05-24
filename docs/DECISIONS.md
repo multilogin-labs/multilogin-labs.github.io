@@ -7,10 +7,18 @@ These rules apply without per-change approval. Maintenance: `python3 scripts/sit
 | Decision | Choice |
 |----------|--------|
 | Goal | **SAAS50 / MIN50** → `/go/multilogin/` |
-| Stack | `home.css` (~5KB) sync + `site.css` async + `home.js` |
-| DOM | Slim: hero → 3 steps → pricing cards → compare links → FAQ → CTA |
-| CI | `optimize_home.py` blocks regressions (no blocking `site.css` in head) |
-| Other scripts | `enhance_pages` / `aff_funnel` **do not modify** `/` |
+| Stack | `home.css` + `home.js` only — **no `site.css`** (async `site.css` caused CLS ~0.39) |
+| DOM | Slim: hero → 3 steps → pricing cards → FAQ → CTA |
+| CI | `optimize_home.py` blocks regressions (no `site.css` / `site.js` on `/`) |
+| Other scripts | `enhance_pages` / `aff_funnel` / `optimize_inner_pages` **do not modify** `/` |
+
+## Inner pages (all other indexable HTML)
+
+| Decision | Choice |
+|----------|--------|
+| Stack | Blocking `site.css` + deferred `site.js` (system fonts only) |
+| CLS | No `content-visibility` on sections; sticky padding only when bar visible (`site.js`) |
+| Maintenance | `optimize_inner_pages.py` — prefetch `/go/multilogin`, normalize CSS URLs, skip `/` |
 
 ## Content & SEO
 

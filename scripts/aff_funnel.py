@@ -11,7 +11,7 @@ OG_PROMO = f"{BASE}/assets/img/multilogin-saas50-1200.webp"
 
 AFF_NAV = """<nav aria-label="Main navigation" class="nav-links">
 <a href="/">Home</a>
-<a href="/#multilogin-coupon">Codes</a>
+<a href="/#multilogin-price">Redeem steps</a>
 <a href="/go/multilogin" rel="sponsored noopener noreferrer" target="_blank">Checkout</a>
 <a href="/promo/">Other promos</a>
 <a href="/compare/">Compare</a>

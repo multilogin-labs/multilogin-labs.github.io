@@ -64,10 +64,10 @@
       return;
     }
 
-    document.body.classList.add("has-aff-sticky");
-
     function toggle() {
-      bar.hidden = window.scrollY < 280;
+      var show = window.scrollY >= 280;
+      bar.hidden = !show;
+      document.body.classList.toggle("has-aff-sticky", show);
     }
 
     toggle();
