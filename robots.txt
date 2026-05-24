@@ -8,5 +8,7 @@ Allow: /catalog/
 Allow: /site-map/
 Allow: /feeds/
 Allow: /llms.txt
+Allow: /.well-known/
+Allow: /humans.txt
 
 Sitemap: https://multilogin-labs.github.io/sitemap.xml

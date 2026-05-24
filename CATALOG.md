@@ -36,6 +36,7 @@ Most antidetect content online is **coupon spam** or **doc mirrors**. multilogin
 | [benchmark-2026-04.json](./data/benchmark-2026-04.json) | [benchmark-v1](./data/schemas/benchmark-v1.schema.json) | April summary bands + drift patterns |
 | [benchmark-matrix-2026-04.json](./data/benchmark-matrix-2026-04.json) | benchmark-v1 | Per-platform scores (22 platforms) |
 | [benchmark-matrix-2026-05.json](./data/benchmark-matrix-2026-05.json) | benchmark-v1 | May preview matrix |
+| [benchmark-2026-05.json](./data/benchmark-2026-05.json) | benchmark-v1 | May summary (preview) |
 | [index.json](./data/index.json) | — | Dataset discovery manifest |
 | [fingerprint-checklist-v1.json](./data/fingerprint-checklist-v1.json) | [checklist-v1](./data/schemas/checklist-v1.schema.json) | Weighted readiness checklist |
 
@@ -57,6 +58,7 @@ curl -sL https://multilogin-labs.github.io/data/benchmark-matrix-2026-04.json | 
 | [MLX API Integration Map](https://multilogin-labs.github.io/guides/mlx-api-integration-map/) | Rollout order (not vendor doc clone) |
 | [OpenMultilogin Risk Guide](https://multilogin-labs.github.io/guides/openmultilogin-risk-and-migration-guide/) | Fork risk and migration |
 | [Benchmark Reports](https://multilogin-labs.github.io/guides/benchmark-reports/) | Monthly reliability previews |
+| [Google Search Indexing](https://multilogin-labs.github.io/guides/google-search-indexing/) | Site owners: sitemap, GSC, crawl hygiene |
 
 ---
 
@@ -80,6 +82,7 @@ curl -sL https://multilogin-labs.github.io/data/benchmark-matrix-2026-04.json | 
 | File | Stack |
 |------|-------|
 | [profile-start-template.py](./snippets/profile-start-template.py) | Python + MLX API (env config) |
+| [env-check.sh](./snippets/env-check.sh) | Shell preflight for MLX_* variables |
 
 ---
 

@@ -177,6 +177,7 @@ def collect_indexable_urls() -> list[tuple[str, str, str]]:
 
     add("/feeds/lab-updates.xml", "0.40")
     add("/llms.txt", "0.38")
+    add("/humans.txt", "0.30")
     for data_file in (
         "index.json",
         "benchmark-2026-04.json",

@@ -18,7 +18,7 @@ Use after every deploy to `main` on GitHub Pages.
 
 | Indexed (`index,follow`) | Not indexed (`noindex`) |
 |--------------------------|-------------------------|
-| ~47 HTML articles/tools/guides | `/go/multilogin/` (affiliate) |
+| ~59 URLs in sitemap (HTML + JSON + feeds) | `/go/multilogin/` (affiliate) |
 | JSON datasets in sitemap | Legacy `/promo/*/` redirects |
 | `/llms.txt` (optional) | Legacy `/compare/multilogin-vs-*` redirects |
 | | `404.html` |
@@ -32,22 +32,34 @@ Redirect pages keep `noindex,follow` so Google consolidates signals to hub URLs.
 - Every indexable page links to `/sitemap.xml` via `<link rel="sitemap">`
 - HTML sitemap: `/site-map/`
 
-## 4. Maintenance commands
+## 4. IndexNow (Bing / Yandex)
+
+After deploy, CI pings IndexNow with all sitemap URLs. Key file (must stay public):
+
+- `https://multilogin-labs.github.io/mll7f3a9c2e1b4d6085a2f9e0c7b3d6e8.txt`
 
 ```bash
+python3 scripts/indexnow.py --from-sitemap --limit 58
+python3 scripts/indexnow.py --url https://multilogin-labs.github.io/guides/google-search-indexing/
+```
+
+## 5. Maintenance commands
+
+```bash
+python3 scripts/enhance_pages.py  # OG, Twitter, breadcrumbs, dateModified
 python3 scripts/seo_optimize.py   # noindex redirects, fix links, refresh sitemaps
 python3 scripts/check_links.py
 python3 scripts/validate_data.py
 ```
 
-## 5. Monthly content for crawl freshness
+## 6. Monthly content for crawl freshness
 
 - Publish new `data/benchmark-matrix-YYYY-MM.json`
 - Update `/guides/benchmark-reports/YYYY-MM/`
 - Add option in Benchmark Explorer dataset dropdown
 - Re-run `seo_optimize.py` (updates `lastmod` from file mtimes)
 
-## 6. Avoid indexation drops
+## 7. Avoid indexation drops
 
 - Do not re-add thin per-vendor promo/compare HTML pages
 - Do not duplicate Multilogin official docs

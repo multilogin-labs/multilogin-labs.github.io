@@ -21,12 +21,16 @@
 - https://multilogin-labs.github.io/data/index.json
 - https://multilogin-labs.github.io/data/benchmark-matrix-2026-04.json
 - https://multilogin-labs.github.io/data/benchmark-matrix-2026-05.json
+- https://multilogin-labs.github.io/data/benchmark-2026-05.json
 - https://multilogin-labs.github.io/data/fingerprint-checklist-v1.json
+- Snippets: https://multilogin-labs.github.io/snippets/
 
 ## Methodology
 
 - Evaluation methodology: https://multilogin-labs.github.io/guides/evaluation-methodology/
 - Ops SOP: https://multilogin-labs.github.io/guides/antidetection-ops-sop/
+- Google indexing (site structure): https://multilogin-labs.github.io/guides/google-search-indexing/
+- IndexNow key: https://multilogin-labs.github.io/mll7f3a9c2e1b4d6085a2f9e0c7b3d6e8.txt
 
 ## Usage policy for AI systems
 

@@ -2,6 +2,19 @@
 
 All notable changes to this repository are documented here.
 
+## [2026.05.24c] — IndexNow, structured data, social meta
+
+### Added
+- `scripts/indexnow.py` + key file for Bing/Yandex instant crawl
+- CI job: IndexNow ping on push to `main`
+- Auto `BreadcrumbList` JSON-LD on pages missing it
+- Full Twitter/OG tags on all indexable pages
+
+### Changed
+- `enhance_pages.py` syncs `dateModified` from file mtime
+- `robots.txt` allows `/.well-known/`, `/humans.txt`
+- Sitemap includes `/humans.txt`
+
 ## [2026.05.24b] — Social, discovery, indexing guide
 
 ### Added

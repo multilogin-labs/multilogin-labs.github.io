@@ -9,3 +9,4 @@ Contributors and operators who submit reproducible benchmark evidence.
 
 /* STANDARDS */
 Methodology v1.2 — https://multilogin-labs.github.io/guides/evaluation-methodology/
+Indexing — https://multilogin-labs.github.io/guides/google-search-indexing/

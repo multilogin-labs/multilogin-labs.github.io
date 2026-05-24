@@ -28,10 +28,30 @@ jobs:
       - name: SEO optimize (links, sitemap, redirects)
         run: python3 scripts/seo_optimize.py
 
-      - name: Enhance pages (OG, RSS, footer discovery)
+      - name: Enhance pages (OG, RSS, breadcrumbs, social meta)
         run: python3 scripts/enhance_pages.py
+
+      - name: IndexNow key file
+        run: python3 scripts/indexnow.py --ensure-key
 
       - name: Regenerate sitemap (dry diff)
         run: |
           python3 scripts/migrate_site.py
           git diff --exit-code sitemap.xml || (echo "::warning::sitemap.xml out of date — run migrate_site.py locally" && exit 0)
+
+  indexnow:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    needs: validate
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Ping IndexNow (Bing/Yandex)
+        run: python3 scripts/indexnow.py --from-sitemap --limit 58
+        continue-on-error: true
+        env:
+          INDEXNOW_PING: "1"
