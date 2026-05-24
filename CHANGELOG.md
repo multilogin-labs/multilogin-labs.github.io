@@ -2,6 +2,20 @@
 
 All notable changes to this repository are documented here.
 
+## [2026.05.24] — Google indexing pass
+
+### Added
+- `scripts/seo_optimize.py` — noindex redirects, internal link fixes, HTML sitemap
+- `/site-map/` HTML sitemap (55 indexable URLs)
+- `docs/GOOGLE-INDEXING.md` Search Console checklist
+
+### Changed
+- All redirect stubs: `noindex,follow` + canonical to hub
+- Internal links: promo anchors `#vendor-*`, dead compares → alternatives
+- `sitemap.xml` uses per-file `lastmod` + `changefreq`
+- 48 pages: `<link rel="sitemap">` discovery tag
+- `compare/` hub: removed duplicate 22-page library block
+
 ## [2026.05.22c] — Benchmark Explorer + catalog
 
 ### Added

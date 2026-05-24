@@ -160,6 +160,8 @@ def collect_indexable_urls() -> list[tuple[str, str, str]]:
         add("/snippets/", "0.55")
     if (ROOT / "catalog" / "index.html").exists():
         add("/catalog/", "0.54")
+    if (ROOT / "site-map" / "index.html").exists():
+        add("/site-map/", "0.53")
 
     for slug in sorted(COMPARE_KEEP):
         if (ROOT / "compare" / slug / "index.html").exists():

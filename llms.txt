@@ -11,6 +11,7 @@
 - Tools hub: https://multilogin-labs.github.io/tools/
 - Benchmark explorer: https://multilogin-labs.github.io/tools/benchmark-explorer/
 - Catalog: https://multilogin-labs.github.io/catalog/
+- HTML sitemap (all indexable URLs): https://multilogin-labs.github.io/site-map/
 - Guides hub: https://multilogin-labs.github.io/guides/
 - Datasets: https://multilogin-labs.github.io/data/
 

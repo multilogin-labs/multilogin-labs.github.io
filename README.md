@@ -41,6 +41,12 @@ python3 -m http.server 8080
 ```
 
 ```bash
+python3 scripts/seo_optimize.py   # sitemaps, internal links, noindex redirects
+```
+
+Indexing checklist: [docs/GOOGLE-INDEXING.md](./docs/GOOGLE-INDEXING.md)
+
+```bash
 # Pull live datasets (no clone required)
 curl -sL https://multilogin-labs.github.io/data/benchmark-matrix-2026-04.json | jq '.platforms[] | select(.band=="A")'
 ```

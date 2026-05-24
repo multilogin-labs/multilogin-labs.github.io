@@ -1360,3 +1360,19 @@ code {
 .catalog-grid .card h3 {
   margin-top: 0;
 }
+
+.sitemap-list {
+  column-count: 2;
+  column-gap: 2rem;
+}
+
+.sitemap-list li {
+  break-inside: avoid;
+  margin-bottom: 0.35rem;
+}
+
+@media (max-width: 720px) {
+  .sitemap-list {
+    column-count: 1;
+  }
+}

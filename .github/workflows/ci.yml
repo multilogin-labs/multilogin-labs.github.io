@@ -25,6 +25,9 @@ jobs:
       - name: Check internal links
         run: python3 scripts/check_links.py
 
+      - name: SEO optimize (links, sitemap, redirects)
+        run: python3 scripts/seo_optimize.py
+
       - name: Regenerate sitemap (dry diff)
         run: |
           python3 scripts/migrate_site.py

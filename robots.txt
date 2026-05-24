@@ -5,6 +5,7 @@ Disallow: /go/
 Allow: /assets/
 Allow: /data/
 Allow: /catalog/
+Allow: /site-map/
 Allow: /feeds/
 Allow: /llms.txt
 
