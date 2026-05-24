@@ -1,0 +1,21 @@
+name: Dataset update
+description: Propose a benchmark month or checklist revision
+labels: ["dataset"]
+body:
+  - type: input
+    id: report_id
+    attributes:
+      label: Report ID (YYYY-MM)
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence summary (methodology v1.2)
+      description: Link to raw notes or reproducible test protocol
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: PR checklist
+      options:
+        - label: JSON validates via scripts/validate_data.py
+        - label: CHANGELOG.md updated
+        - label: No vendor doc text copied verbatim

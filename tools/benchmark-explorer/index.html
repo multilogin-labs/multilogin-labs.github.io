@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- mll-head -->
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml"/>
+<link rel="manifest" href="/site.webmanifest"/>
+<meta name="theme-color" content="#2a9d8f"/>
+<title>Benchmark Explorer: Interactive 22-Platform Matrix | multilogin-labs</title>
+<meta content="Free interactive explorer for the multilogin-labs antidetect benchmark matrix: filter by band, export CSV, link to compare pages. Data from open JSON datasets." name="description"/>
+<meta content="index,follow,max-image-preview:large" name="robots"/>
+<link href="https://multilogin-labs.github.io/tools/benchmark-explorer/" rel="canonical"/>
+<meta content="Benchmark Explorer | multilogin-labs" property="og:title"/>
+<meta content="Explore April 2026 antidetect reliability scores with filters and CSV export." property="og:description"/>
+<meta content="https://multilogin-labs.github.io/tools/benchmark-explorer/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="multilogin-labs" property="og:site_name"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Space+Grotesk:wght@500;700&amp;display=swap" rel="stylesheet"/>
+<link href="/assets/css/site.css" rel="stylesheet"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "Benchmark Explorer",
+      "url": "https://multilogin-labs.github.io/tools/benchmark-explorer/",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Any",
+      "isAccessibleForFree": true,
+      "creator": {"@type": "Organization", "name": "multilogin-labs"}
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<div aria-live="polite" class="toast" id="site-toast"></div>
+<header class="site-header">
+<div class="container nav-wrap">
+<a class="logo" href="/">multi<span>login-labs</span></a>
+<nav aria-label="Main navigation" class="nav-links">
+<a aria-current="page" href="/tools/">Tools</a>
+<a href="/compare/">Compare</a>
+<a href="/guides/">Guides</a>
+<a href="/contact/">Contact</a>
+</nav>
+</div>
+</header>
+<main class="container" id="main-content">
+<p class="breadcrumb"><a href="/">Home</a> / <a href="/tools/">Tools</a> / Benchmark Explorer</p>
+<section class="hero">
+<span class="badge">Free Tool · Live JSON</span>
+<h1>Benchmark Explorer</h1>
+<p class="lead">Interactive view of the open <code>benchmark-matrix</code> datasets. Filter by reliability band, surface blockers, and export CSV for procurement spreadsheets.</p>
+<p class="hero-meta">Methodology v1.2 · Data loads from <a href="/data/index.json">/data/index.json</a> · <a href="https://github.com/multilogin-labs/multilogin-labs.github.io/tree/main/data">GitHub /data</a></p>
+<p class="disclosure">Disclosure: scores are lab estimates for decision support—validate in your own environment before purchase.</p>
+</section>
+<section class="section" id="benchmark-explorer">
+<div class="panel explorer-controls">
+<label class="field" for="benchmark-dataset">
+<span>Dataset</span>
+<select class="input-control" id="benchmark-dataset">
+<option value="/data/benchmark-matrix-2026-04.json">April 2026 (2026-04)</option>
+<option value="/data/benchmark-matrix-2026-05.json">May 2026 preview (2026-05)</option>
+</select>
+</label>
+<label class="field" for="benchmark-search">
+<span>Search platform</span>
+<input class="input-control" id="benchmark-search" placeholder="e.g. GoLogin" type="search"/>
+</label>
+<label class="field" for="benchmark-band">
+<span>Band filter</span>
+<select class="input-control" id="benchmark-band">
+<option value="all">All bands</option>
+<option value="A">Band A only</option>
+<option value="B">Band B only</option>
+<option value="C">Band C only</option>
+</select>
+</label>
+<label class="field field-checkbox">
+<input id="benchmark-blockers" type="checkbox"/>
+<span>Blockers only</span>
+</label>
+<button class="btn btn-primary" id="benchmark-export" type="button">Export CSV</button>
+</div>
+<div id="benchmark-meta"></div>
+<div class="metric-strip" id="benchmark-stats"></div>
+<div class="table-wrap">
+<table class="table-compact explorer-table">
+<thead>
+<tr>
+<th>Platform</th>
+<th>Band</th>
+<th>Score</th>
+<th>Evidence</th>
+<th>Blocker</th>
+<th>Caveat</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody id="benchmark-tbody">
+<tr><td colspan="7">Loading dataset…</td></tr>
+</tbody>
+</table>
+</div>
+<p class="comparison-note small">Next: <a href="/guides/evaluation-methodology/">methodology</a> · <a href="/tools/fingerprint-readiness-score/">readiness score</a> · <a href="/tools/evidence-pack-builder/">evidence pack</a></p>
+</section>
+</main>
+<footer class="site-footer">
+<div class="container footer-bottom-row">
+<p class="small">© <span data-year=""></span> multilogin-labs</p>
+<a href="https://github.com/multilogin-labs/multilogin-labs.github.io">GitHub</a>
+</div>
+</footer>
+<script defer src="/assets/js/site.js"></script>
+<script defer src="/assets/js/benchmark-explorer.js"></script>
+</body>
+</html>

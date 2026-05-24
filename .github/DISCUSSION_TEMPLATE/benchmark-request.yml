@@ -1,0 +1,23 @@
+name: Benchmark month request
+description: Propose a new benchmark-matrix dataset month
+labels: ["benchmark", "dataset"]
+body:
+  - type: input
+    id: month
+    attributes:
+      label: Report ID (YYYY-MM)
+      placeholder: "2026-06"
+    validations:
+      required: true
+  - type: textarea
+    id: changes
+    attributes:
+      label: What changed vs prior month?
+  - type: checkboxes
+    id: deliverables
+    attributes:
+      label: Deliverables
+      options:
+        - label: benchmark-matrix-YYYY-MM.json
+        - label: HTML report under guides/benchmark-reports/
+        - label: Updated Benchmark Explorer dataset option

@@ -1,0 +1,38 @@
+{
+  "name": "multilogin-labs datasets",
+  "updated": "2026-05-22",
+  "base_url": "https://multilogin-labs.github.io/data/",
+  "schemas": {
+    "benchmark": "https://multilogin-labs.github.io/data/schemas/benchmark-v1.schema.json",
+    "checklist": "https://multilogin-labs.github.io/data/schemas/checklist-v1.schema.json"
+  },
+  "datasets": [
+    {
+      "id": "benchmark-matrix-2026-04",
+      "url": "https://multilogin-labs.github.io/data/benchmark-matrix-2026-04.json",
+      "report_id": "2026-04",
+      "type": "benchmark-matrix"
+    },
+    {
+      "id": "benchmark-matrix-2026-05",
+      "url": "https://multilogin-labs.github.io/data/benchmark-matrix-2026-05.json",
+      "report_id": "2026-05",
+      "type": "benchmark-matrix",
+      "status": "preview"
+    },
+    {
+      "id": "benchmark-2026-04",
+      "url": "https://multilogin-labs.github.io/data/benchmark-2026-04.json",
+      "report_id": "2026-04",
+      "type": "benchmark-summary"
+    },
+    {
+      "id": "fingerprint-checklist-v1",
+      "url": "https://multilogin-labs.github.io/data/fingerprint-checklist-v1.json",
+      "type": "checklist"
+    }
+  ],
+  "tools": {
+    "explorer": "https://multilogin-labs.github.io/tools/benchmark-explorer/"
+  }
+}

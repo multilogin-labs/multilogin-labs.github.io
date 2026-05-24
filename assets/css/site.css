@@ -1243,3 +1243,120 @@ code {
     transition: none;
   }
 }
+
+/* GitHub lab CTA */
+.github-cta {
+  margin-top: 1.25rem;
+  padding: 1.1rem 1.25rem;
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  background: linear-gradient(135deg, rgba(42, 157, 143, 0.08), rgba(217, 119, 6, 0.06));
+}
+
+.github-cta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn-github {
+  background: #1b2430;
+  color: #fff !important;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.btn-github:hover {
+  background: #0f172a;
+  color: #f8fafc !important;
+}
+
+.metric-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+}
+
+.metric {
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.metric strong {
+  display: block;
+  font-family: "Space Grotesk", "Manrope", sans-serif;
+  font-size: 1.35rem;
+  color: var(--primary-2);
+}
+
+.metric span {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--text-dim);
+  line-height: 1.3;
+}
+
+@media (max-width: 720px) {
+  .metric-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Benchmark explorer */
+.explorer-controls {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  align-items: end;
+  margin-bottom: 1rem;
+}
+
+.field-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-bottom: 0.35rem;
+}
+
+.explorer-table td {
+  vertical-align: top;
+}
+
+.band-pill {
+  display: inline-block;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+.band-a {
+  background: rgba(42, 157, 143, 0.18);
+  color: var(--primary-2);
+}
+
+.band-b {
+  background: rgba(217, 119, 6, 0.15);
+  color: #9a5b0a;
+}
+
+.band-c {
+  background: rgba(214, 69, 69, 0.12);
+  color: var(--danger);
+}
+
+.text-danger {
+  color: var(--danger);
+  font-weight: 700;
+}
+
+.catalog-grid .card h3 {
+  margin-top: 0;
+}

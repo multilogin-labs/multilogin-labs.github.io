@@ -1,0 +1,17 @@
+{
+  "name": "multilogin-labs",
+  "short_name": "MLX Labs",
+  "description": "Open antidetect operations lab: benchmarks, tools, and playbooks",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f6f3ee",
+  "theme_color": "#2a9d8f",
+  "icons": [
+    {
+      "src": "/assets/img/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

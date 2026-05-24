@@ -150,10 +150,16 @@ def collect_indexable_urls() -> list[tuple[str, str, str]]:
         "fingerprint-readiness-score",
         "evidence-pack-builder",
         "benchmark-release-checker",
+        "benchmark-explorer",
         "antidetect-browsers",
     ]:
         if (ROOT / "tools" / tool / "index.html").exists():
             add(f"/tools/{tool}/", "0.87")
+
+    if (ROOT / "snippets" / "index.html").exists():
+        add("/snippets/", "0.55")
+    if (ROOT / "catalog" / "index.html").exists():
+        add("/catalog/", "0.54")
 
     for slug in sorted(COMPARE_KEEP):
         if (ROOT / "compare" / slug / "index.html").exists():
@@ -168,6 +174,16 @@ def collect_indexable_urls() -> list[tuple[str, str, str]]:
         add(f"/{g}/", "0.84")
 
     add("/feeds/lab-updates.xml", "0.40")
+    add("/llms.txt", "0.38")
+    for data_file in (
+        "index.json",
+        "benchmark-2026-04.json",
+        "benchmark-matrix-2026-04.json",
+        "benchmark-matrix-2026-05.json",
+        "fingerprint-checklist-v1.json",
+    ):
+        if (ROOT / "data" / data_file).exists():
+            add(f"/data/{data_file}", "0.36")
     add("/privacy-policy/", "0.35")
     add("/terms/", "0.35")
     urls.sort(key=lambda x: (-float(x[2]), x[0]))

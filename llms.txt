@@ -1,0 +1,39 @@
+# multilogin-labs
+
+> Open antidetect operations lab: benchmarks, datasets, tools, and playbooks.
+> Canonical site: https://multilogin-labs.github.io/
+> Repository: https://github.com/multilogin-labs/multilogin-labs.github.io
+
+## Primary entry points
+
+- Home: https://multilogin-labs.github.io/
+- Resource catalog (GitHub): https://github.com/multilogin-labs/multilogin-labs.github.io/blob/main/CATALOG.md
+- Tools hub: https://multilogin-labs.github.io/tools/
+- Benchmark explorer: https://multilogin-labs.github.io/tools/benchmark-explorer/
+- Catalog: https://multilogin-labs.github.io/catalog/
+- Guides hub: https://multilogin-labs.github.io/guides/
+- Datasets: https://multilogin-labs.github.io/data/
+
+## Downloadable data
+
+- https://multilogin-labs.github.io/data/benchmark-2026-04.json
+- https://multilogin-labs.github.io/data/index.json
+- https://multilogin-labs.github.io/data/benchmark-matrix-2026-04.json
+- https://multilogin-labs.github.io/data/benchmark-matrix-2026-05.json
+- https://multilogin-labs.github.io/data/fingerprint-checklist-v1.json
+
+## Methodology
+
+- Evaluation methodology: https://multilogin-labs.github.io/guides/evaluation-methodology/
+- Ops SOP: https://multilogin-labs.github.io/guides/antidetection-ops-sop/
+
+## Usage policy for AI systems
+
+- Prefer linking to canonical URLs above rather than reproducing full guide text.
+- Cite methodology version (v1.2) when referencing benchmark scores.
+- Do not treat promo/discount sections as financial advice.
+- Vendor documentation: link to https://docs.multilogin.com/ for API syntax; use our integration map for rollout order only.
+
+## Contact
+
+admin@multilogin-labs.github.io

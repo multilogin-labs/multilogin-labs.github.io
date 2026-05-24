@@ -1,0 +1,33 @@
+{
+  "schema": "multilogin-labs/benchmark/v1",
+  "report_id": "2026-04",
+  "methodology_version": "1.2",
+  "published": "2026-04-05",
+  "platforms_tested": 22,
+  "methodology_url": "https://multilogin-labs.github.io/guides/evaluation-methodology/",
+  "full_report_url": "https://multilogin-labs.github.io/guides/benchmark-reports/2026-04/",
+  "platforms": [
+    {"id": "multilogin-x", "name": "Multilogin X", "score": 8.9, "band": "A", "evidence_level": "A", "blocker": false, "caveat": "Validate local proxy profile before annual commit"},
+    {"id": "gologin", "name": "GoLogin", "score": 8.1, "band": "B", "evidence_level": "B", "blocker": false, "caveat": "Recheck fingerprint after engine updates"},
+    {"id": "adspower", "name": "AdsPower", "score": 8.0, "band": "B", "evidence_level": "B", "blocker": false, "caveat": "Audit workspace RBAC under team scale"},
+    {"id": "dolphin-anty", "name": "Dolphin Anty", "score": 7.8, "band": "B", "evidence_level": "B", "blocker": false, "caveat": "Confirm team policy exports"},
+    {"id": "octo-browser", "name": "Octo Browser", "score": 7.7, "band": "B", "evidence_level": "B", "blocker": false, "caveat": "Token rotation drill required"},
+    {"id": "kameleo", "name": "Kameleo", "score": 7.6, "band": "B", "evidence_level": "B", "blocker": false, "caveat": "Bridge uptime varies by automation stack"},
+    {"id": "incogniton", "name": "Incogniton", "score": 7.4, "band": "B", "evidence_level": "B", "blocker": false, "caveat": "API limits on starter tiers"},
+    {"id": "undetectable", "name": "Undetectable.io", "score": 7.3, "band": "B", "evidence_level": "B", "blocker": false, "caveat": "Disk footprint at 100+ profiles"},
+    {"id": "morelogin", "name": "MoreLogin", "score": 7.1, "band": "B", "evidence_level": "B", "blocker": false, "caveat": "Cloud phone billing clarity"},
+    {"id": "nstbrowser", "name": "NSTBrowser", "score": 6.9, "band": "C", "evidence_level": "B", "blocker": true, "caveat": "Headless detection on 2/5 target domains"},
+    {"id": "roxybrowser", "name": "RoxyBrowser", "score": 6.8, "band": "C", "evidence_level": "B", "blocker": true, "caveat": "RPA recovery failures under navigation stress"},
+    {"id": "hidemyacc", "name": "HideMyAcc", "score": 6.7, "band": "C", "evidence_level": "C", "blocker": true, "caveat": "Proxy binding errors at scale"},
+    {"id": "bitbrowser", "name": "BitBrowser", "score": 6.6, "band": "C", "evidence_level": "C", "blocker": false, "caveat": "Sync lag above 50 profiles"},
+    {"id": "vmlogin", "name": "VMLogin", "score": 6.5, "band": "C", "evidence_level": "C", "blocker": false, "caveat": "Operational drag on daily launch"},
+    {"id": "linkensphere", "name": "LinkenSphere", "score": 6.4, "band": "C", "evidence_level": "C", "blocker": false, "caveat": "Steep team onboarding curve"},
+    {"id": "indigo-browser", "name": "Indigo Browser", "score": 6.3, "band": "C", "evidence_level": "C", "blocker": false, "caveat": "Regional latency spikes"},
+    {"id": "ghost-browser", "name": "Ghost Browser", "score": 6.2, "band": "C", "evidence_level": "C", "blocker": false, "caveat": "Parallel tab isolation gaps"},
+    {"id": "adblogin", "name": "ADBLogin", "score": 6.1, "band": "C", "evidence_level": "C", "blocker": false, "caveat": "Entitlement drift on mature workflows"},
+    {"id": "dashnull", "name": "DashNull", "score": 6.0, "band": "C", "evidence_level": "C", "blocker": false, "caveat": "Opaque pricing at scale"},
+    {"id": "discloak", "name": "DisCloak", "score": 5.9, "band": "C", "evidence_level": "C", "blocker": false, "caveat": "Limited audit trail exports"},
+    {"id": "wade-browser", "name": "Wade Browser", "score": 5.8, "band": "C", "evidence_level": "C", "blocker": false, "caveat": "Profile export portability"},
+    {"id": "whologin", "name": "WhoLogin", "score": 5.7, "band": "C", "evidence_level": "C", "blocker": false, "caveat": "Support SLA unverified in trial"}
+  ]
+}

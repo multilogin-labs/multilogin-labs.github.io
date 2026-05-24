@@ -1,0 +1,11 @@
+/* TEAM */
+Lab: multilogin-labs
+Contact: admin@multilogin-labs.github.io
+Site: https://multilogin-labs.github.io/
+Repo: https://github.com/multilogin-labs/multilogin-labs.github.io
+
+/* THANKS */
+Contributors and operators who submit reproducible benchmark evidence.
+
+/* STANDARDS */
+Methodology v1.2 — https://multilogin-labs.github.io/guides/evaluation-methodology/

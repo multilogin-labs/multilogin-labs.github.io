@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://multilogin-labs.github.io/data/schemas/checklist-v1.schema.json",
+  "title": "multilogin-labs fingerprint checklist v1",
+  "type": "object",
+  "required": ["schema", "id", "items"],
+  "properties": {
+    "schema": { "const": "multilogin-labs/checklist/v1" },
+    "id": { "type": "string" },
+    "updated": { "type": "string", "format": "date" },
+    "items": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "label", "weight", "pass_rule"],
+        "properties": {
+          "id": { "type": "string" },
+          "label": { "type": "string" },
+          "weight": { "type": "integer", "minimum": 1, "maximum": 100 },
+          "pass_rule": { "type": "string" }
+        }
+      }
+    }
+  }
+}

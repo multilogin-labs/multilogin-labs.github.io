@@ -2,8 +2,10 @@ User-agent: *
 Allow: /
 Disallow: /go/
 
-# Crawl primary static assets and HTML pages
 Allow: /assets/
+Allow: /data/
+Allow: /catalog/
 Allow: /feeds/
+Allow: /llms.txt
 
 Sitemap: https://multilogin-labs.github.io/sitemap.xml
