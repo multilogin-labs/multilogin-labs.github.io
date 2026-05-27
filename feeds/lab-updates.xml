@@ -9,6 +9,14 @@
     <atom:link href="https://multilogin-labs.github.io/feeds/lab-updates.xml" rel="self" type="application/rss+xml"/>
 
     <item>
+      <title>Affiliate config + ai.txt + sitewide pricing links</title>
+      <link>https://multilogin-labs.github.io/data/affiliate.json</link>
+      <guid isPermaLink="true">https://multilogin-labs.github.io/data/affiliate.json</guid>
+      <pubDate>Tue, 27 May 2026 12:00:00 +0000</pubDate>
+      <description>Central affiliate.json, ai.txt for crawlers, sponsored checkout links on compare/tools pages, and JS redirect on /go/multilogin/.</description>
+    </item>
+
+    <item>
       <title>May 2026 Benchmark Preview + Procurement Evidence Gate</title>
       <link>https://multilogin-labs.github.io/guides/benchmark-reports/2026-05/</link>
       <guid isPermaLink="true">https://multilogin-labs.github.io/guides/benchmark-reports/2026-05/</guid>

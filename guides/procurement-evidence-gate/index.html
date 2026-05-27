@@ -5,6 +5,8 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <!-- mll-head -->
+<link rel="dns-prefetch" href="https://multilogin.com"/>
+<link rel="preconnect" href="https://multilogin.com" crossorigin/>
 <link href="https://multilogin-labs.github.io/feeds/lab-updates.xml" rel="alternate" title="multilogin-labs Lab Updates RSS" type="application/rss+xml"/>
 <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml"/>
 <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml"/>
@@ -58,6 +60,7 @@
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to main content</a>
+<div class="site-announcement">SAAS50 = <strong>50% off</strong> plans · MIN50 = cloud phone — <a href="https://multilogin.com/pricing/?utm_source=saas&amp;utm_medium=partner&amp;a_aid=saas&amp;a_bid=f5fad549" rel="sponsored noopener noreferrer" target="_blank">Multilogin pricing →</a></div>
 <div aria-live="polite" class="toast" id="site-toast"></div>
 <header class="site-header">
 <div class="container nav-wrap">
@@ -86,7 +89,7 @@
 <li><strong>Run signal tests</strong> — <a href="/guides/detection-tests/">Detection tests</a> and <a href="/guides/connection-leak-tests/">connection leak tests</a> on your proxy stack.</li>
 <li><strong>Document go/no-go</strong> — <a href="/tools/evidence-pack-builder/">Evidence Pack Builder</a> for procurement approval trails.</li>
 <li><strong>Compare total cost</strong> — tier-1 <a href="/compare/">compare pages</a> plus <a href="/guides/antidetect-browser-pricing-playbook/">pricing playbook</a>.</li>
-<li><strong>Checkout with proof</strong> — <a href="/tools/multilogin-discount/">Multilogin discount verifier</a> then <a href="/go/multilogin" rel="sponsored noopener noreferrer" target="_blank">official billing</a> (confirm SAAS50 / MIN50 lines).</li>
+<li><strong>Checkout with proof</strong> — <a href="/tools/multilogin-discount/">Multilogin discount verifier</a> then <a href="https://multilogin.com/pricing/?utm_source=saas&amp;utm_medium=partner&amp;a_aid=saas&amp;a_bid=f5fad549" rel="sponsored noopener noreferrer" target="_blank">official billing</a> (confirm SAAS50 / MIN50 lines).</li>
 </ol>
 </section>
 <section class="section">
@@ -110,11 +113,19 @@
 </section>
 </main>
 <footer class="site-footer">
-<div class="container">
-<p class="small">© <span data-year></span> multilogin-labs · <a href="/site-map/">Sitemap</a></p>
+<div class="container footer-bottom-row">
+<p class="small">© <span data-year></span> multilogin-labs</p>
+<div class="footer-mini-links">
+<a href="/tools/multilogin-discount/">SAAS50 verifier</a>
+<a href="/site-map/">Sitemap</a>
+<a href="/catalog/">Catalog</a>
+<a href="/feeds/lab-updates.xml">RSS</a>
+<a href="/compare/">Compare</a>
+<a href="/guides/">Guides</a>
+</div>
 </div>
 </footer>
 <script defer src="/assets/js/site.js"></script>
-<script type="speculationrules">{"prefetch":[{"source":"document","where":{"href_matches":"/go/multilogin*"},"eagerness":"moderate"}]}</script>
+<script type="speculationrules">{"prefetch":[{"source":"document","where":{"href_matches":"*multilogin.com/pricing*"},"eagerness":"moderate"}]}</script>
 </body>
 </html>

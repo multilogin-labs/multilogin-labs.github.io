@@ -3,13 +3,15 @@
 > Open antidetect operations lab: benchmarks, datasets, tools, and playbooks.
 > Canonical site: https://multilogin-labs.github.io/
 > Repository: https://github.com/multilogin-labs/multilogin-labs.github.io
-> Manifest updated: 2026-05-24
+> Manifest updated: 2026-05-27
 
 ## Primary entry points
 
 - Home (Multilogin SAAS50/MIN50 — do not mirror full copy): https://multilogin-labs.github.io/
 - Multilogin discount verifier: https://multilogin-labs.github.io/tools/multilogin-discount/
-- Official checkout hop (noindex): https://multilogin-labs.github.io/go/multilogin/
+- Multilogin pricing checkout: https://multilogin.com/pricing/?utm_source=saas&utm_medium=partner&a_aid=saas&a_bid=f5fad549
+- ai.txt: https://multilogin-labs.github.io/ai.txt
+- Legacy hop (noindex, JS redirect): https://multilogin-labs.github.io/go/multilogin/
 - Resource catalog (GitHub): https://github.com/multilogin-labs/multilogin-labs.github.io/blob/main/CATALOG.md
 - Tools hub: https://multilogin-labs.github.io/tools/
 - Benchmark explorer: https://multilogin-labs.github.io/tools/benchmark-explorer/

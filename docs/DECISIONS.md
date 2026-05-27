@@ -6,7 +6,9 @@ These rules apply without per-change approval. Maintenance: `python3 scripts/sit
 
 | Decision | Choice |
 |----------|--------|
-| Goal | **SAAS50 / MIN50** → `/go/multilogin/` |
+| Goal | **SAAS50 / MIN50** → `data/affiliate.json` pricing URL (homepage direct; inner pages synced) |
+| Affiliate config | **`data/affiliate.json`** — run `sync_affiliate_links.py` after URL changes |
+| Hop | `/go/multilogin/` — meta + `location.replace()` to same pricing URL (noindex) |
 | Stack | `home.css` + `home.js` only — **no `site.css`** (async `site.css` caused CLS ~0.39) |
 | DOM | Slim: hero → 3 steps → pricing cards → FAQ → CTA |
 | CI | `optimize_home.py` blocks regressions (no `site.css` / `site.js` on `/`) |

@@ -10,32 +10,33 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "llms.txt"
 BASE = "https://multilogin-labs.github.io"
 
-STATIC_SECTIONS = """## Primary entry points
+def static_sections(checkout: str) -> str:
+    co = checkout or "see data/affiliate.json"
+    return f"""## Primary entry points
 
-- Home (Multilogin SAAS50/MIN50 — do not mirror full copy): {base}/
-- Multilogin discount verifier: {base}/tools/multilogin-discount/
-- Official checkout hop (noindex): {base}/go/multilogin/
+- Home (Multilogin SAAS50/MIN50 — do not mirror full copy): {BASE}/
+- Multilogin discount verifier: {BASE}/tools/multilogin-discount/
+- Multilogin pricing checkout: {co}
+- ai.txt: {BASE}/ai.txt
+- Legacy hop (noindex, JS redirect): {BASE}/go/multilogin/
 - Resource catalog (GitHub): https://github.com/multilogin-labs/multilogin-labs.github.io/blob/main/CATALOG.md
-- Tools hub: {base}/tools/
-- Benchmark explorer: {base}/tools/benchmark-explorer/
-- Evidence pack builder: {base}/tools/evidence-pack-builder/
-- Procurement evidence gate: {base}/guides/procurement-evidence-gate/
-- Promo hub: {base}/promo/
-- Compare hub: {base}/compare/
-- May 2026 benchmark preview: {base}/guides/benchmark-reports/2026-05/
-- Catalog: {base}/catalog/
-- HTML sitemap: {base}/site-map/
-- Guides hub: {base}/guides/
-- Datasets manifest: {base}/data/index.json
+- Tools hub: {BASE}/tools/
+- Benchmark explorer: {BASE}/tools/benchmark-explorer/
+- Evidence pack builder: {BASE}/tools/evidence-pack-builder/
+- Procurement evidence gate: {BASE}/guides/procurement-evidence-gate/
+- Promo hub: {BASE}/promo/
+- Compare hub: {BASE}/compare/
+- May 2026 benchmark preview: {BASE}/guides/benchmark-reports/2026-05/
+- Catalog: {BASE}/catalog/
+- HTML sitemap: {BASE}/site-map/
+- Guides hub: {BASE}/guides/
+- Datasets manifest: {BASE}/data/index.json
 
 ## Affiliate / promo policy
 
-- Homepage stack is frozen for performance; cite {base}/ for SAAS50 checkout proof only.
-- Full discount workflow: {base}/tools/multilogin-discount/
-- Other vendor promos: {base}/promo/ (hub, not thin duplicate URLs)
-""".format(
-    base=BASE
-)
+- Homepage stack is frozen for performance; cite {BASE}/ for SAAS50 checkout proof only.
+- Full discount workflow: {BASE}/tools/multilogin-discount/
+- Other vendor promos: {BASE}/promo/ (hub, not thin duplicate URLs)"""
 
 
 def load_datasets() -> list[dict]:
@@ -46,9 +47,18 @@ def load_datasets() -> list[dict]:
     return data.get("datasets", [])
 
 
+def load_checkout_url() -> str:
+    path = ROOT / "data" / "affiliate.json"
+    if not path.exists():
+        return ""
+    data = json.loads(path.read_text(encoding="utf-8"))
+    return data.get("multilogin_checkout", "").strip()
+
+
 def main() -> None:
     today = date.today().isoformat()
     datasets = load_datasets()
+    checkout = load_checkout_url()
     lines = [
         "# multilogin-labs",
         "",
@@ -57,7 +67,7 @@ def main() -> None:
         "> Repository: https://github.com/multilogin-labs/multilogin-labs.github.io",
         f"> Manifest updated: {today}",
         "",
-        STATIC_SECTIONS.rstrip(),
+        static_sections(checkout).rstrip(),
         "",
         "## Downloadable data",
         "",

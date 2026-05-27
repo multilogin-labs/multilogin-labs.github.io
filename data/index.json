@@ -1,11 +1,12 @@
 {
   "name": "multilogin-labs datasets",
-  "updated": "2026-05-24",
+  "updated": "2026-05-27",
   "base_url": "https://multilogin-labs.github.io/data/",
   "schemas": {
     "benchmark": "https://multilogin-labs.github.io/data/schemas/benchmark-v1.schema.json",
     "checklist": "https://multilogin-labs.github.io/data/schemas/checklist-v1.schema.json"
   },
+  "affiliate": "https://multilogin-labs.github.io/data/affiliate.json",
   "datasets": [
     {
       "id": "benchmark-matrix-2026-04",

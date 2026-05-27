@@ -2,6 +2,52 @@
 
 All notable changes to this repository are documented here.
 
+## [2026.05.27c] — Research polish pass
+
+### Added
+- `scripts/upgrade_polish.py` — footers, compare OG (SAAS50 image), robots preview, `data-year` fix
+- `docs/RESEARCH-UPGRADES.md` — audit log + script map for maintainers
+
+### Changed
+- Thin-footers (procurement, catalog, …) → mini discovery links
+- Tier-1 **compare/** pages: OG/Twitter image → `multilogin-saas50-1200.webp`
+- ~45 pages: `data-year=""` → `data-year` (site.js fills year)
+- `site-map/`: viewport, JSON-LD, robots preview, speculation rules
+- `benchmark-explorer/`: footer links + pricing CTA in table note
+
+## [2026.05.27b] — Sitewide UX upgrade
+
+### Added
+- `scripts/upgrade_sitewide.py` — announcement bar, lab CTA, toast, dns-prefetch, speculation rules on ~32 pages
+
+### Changed
+- Guides, about, contact, benchmark reports, tools hub: unified SAAS50 announcement + end-of-page lab CTA
+- `site.css` — `.lab-cta` panel styling
+- Skipped: homepage, privacy/terms, site-map, redirect stubs
+
+## [2026.05.27] — Inner site upgrade batch
+
+### Added
+- `ai.txt` — pointer to llms.txt + canonical checkout URL
+- `scripts/upgrade_inner_site.py` — sponsored rel, announcement bar, catalog cards, dns-prefetch
+
+### Changed
+- Compare/tools pages: `rel="sponsored"` on pricing links; unified announcement bar
+- `/catalog/` — Multilogin discount card, May matrix note, procurement links
+- Sitemap: `ai.txt`, `data/affiliate.json`
+- `llms.txt` — full checkout URL from affiliate.json
+
+## [2026.05.24m] — Affiliate pricing URL sitewide
+
+### Added
+- `data/affiliate.json` — single source for Multilogin pricing checkout URL
+- `scripts/sync_affiliate_links.py` + `verify_affiliate.py` — sync inner pages; CI guard
+
+### Changed
+- `/go/multilogin/` — meta refresh + `location.replace()` to pricing URL (fixes stale hop)
+- 23 inner pages: `/go/multilogin` → direct `multilogin.com/pricing` affiliate link
+- Homepage unchanged (already direct pricing links)
+
 ## [2026.05.24k] — Homepage audit pass
 
 ### Changed (index.html only)

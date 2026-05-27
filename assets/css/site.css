@@ -408,6 +408,16 @@ h3 {
   text-underline-offset: 2px;
 }
 
+.lab-cta .panel {
+  border-color: rgba(42, 157, 143, 0.28);
+  background: linear-gradient(135deg, var(--panel), rgba(42, 157, 143, 0.06));
+}
+
+.lab-cta h2 {
+  font-size: 1.15rem;
+  margin-bottom: 0.35rem;
+}
+
 .hero-layout {
   align-items: center;
   gap: 1.5rem;

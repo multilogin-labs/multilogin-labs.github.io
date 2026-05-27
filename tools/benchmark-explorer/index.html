@@ -4,6 +4,8 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <!-- mll-head -->
+<link rel="dns-prefetch" href="https://multilogin.com"/>
+<link rel="preconnect" href="https://multilogin.com" crossorigin/>
 <link href="https://multilogin-labs.github.io/feeds/lab-updates.xml" rel="alternate" title="multilogin-labs Lab Updates RSS" type="application/rss+xml"/>
 <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml"/>
 <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml"/>
@@ -72,6 +74,7 @@
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to main content</a>
+<div class="site-announcement">SAAS50 = <strong>50% off</strong> plans · MIN50 = cloud phone — <a href="https://multilogin.com/pricing/?utm_source=saas&amp;utm_medium=partner&amp;a_aid=saas&amp;a_bid=f5fad549" rel="sponsored noopener noreferrer" target="_blank">Multilogin pricing →</a></div>
 <div aria-live="polite" class="toast" id="site-toast"></div>
 <header class="site-header">
 <div class="container nav-wrap">
@@ -146,11 +149,12 @@
 </main>
 <footer class="site-footer">
 <div class="container footer-bottom-row">
-<p class="small">© <span data-year=""></span> multilogin-labs</p>
+<p class="small">© <span data-year></span> multilogin-labs</p>
 <a href="https://github.com/multilogin-labs/multilogin-labs.github.io">GitHub</a>
 </div>
 </footer>
 <script defer src="/assets/js/site.js"></script>
 <script defer src="/assets/js/benchmark-explorer.js"></script>
+<script type="speculationrules">{"prefetch":[{"source":"document","where":{"href_matches":"*multilogin.com/pricing*"},"eagerness":"moderate"}]}</script>
 </body>
 </html>

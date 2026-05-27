@@ -8,6 +8,7 @@ Allow: /catalog/
 Allow: /site-map/
 Allow: /feeds/
 Allow: /llms.txt
+Allow: /ai.txt
 Allow: /humans.txt
 Allow: /security.txt
 

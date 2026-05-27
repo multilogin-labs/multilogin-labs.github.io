@@ -10,6 +10,11 @@ ROOT = Path(__file__).resolve().parents[1]
 
 STEPS: list[tuple[str, list[str]]] = [
     ("Homepage perf guardrails", ["python3", "scripts/optimize_home.py"]),
+    ("Affiliate URL sync (data/affiliate.json)", ["python3", "scripts/sync_affiliate_links.py"]),
+    ("Inner site upgrade (rel, catalog, ai.txt)", ["python3", "scripts/upgrade_inner_site.py"]),
+    ("Sitewide UX (announcement, CTA, prefetch)", ["python3", "scripts/upgrade_sitewide.py"]),
+    ("Polish (footers, compare OG, meta)", ["python3", "scripts/upgrade_polish.py"]),
+    ("Verify affiliate hop + homepage", ["python3", "scripts/verify_affiliate.py"]),
     ("Regenerate llms.txt", ["python3", "scripts/generate_llms_txt.py"]),
     ("Performance (remove blocking fonts)", ["python3", "scripts/optimize_perf.py"]),
     ("Inner pages perf (CLS, prefetch; skip homepage)", ["python3", "scripts/optimize_inner_pages.py"]),

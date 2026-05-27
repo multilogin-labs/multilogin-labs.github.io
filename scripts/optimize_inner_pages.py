@@ -10,7 +10,7 @@ HOMEPAGE = ROOT / "index.html"
 BASE_CSS = "https://multilogin-labs.github.io/assets/css/site.css"
 SPECULATION = (
     '<script type="speculationrules">'
-    '{"prefetch":[{"source":"document","where":{"href_matches":"/go/multilogin*"},'
+    '{"prefetch":[{"source":"document","where":{"href_matches":"*multilogin.com/pricing*"},'
     '"eagerness":"moderate"}]}</script>'
 )
 ABS_SITE_CSS = re.compile(
@@ -47,7 +47,7 @@ def patch_html(text: str) -> str:
         new,
     )
     new = AFF_STICKY_OPEN.sub(r'<aside class="aff-sticky" hidden\1', new)
-    if "/go/multilogin" in new and "speculationrules" not in new:
+    if "multilogin.com/pricing" in new and "speculationrules" not in new:
         new = new.replace("</body>", f"{SPECULATION}\n</body>", 1)
     return new
 

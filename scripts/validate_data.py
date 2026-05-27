@@ -60,7 +60,9 @@ def main() -> int:
     errors = 0
     for path in sorted(DATA.glob("*.json")):
         try:
-            if path.name == "index.json":
+            if path.name == "affiliate.json":
+                print(f"OK {path.relative_to(ROOT)}")
+            elif path.name == "index.json":
                 validate_index(path)
             elif "checklist" in path.name:
                 validate_checklist(path)

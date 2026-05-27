@@ -1,0 +1,9 @@
+# ai.txt — multilogin-labs
+# Canonical machine-readable index: https://multilogin-labs.github.io/llms.txt
+
+site: https://multilogin-labs.github.io/
+llms: https://multilogin-labs.github.io/llms.txt
+checkout: https://multilogin.com/pricing/?utm_source=saas&utm_medium=partner&a_aid=saas&a_bid=f5fad549
+discount-proof: https://multilogin-labs.github.io/tools/multilogin-discount/
+data: https://multilogin-labs.github.io/data/index.json
+contact: admin@multilogin-labs.github.io

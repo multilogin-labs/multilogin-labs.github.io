@@ -10,17 +10,30 @@ BASE = "https://multilogin-labs.github.io"
 OG_PROMO = f"{BASE}/assets/img/multilogin-saas50-1200.webp"
 OG_CHECKOUT = f"{BASE}/assets/img/multilogin-promo-code-saas50-checkout-proof-1024.webp"
 
-AFF_NAV = """<nav aria-label="Main navigation" class="nav-links">
+
+def checkout_href() -> str:
+    import json
+
+    raw = json.loads((ROOT / "data" / "affiliate.json").read_text(encoding="utf-8"))
+    return raw["multilogin_checkout"].replace("&", "&amp;")
+
+
+def aff_nav() -> str:
+    href = checkout_href()
+    return f"""<nav aria-label="Main navigation" class="nav-links">
 <a href="/">Home</a>
 <a href="/#multilogin-price">Redeem steps</a>
-<a href="/go/multilogin" rel="sponsored noopener noreferrer" target="_blank">Checkout</a>
+<a href="{href}" rel="sponsored noopener noreferrer" target="_blank">Checkout</a>
 <a href="/promo/">Other promos</a>
 <a href="/compare/">Compare</a>
 </nav>"""
 
-STICKY = """
+
+def sticky_block() -> str:
+    href = checkout_href()
+    return f"""
 <aside class="aff-sticky" hidden id="aff-sticky">
-<a class="btn btn-primary" href="/go/multilogin" rel="sponsored noopener noreferrer" target="_blank">SAAS50 — 50% off</a>
+<a class="btn btn-primary" href="{href}" rel="sponsored noopener noreferrer" target="_blank">SAAS50 — 50% off</a>
 <button aria-label="Copy promo code SAAS50" class="btn btn-ghost aff-sticky-copy copy-code" data-copy-code="SAAS50" type="button">Copy SAAS50</button>
 </aside>
 """
@@ -113,7 +126,7 @@ def fix_og_image(text: str, image_url: str = OG_PROMO) -> str:
 def add_sticky(text: str) -> str:
     if "aff-sticky" in text:
         return text
-    return text.replace("</footer>", STICKY + "\n</footer>", 1)
+    return text.replace("</footer>", sticky_block() + "\n</footer>", 1)
 
 
 def patch_discount_extras(text: str) -> str:
@@ -133,7 +146,7 @@ def patch_discount_extras(text: str) -> str:
 def patch_file(path: Path, body_class: str = "aff-page", og_image: str = OG_PROMO) -> bool:
     raw = path.read_text(encoding="utf-8")
     new = raw
-    new = NAV_RE.sub(AFF_NAV, new, count=1)
+    new = NAV_RE.sub(aff_nav(), new, count=1)
     new = add_body_class(new, body_class)
     new = add_perf_hints(new)
     new = fix_og_image(new, og_image)

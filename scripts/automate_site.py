@@ -35,9 +35,10 @@ def main() -> int:
         print("WARN: homepage already references site.css", file=sys.stderr)
 
     steps: list[list[str]] = [
+        ["python3", "scripts/sync_affiliate_links.py"],
+        ["python3", "scripts/verify_affiliate.py"],
         ["python3", "scripts/generate_llms_txt.py"],
         ["python3", "scripts/site_maintenance.py"],
-        ["python3", "scripts/aff_funnel.py"],
     ]
     failed = False
     for cmd in steps:
