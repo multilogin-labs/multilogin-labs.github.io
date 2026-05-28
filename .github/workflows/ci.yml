@@ -43,11 +43,14 @@ jobs:
       - name: Full site automation (maintenance + llms; homepage guard)
         run: python3 scripts/automate_site.py
 
-      - name: Regenerate sitemap (must be up-to-date)
+      - name: Regenerate sitemap (structural drift only — ignore lastmod dates)
         run: |
           python3 scripts/migrate_site.py
-          git diff --exit-code sitemap.xml \
-            || (echo "::error::sitemap.xml out of date — run scripts/migrate_site.py locally and commit" && exit 1)
+          # Compare ignoring <lastmod> values so timezone drift between commit
+          # and CI runner doesn't fail the build. URL set and priorities still gated.
+          diff <(git show HEAD:sitemap.xml | grep -v '<lastmod>') \
+               <(grep -v '<lastmod>' sitemap.xml) \
+            || (echo "::error::sitemap.xml URL set out of date — run scripts/migrate_site.py locally and commit" && exit 1)
 
       - name: Verify homepage performance guardrails
         run: python3 scripts/optimize_home.py
