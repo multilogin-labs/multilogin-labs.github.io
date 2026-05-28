@@ -221,6 +221,17 @@ def write_html_sitemap(urls: list[tuple[str, str, str]]) -> None:
 <meta content="Complete HTML sitemap of indexable multilogin-labs pages for crawlers and readers. Updated {TODAY}." name="description"/>
 <meta content="index,follow,max-image-preview:large" name="robots"/>
 <link href="{BASE}/site-map/" rel="canonical"/>
+<meta content="HTML Sitemap — All Indexable Pages | multilogin-labs" property="og:title"/>
+<meta content="Reader-facing index of every URL we intend Google to index. Updated {TODAY}." property="og:description"/>
+<meta content="{BASE}/site-map/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="multilogin-labs" property="og:site_name"/>
+<meta content="{BASE}/assets/img/og-lab.svg" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="{BASE}/assets/img/og-lab.svg" name="twitter:image"/>
 <link href="{BASE}/assets/css/site.css" rel="stylesheet"/>
 <script type="application/ld+json">
 {{

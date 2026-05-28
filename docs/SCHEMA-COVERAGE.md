@@ -16,8 +16,8 @@
 - Organization: 3
 - Offer: 2
 - HowTo: 2
-- WebSite: 1
 - ImageObject: 1
+- WebSite: 1
 - VideoObject: 1
 - ContactPage: 1
 - AboutPage: 1

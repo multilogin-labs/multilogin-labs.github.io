@@ -176,6 +176,14 @@ def add_social_meta(text: str, canonical: str | None, title: str | None, desc: s
             f'name="twitter:title"/>\n<meta content="{esc}" name="twitter:description"/>',
             1,
         )
+
+    if 'property="og:type"' not in text and 'property="og:title"' in text:
+        og_type = '<meta content="article" property="og:type"/>'
+        text = text.replace(
+            'property="og:title"/>',
+            f'property="og:title"/>\n{og_type}',
+            1,
+        )
     return text
 
 

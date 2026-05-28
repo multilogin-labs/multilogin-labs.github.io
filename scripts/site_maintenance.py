@@ -26,6 +26,8 @@ STEPS: list[tuple[str, list[str]]] = [
     ("Schema coverage report", ["python3", "scripts/schema_coverage.py"]),
     ("Sitewide a11y guard", ["python3", "scripts/a11y_check.py"]),
     ("Indexability audit (robots, canonical, sitemap)", ["python3", "scripts/indexability_audit.py"]),
+    ("Open Graph audit (og:*, twitter:*)", ["python3", "scripts/og_audit.py"]),
+    ("Link safety audit (sponsored, noopener)", ["python3", "scripts/link_safety.py"]),
     ("Index health report", ["python3", "scripts/index_health.py"]),
     ("Internal link audit", ["python3", "scripts/internal_link_audit.py"]),
     ("Content freshness report", ["python3", "scripts/content_freshness.py"]),
