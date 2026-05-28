@@ -37,6 +37,10 @@ Auto-maintained notes from sitewide audit passes. Run: `python3 scripts/automate
 | `schema_coverage.py` | Sitewide schema audit (`docs/SCHEMA-COVERAGE.md`) |
 | `a11y_check.py` | Sitewide a11y guard (lang, h1, skip-link, alt) |
 | `upgrade_promo_pages.py` | Indexable promo detail pages with per-vendor research + cross-links |
+| `indexability_audit.py` | Hard gate: robots + canonical + JSON-LD + title + description + sitemap |
+| `link_safety.py` | Hard gate: sponsored on revenue anchors, noopener on target=_blank |
+| `og_audit.py` | Hard gate: og:*, twitter:*, same-origin asset existence |
+| `add_reading_time.py` | Reading-time meta + `timeRequired` schema on 25 guides |
 | `sync_affiliate_links.py` | Checkout URL + `/go/` hop |
 | `upgrade_inner_site.py` | sponsored rel, catalog, ai.txt |
 | `upgrade_sitewide.py` | announcement, prefetch, lab CTA |
@@ -50,3 +54,4 @@ Auto-maintained notes from sitewide audit passes. Run: `python3 scripts/automate
 - `docs/INTERNAL-LINK-AUDIT.md`
 - `docs/CONTENT-FRESHNESS.md`
 - `docs/SCHEMA-COVERAGE.md`
+- `docs/INDEXABILITY.md`

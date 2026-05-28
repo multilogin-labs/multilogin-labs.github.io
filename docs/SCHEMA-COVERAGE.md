@@ -14,11 +14,11 @@
 - ItemList: 4
 - WebApplication: 4
 - Organization: 3
-- Offer: 2
 - HowTo: 2
+- Offer: 2
 - ImageObject: 1
-- WebSite: 1
 - VideoObject: 1
+- WebSite: 1
 - ContactPage: 1
 - AboutPage: 1
 

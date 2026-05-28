@@ -1483,3 +1483,44 @@ body.has-aff-sticky {
     column-count: 1;
   }
 }
+
+@media print {
+  :root { color-scheme: light; }
+  body { background: #fff !important; color: #000 !important; }
+  .site-announcement,
+  .aff-sticky,
+  .site-toast,
+  .nav-links,
+  .footer-mini-links,
+  .footer-badges,
+  .speculation,
+  script,
+  .skip-link,
+  .lab-cta,
+  nav,
+  .hero-actions,
+  .related-links { display: none !important; }
+  .site-header,
+  .site-footer { border: none !important; padding: 0.25rem 0 !important; }
+  .site-header .logo,
+  .site-footer .footer-bottom-row { color: #000 !important; }
+  a { color: #000 !important; text-decoration: underline; }
+  a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 0.85em; word-break: break-all; }
+  a[href^="/"]::after { content: " (https://multilogin-labs.github.io" attr(href) ")"; font-size: 0.85em; }
+  main { padding: 0 !important; max-width: none !important; }
+  .container { max-width: none !important; padding: 0 !important; }
+  .section { page-break-inside: avoid; padding: 0.5rem 0 !important; }
+  h1, h2, h3 { page-break-after: avoid; color: #000 !important; }
+  .panel, .card, .decision-card, .score-card { box-shadow: none !important; border: 1px solid #ccc !important; background: #fff !important; }
+  table { border-collapse: collapse !important; }
+  table, th, td { border: 1px solid #999 !important; }
+  blockquote { border-left: 3px solid #666 !important; color: #000 !important; }
+  .badge { background: none !important; color: #000 !important; border: 1px solid #000 !important; padding: 0 0.25rem; }
+  .disclosure { font-style: italic; }
+  .breadcrumb { font-size: 0.85em; color: #666 !important; }
+  @page { margin: 1.6cm 1.4cm; }
+}
+
+.hero-center { text-align: center; }
+.hero-center .lead { margin-inline: auto; max-width: 60ch; }
+.hero-actions-center { justify-content: center; }

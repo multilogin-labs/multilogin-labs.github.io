@@ -21,6 +21,7 @@ STEPS: list[tuple[str, list[str]]] = [
     ("Upgrade promo detail pages (indexable)", ["python3", "scripts/upgrade_promo_pages.py"]),
     ("Affiliate funnel pages", ["python3", "scripts/aff_funnel.py"]),
     ("Enhance pages (OG, breadcrumbs, dates)", ["python3", "scripts/enhance_pages.py"]),
+    ("Reading time + timeRequired schema (guides)", ["python3", "scripts/add_reading_time.py"]),
     ("SEO optimize (redirects, sitemap, links)", ["python3", "scripts/seo_optimize.py"]),
     ("Normalize + validate JSON-LD (skip homepage)", ["python3", "scripts/normalize_jsonld.py"]),
     ("Schema coverage report", ["python3", "scripts/schema_coverage.py"]),

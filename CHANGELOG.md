@@ -2,6 +2,29 @@
 
 All notable changes to this repository are documented here.
 
+## [2026.05.28c] — OG cards, link safety, reading-time, print
+
+### Added
+- `scripts/link_safety.py` — sitewide gate: revenue anchors require `rel=sponsored`; any `target=_blank` requires `noopener`/`noreferrer`. Covers 169 revenue + 222 new-tab anchors.
+- `scripts/og_audit.py` — every indexable page must have `og:title/description/url/type/image` (+ width/height) + `twitter:card=summary_large_image` + `twitter:image`. Asserts same-origin OG images exist on disk.
+- `scripts/add_reading_time.py` — counts words in `<main>`, injects `twitter:label1/data1` (visible reading-time on Twitter cards) and merges `timeRequired` into Article/HowTo/TechArticle JSON-LD.
+- Print stylesheet inside `assets/css/site.css` (`@media print`) — hides nav/CTAs/announcements, expands URLs after links, removes shadows, ensures page-break-inside avoidance for sections. Procurement teams can now save guides/compare pages as clean PDFs.
+- `.hero-center` / `.hero-actions-center` utility classes (404 page).
+- `<link rel="apple-touch-icon">` on 404 page.
+
+### Changed
+- `404.html` — branded layout matching the rest of the site: SAAS50 announcement bar, "Popular destinations" grid (Decide / Validate / Activate), explicit links to sitemap/promo/datasets/llms/ai. Inline styles removed.
+- `seo_optimize.py` site-map template — full OG meta block (title/description/url/type/image/site_name + twitter:card/image + og:locale).
+- `enhance_pages.py` — backfills `og:type` on any page that has `og:title` but not `og:type` (defaults to `article`).
+- `site_maintenance.py` — runs link-safety, OG audit, and reading-time as hard CI gates.
+- 25 guide pages now expose reading time and `timeRequired` schema (ranges PT2M–PT15M).
+
+### Result
+- Link safety: 0 violations across 169 revenue anchors + 222 new-tab anchors
+- OG audit: 0 violations across 73 indexable pages
+- Lint: ruff clean
+- Homepage fingerprint guard still green
+
 ## [2026.05.28b] — Indexability gate 100%
 
 ### Added

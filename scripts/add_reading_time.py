@@ -38,21 +38,21 @@ def minutes(words: int) -> int:
     return max(1, round(words / WPM))
 
 
+TW_IMG_TAG = re.compile(r'(<meta\b[^>]*\bname=["\']twitter:image["\'][^>]*>)', re.I)
+
+
 def inject_twitter_label(text: str, mins: int) -> str:
     if EXISTING_LABEL.search(text):
         return text
     meta = (
         f'<meta name="twitter:label1" content="Reading time"/>\n'
-        f'<meta name="twitter:data1" content="{mins} min read"/>\n'
+        f'<meta name="twitter:data1" content="{mins} min read"/>'
     )
-    if 'name="twitter:image"' in text:
-        return text.replace(
-            'name="twitter:image"/>',
-            'name="twitter:image"/>\n' + meta.rstrip("\n"),
-            1,
-        )
+    m = TW_IMG_TAG.search(text)
+    if m:
+        return text[: m.end()] + "\n" + meta + text[m.end():]
     if "</head>" in text:
-        return text.replace("</head>", meta + "</head>", 1)
+        return text.replace("</head>", meta + "\n</head>", 1)
     return text
 
 
