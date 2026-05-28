@@ -4,7 +4,7 @@ Updated: 2026-05-28
 
 ## Snapshot
 
-- Indexable HTML pages tracked: **72**
+- Indexable HTML pages tracked: **73**
 - Stale >30 days: **0**
 - Stale >60 days: **0**
 - Stale >90 days: **0**

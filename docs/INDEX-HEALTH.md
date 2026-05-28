@@ -4,8 +4,8 @@ Updated: 2026-05-28
 
 ## Snapshot
 
-- Sitemap URLs: **84**
-- Indexable HTML URLs: **72**
+- Sitemap URLs: **85**
+- Indexable HTML URLs: **73**
 - Orphan indexable URLs: **0**
 - Low inlink URLs (<2): **0**
 

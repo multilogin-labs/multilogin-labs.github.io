@@ -129,6 +129,21 @@ Machine-readable site index: **[llms.txt](./llms.txt)** (also at `https://multil
 
 ---
 
+## Related projects (multilogin-labs org)
+
+Four open-source MIT-licensed repos ship under the [multilogin-labs](https://github.com/multilogin-labs) organization:
+
+| Repo | What it is |
+|------|------------|
+| [multilogin-labs/multilogin-labs](https://github.com/multilogin-labs/multilogin-labs) | Official partner hub — 90-endpoint API docs, 16 languages, 55+ guides, 30 country playbooks, 13 platform playbooks, CLI (`npx mlx-labs`). |
+| [multilogin-labs/Cloud-Phone](https://github.com/multilogin-labs/Cloud-Phone) | Polymorphic mobile orchestration framework — device SDK (auto Appium/ADB), stealth validator, production flows. |
+| [multilogin-labs/stealth-cloudphone-farm](https://github.com/multilogin-labs/stealth-cloudphone-farm) | Infrastructure-first Python framework — no session starts before hardware hygiene checks pass. |
+| [multilogin-labs/multilogin-labs.github.io](https://github.com/multilogin-labs/multilogin-labs.github.io) | Source of this lab site (you are here). |
+
+Live overview with role-based picks: **[/open-source/](https://multilogin-labs.github.io/open-source/)**.
+
+---
+
 ## Contributing
 
 See [CONTRIBUTING.md](./CONTRIBUTING.md). We welcome dataset updates, tool improvements, and reproducible playbook additions—not vendor doc copies.

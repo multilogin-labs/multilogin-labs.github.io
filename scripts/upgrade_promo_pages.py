@@ -433,6 +433,7 @@ def page_html(slug: str, label: str, category: str, risk_short: str, validation_
 <p class=\"small\">© <span data-year></span> multilogin-labs</p>
 <div class=\"footer-mini-links\">
 <a href=\"/tools/multilogin-discount/\">SAAS50 verifier</a>
+<a href=\"/open-source/\">Open-source</a>
 <a href=\"/site-map/\">Sitemap</a>
 <a href=\"/catalog/\">Catalog</a>
 <a href=\"/feeds/lab-updates.xml\">RSS</a>

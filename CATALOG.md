@@ -87,6 +87,21 @@ curl -sL https://multilogin-labs.github.io/data/benchmark-matrix-2026-04.json | 
 
 ---
 
+## Sister open-source projects
+
+Four MIT-licensed repos under the [multilogin-labs](https://github.com/multilogin-labs) GitHub organization:
+
+| Repo | Focus |
+|------|-------|
+| [multilogin-labs/multilogin-labs](https://github.com/multilogin-labs/multilogin-labs) | Multilingual hub — 90 API endpoints, CLI, 55+ guides, 30 country playbooks |
+| [multilogin-labs/Cloud-Phone](https://github.com/multilogin-labs/Cloud-Phone) | Polymorphic mobile orchestration framework with stealth validator |
+| [multilogin-labs/stealth-cloudphone-farm](https://github.com/multilogin-labs/stealth-cloudphone-farm) | Infrastructure-first Python framework for cloud phone automation |
+| [multilogin-labs/multilogin-labs.github.io](https://github.com/multilogin-labs/multilogin-labs.github.io) | Source of this site (open datasets, CI-grade automation) |
+
+Live hub: **[/open-source/](https://multilogin-labs.github.io/open-source/)**.
+
+---
+
 ## Trust & governance
 
 - [Editorial policy](https://multilogin-labs.github.io/editorial-policy/)

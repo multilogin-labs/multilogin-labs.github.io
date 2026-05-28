@@ -1,8 +1,8 @@
 # Indexability Audit
 
-- Indexable HTML pages: **73**
-- Sitemap entries (HTML): **73**
-- Sitemap entries (total): **84**
+- Indexable HTML pages: **74**
+- Sitemap entries (HTML): **74**
+- Sitemap entries (total): **85**
 - Failures: **0**
 
 ## Failures

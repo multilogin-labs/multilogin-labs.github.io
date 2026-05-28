@@ -1,6 +1,6 @@
 {
   "name": "multilogin-labs datasets",
-  "updated": "2026-05-27",
+  "updated": "2026-05-28",
   "base_url": "https://multilogin-labs.github.io/data/",
   "schemas": {
     "benchmark": "https://multilogin-labs.github.io/data/schemas/benchmark-v1.schema.json",
@@ -42,5 +42,31 @@
   ],
   "tools": {
     "explorer": "https://multilogin-labs.github.io/tools/benchmark-explorer/"
-  }
+  },
+  "related_repositories": [
+    {
+      "name": "multilogin-labs/multilogin-labs",
+      "url": "https://github.com/multilogin-labs/multilogin-labs",
+      "license": "MIT",
+      "description": "Official partner hub: antidetect browser, cloud phone, multi-account, MMO automation resources across 16 languages. 90 OpenAPI endpoints, Swagger UI, CLI tools."
+    },
+    {
+      "name": "multilogin-labs/Cloud-Phone",
+      "url": "https://github.com/multilogin-labs/Cloud-Phone",
+      "license": "MIT",
+      "description": "Polymorphic mobile orchestration framework for multi-account automation on real Android cloud phones. Includes stealth validator and production flows."
+    },
+    {
+      "name": "multilogin-labs/stealth-cloudphone-farm",
+      "url": "https://github.com/multilogin-labs/stealth-cloudphone-farm",
+      "license": "MIT",
+      "description": "Open-source Python framework for scalable, resilient mobile automation on real cloud hardware. Infrastructure-first defaults — no session starts before hygiene checks pass."
+    },
+    {
+      "name": "multilogin-labs/multilogin-labs.github.io",
+      "url": "https://github.com/multilogin-labs/multilogin-labs.github.io",
+      "license": "MIT",
+      "description": "Source of the public lab site — open datasets, tools, guides, and CI-grade automation."
+    }
+  ]
 }

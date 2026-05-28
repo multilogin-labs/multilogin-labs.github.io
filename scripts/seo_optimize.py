@@ -193,7 +193,7 @@ def write_html_sitemap(urls: list[tuple[str, str, str]]) -> None:
             sections["Compare"].append(entry)
         elif path.startswith("/data/"):
             sections["Data"].append(entry)
-        elif path in ("/", "/promo/", "/about/", "/contact/", "/catalog/"):
+        elif path in ("/", "/promo/", "/about/", "/contact/", "/catalog/", "/open-source/"):
             sections["Core"].append(entry)
         else:
             sections["Other"].append(entry)

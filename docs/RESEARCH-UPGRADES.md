@@ -26,6 +26,19 @@ Auto-maintained notes from sitewide audit passes. Run: `python3 scripts/automate
 - Ship full **June 2026** benchmark matrix (not preview)
 - Optional: WebP OG for compare pages under 1200px width
 
+## Backlink graph (2026.05.28d)
+
+Outbound dofollow links to sibling multilogin-labs repos surfaced from the public site:
+
+| Repo | Inbound from this site |
+|------|------------------------|
+| `multilogin-labs/multilogin-labs` | 19 |
+| `multilogin-labs/Cloud-Phone` | 17 |
+| `multilogin-labs/stealth-cloudphone-farm` | 17 |
+| `multilogin-labs/multilogin-labs.github.io` | 39 |
+
+Primary surfaces: `/open-source/` hub, `/catalog/`, `/guides/multilogin-x-open-source-blueprints/`, `/tools/multilogin-discount/`, README.md, CATALOG.md, llms.txt, data/index.json, sitewide footer (72 pages).
+
 ## Scripts map
 
 | Script | Purpose |

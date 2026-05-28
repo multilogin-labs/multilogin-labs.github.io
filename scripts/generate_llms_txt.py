@@ -31,6 +31,14 @@ def static_sections(checkout: str) -> str:
 - HTML sitemap: {BASE}/site-map/
 - Guides hub: {BASE}/guides/
 - Datasets manifest: {BASE}/data/index.json
+- Open-source sister projects: {BASE}/open-source/
+
+## Sister repositories (multilogin-labs GitHub org, MIT)
+
+- multilogin-labs hub (90 API endpoints, 16 languages): https://github.com/multilogin-labs/multilogin-labs
+- Cloud-Phone (polymorphic mobile orchestration, stealth validator): https://github.com/multilogin-labs/Cloud-Phone
+- stealth-cloudphone-farm (infrastructure-first Python framework): https://github.com/multilogin-labs/stealth-cloudphone-farm
+- This site source: https://github.com/multilogin-labs/multilogin-labs.github.io
 
 ## Affiliate / promo policy
 

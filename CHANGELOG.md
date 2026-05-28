@@ -2,6 +2,31 @@
 
 All notable changes to this repository are documented here.
 
+## [2026.05.28d] — Open-source sister projects + sitewide backlinks
+
+### Added
+- `/open-source/` — new indexable hub page (CollectionPage + ItemList + 4× SoftwareSourceCode JSON-LD) for the four MIT-licensed repos under the [multilogin-labs](https://github.com/multilogin-labs) GitHub organization: `multilogin-labs` (90-endpoint API hub, 16 languages), `Cloud-Phone` (polymorphic mobile orchestration), `stealth-cloudphone-farm` (infrastructure-first Python framework), and this site source.
+- Sitewide footer mini-link to `/open-source/` injected across 72 indexable pages (homepage stack remains locked).
+- "Sister repositories" card grid on `/catalog/` and a dedicated section on `/guides/multilogin-x-open-source-blueprints/`.
+- "Cloud phone tooling" section on `/tools/multilogin-discount/` cross-linking `Cloud-Phone` + `stealth-cloudphone-farm` from the MIN50 verifier.
+- `related_repositories` array in `data/index.json` (machine-readable for AI crawlers).
+- New `## Sister repositories` block in `llms.txt` listing all four repos.
+- README.md + CATALOG.md "Related projects" tables.
+
+### Changed
+- `scripts/migrate_site.py` — `/open-source/` registered in sitemap with priority `0.62`.
+- `scripts/seo_optimize.py` — `/open-source/` classified as Core in the HTML sitemap groups.
+- `scripts/upgrade_polish.py` — adds `inject_open_source_link()` to backfill the link into existing `footer-mini-links` blocks (idempotent, two needle patterns).
+- `scripts/upgrade_promo_pages.py` — promo page footer template now includes `/open-source/` so regenerated pages keep the link.
+- `scripts/generate_llms_txt.py` — emits "Sister repositories" section.
+
+### Result
+- 4 sibling repos receive **17–39 inbound links each** from the public site (was 0–1).
+- 72 indexable pages link to `/open-source/` (vs. 0 before).
+- Sitemap: 85 URLs (was 84). Indexable HTML: 74 (was 73). 0 orphans, 0 low-inlink URLs.
+- All hard CI gates green: indexability_audit, og_audit, link_safety, a11y_check, schema_coverage.
+- Homepage fingerprint unchanged — performance lock intact.
+
 ## [2026.05.28c] — OG cards, link safety, reading-time, print
 
 ### Added

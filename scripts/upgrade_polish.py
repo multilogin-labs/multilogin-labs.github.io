@@ -25,6 +25,7 @@ FOOTER_MINI = """<footer class="site-footer">
 <p class="small">© <span data-year></span> multilogin-labs</p>
 <div class="footer-mini-links">
 <a href="/tools/multilogin-discount/">SAAS50 verifier</a>
+<a href="/open-source/">Open-source</a>
 <a href="/site-map/">Sitemap</a>
 <a href="/catalog/">Catalog</a>
 <a href="/feeds/lab-updates.xml">RSS</a>
@@ -142,6 +143,23 @@ def patch_site_map(text: str) -> str:
     return new
 
 
+def inject_open_source_link(text: str) -> str:
+    """Backfill /open-source/ link into existing footer-mini-links (idempotent)."""
+    if 'href="/open-source/"' in text:
+        return text
+    for needle in (
+        '<a href="/tools/multilogin-discount/">SAAS50 verifier</a>',
+        '<a href="/site-map/">HTML sitemap</a>',
+    ):
+        if needle in text:
+            return text.replace(
+                needle,
+                needle + '\n<a href="/open-source/">Open-source</a>',
+                1,
+            )
+    return text
+
+
 def patch_file(path: Path, html_url: str) -> bool:
     if path.resolve() == HOMEPAGE.resolve():
         return False
@@ -154,6 +172,7 @@ def patch_file(path: Path, html_url: str) -> bool:
     new = fix_viewport(new)
     new = add_rss(new)
     new = upgrade_compare_og(new, path)
+    new = inject_open_source_link(new)
 
     if THIN_FOOTER.search(new):
         new = THIN_FOOTER.sub(FOOTER_MINI, new, count=1)
