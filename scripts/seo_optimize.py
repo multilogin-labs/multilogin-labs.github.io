@@ -49,6 +49,10 @@ def fix_promo_redirects():
         p = ROOT / "promo" / slug / "index.html"
         if not p.exists():
             continue
+        raw = p.read_text(encoding="utf-8", errors="replace")
+        # Keep enriched promo pages when explicitly marked indexable.
+        if "mll-promo-indexable" in raw:
+            continue
         url = f"/promo/#vendor-{slug}"
         p.write_text(
             REDIRECT_HTML.format(
@@ -102,6 +106,12 @@ def fix_compare_redirects():
 
 def fix_internal_links(text: str) -> str:
     for slug in PROMO_SLUGS:
+        promo_path = ROOT / "promo" / slug / "index.html"
+        is_indexable_promo = promo_path.exists() and "mll-promo-indexable" in promo_path.read_text(
+            encoding="utf-8", errors="replace"
+        )
+        if is_indexable_promo:
+            continue
         text = text.replace(f'"/promo/{slug}/"', f'"/promo/#vendor-{slug}"')
         text = text.replace(f"'/promo/{slug}/'", f"'/promo/#vendor-{slug}'")
         text = text.replace(f">{BASE}/promo/{slug}/<", f">{BASE}/promo/#vendor-{slug}<")

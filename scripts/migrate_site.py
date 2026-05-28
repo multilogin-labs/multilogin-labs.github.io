@@ -48,6 +48,9 @@ PROMO_VENDORS = [
     ("wade-browser", "Wade Browser", "vendor lock-in on profiles", "profile export format portability"),
     ("whologin", "WhoLogin", "support response under incidents", "SLA for ticket response in trial"),
 ]
+PROMO_SLUGS = [f"{slug}-promo-code" for slug, *_ in PROMO_VENDORS]
+PROMO_SLUGS[PROMO_SLUGS.index("gologin-promo-code")] = "gologin-discount-code"
+PROMO_SLUGS[PROMO_SLUGS.index("dolphin-anty-promo-code")] = "dolphin-anty-coupon"
 
 def text_replacements(content: str) -> str:
     content = content.replace("SaaS<span>Verdict</span>", "multi<span>login-labs</span>")
@@ -176,6 +179,11 @@ def collect_indexable_urls() -> list[tuple[str, str, str]]:
     add("/llms.txt", "0.38")
     add("/ai.txt", "0.37")
     add("/humans.txt", "0.30")
+    # Include enriched promo detail pages when converted from redirect stubs.
+    for slug in PROMO_SLUGS:
+        p = ROOT / "promo" / slug / "index.html"
+        if p.exists() and "mll-promo-indexable" in p.read_text(encoding="utf-8", errors="replace"):
+            add(f"/promo/{slug}/", "0.72")
     for data_file in (
         "index.json",
         "affiliate.json",

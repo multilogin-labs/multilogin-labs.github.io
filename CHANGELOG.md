@@ -8,6 +8,17 @@ All notable changes to this repository are documented here.
 - `scripts/upgrade_polish.py` — footers, compare OG (SAAS50 image), robots preview, `data-year` fix
 - `docs/RESEARCH-UPGRADES.md` — audit log + script map for maintainers
 
+## [2026.05.27d] — Indexing observability automation
+
+### Added
+- `scripts/index_health.py` → `docs/INDEX-HEALTH.md` (sitemap coverage, orphan URLs, low inlinks)
+- `scripts/internal_link_audit.py` → `docs/INTERNAL-LINK-AUDIT.md` (link graph summary)
+- `scripts/content_freshness.py` → `docs/CONTENT-FRESHNESS.md` (staleness SLA)
+
+### Changed
+- `scripts/site_maintenance.py` now runs all 3 reports every cycle
+- `docs/RESEARCH-UPGRADES.md` includes new scripts + report outputs
+
 ### Changed
 - Thin-footers (procurement, catalog, …) → mini discovery links
 - Tier-1 **compare/** pages: OG/Twitter image → `multilogin-saas50-1200.webp`

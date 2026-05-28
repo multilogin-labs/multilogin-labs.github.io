@@ -6,13 +6,31 @@ REDIRECT_HTML = """<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="theme-color" content="#2a9d8f"/>
 <meta name="robots" content="noindex,follow"/>
+<meta name="description" content="{title} has moved. Use the canonical hub URL instead."/>
 <meta http-equiv="refresh" content="0;url={url}"/>
 <link rel="canonical" href="{canonical}"/>
 <title>Moved: {title} | multilogin-labs</title>
 </head>
 <body>
-<p>This URL has moved. <a href="{url}">{link_label}</a></p>
+<main>
+<h1>Moved: {title}</h1>
+<p>This utility URL is retained for compatibility and redirects to the canonical hub.</p>
+<p><a href="{url}">{link_label}</a></p>
+<hr/>
+<p><strong>Research-first shortcut:</strong> if you are comparing promo offers, start from Multilogin evidence pages before checkout.</p>
+<ul>
+  <li><a href="/tools/multilogin-discount/">Multilogin SAAS50 + MIN50 verifier</a> (proof + checklist)</li>
+  <li><a href="/compare/multilogin-alternatives/">Multilogin alternatives overview</a> (risk/cost orientation)</li>
+  <li><a href="/go/multilogin/" rel="sponsored noopener noreferrer">Official Multilogin pricing</a></li>
+</ul>
+<p><small>Policy: this page is <code>noindex,follow</code>.</small></p>
+</main>
+<noscript>
+<p>If redirect does not trigger, use <a href="{url}">{link_label}</a>.</p>
+</noscript>
 </body>
 </html>
 """

@@ -30,9 +30,18 @@ Auto-maintained notes from sitewide audit passes. Run: `python3 scripts/automate
 
 | Script | Purpose |
 |--------|---------|
+| `index_health.py` | Sitemap vs indexable coverage report (`docs/INDEX-HEALTH.md`) |
+| `internal_link_audit.py` | Inlink/outlink graph summary (`docs/INTERNAL-LINK-AUDIT.md`) |
+| `content_freshness.py` | Stale content SLA report (`docs/CONTENT-FRESHNESS.md`) |
 | `sync_affiliate_links.py` | Checkout URL + `/go/` hop |
 | `upgrade_inner_site.py` | sponsored rel, catalog, ai.txt |
 | `upgrade_sitewide.py` | announcement, prefetch, lab CTA |
 | `upgrade_polish.py` | footers, OG compare, meta polish |
 | `enhance_pages.py` | OG, breadcrumbs, dates |
 | `optimize_home.py` | Homepage guardrails only |
+
+## Auto-generated reports
+
+- `docs/INDEX-HEALTH.md`
+- `docs/INTERNAL-LINK-AUDIT.md`
+- `docs/CONTENT-FRESHNESS.md`
