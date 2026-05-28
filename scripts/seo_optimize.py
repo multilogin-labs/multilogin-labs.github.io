@@ -38,7 +38,7 @@ PROMO_SLUGS = [
 
 
 def is_redirect(path: Path) -> bool:
-    if not path.name == "index.html":
+    if path.name != "index.html":
         return False
     text = path.read_text(encoding="utf-8", errors="replace")
     return 'http-equiv="refresh"' in text or "http-equiv='refresh'" in text
@@ -219,9 +219,30 @@ def write_html_sitemap(urls: list[tuple[str, str, str]]) -> None:
 {SITEMAP_LINK}
 <title>HTML Sitemap — All Indexable Pages | multilogin-labs</title>
 <meta content="Complete HTML sitemap of indexable multilogin-labs pages for crawlers and readers. Updated {TODAY}." name="description"/>
-<meta content="index,follow" name="robots"/>
+<meta content="index,follow,max-image-preview:large" name="robots"/>
 <link href="{BASE}/site-map/" rel="canonical"/>
 <link href="{BASE}/assets/css/site.css" rel="stylesheet"/>
+<script type="application/ld+json">
+{{
+  "@context": "https://schema.org",
+  "@graph": [
+    {{
+      "@type": "CollectionPage",
+      "name": "multilogin-labs HTML sitemap",
+      "url": "{BASE}/site-map/",
+      "description": "Reader-facing index of every URL we intend Google to index.",
+      "isPartOf": {{"@type": "WebSite", "url": "{BASE}/"}}
+    }},
+    {{
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {{"@type": "ListItem", "position": 1, "name": "Home", "item": "{BASE}/"}},
+        {{"@type": "ListItem", "position": 2, "name": "HTML sitemap", "item": "{BASE}/site-map/"}}
+      ]
+    }}
+  ]
+}}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -265,10 +286,11 @@ def write_sitemap_with_mtime():
         file_path = ROOT / rel / "index.html" if rel and not path.endswith(".json") and not path.endswith(".xml") and not path.endswith(".txt") else ROOT / rel.lstrip("/")
         if file_path.is_dir():
             file_path = file_path / "index.html"
-        if file_path.exists():
-            mtime = date.fromtimestamp(file_path.stat().st_mtime).isoformat()
-        else:
-            mtime = TODAY
+        mtime = (
+            date.fromtimestamp(file_path.stat().st_mtime).isoformat()
+            if file_path.exists()
+            else TODAY
+        )
         urls.append((loc, mtime, priority))
 
     # Reuse logic from migrate_site
@@ -285,7 +307,7 @@ def write_sitemap_with_mtime():
             "  <url>",
             f"    <loc>{loc}</loc>",
             f"    <lastmod>{lastmod}</lastmod>",
-            f"    <changefreq>weekly</changefreq>",
+            "    <changefreq>weekly</changefreq>",
             f"    <priority>{priority}</priority>",
             "  </url>",
         ]
@@ -358,7 +380,7 @@ def main():
     # Add site-map to migrate list manually in migrate_site
     print(f"Patched {n} indexable HTML files")
     print(f"Sitemap URLs: {len(urls)}")
-    print(f"HTML sitemap: /site-map/")
+    print("HTML sitemap: /site-map/")
 
 
 if __name__ == "__main__":

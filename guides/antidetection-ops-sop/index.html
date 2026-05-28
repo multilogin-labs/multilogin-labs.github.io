@@ -31,65 +31,86 @@
 <meta content="Production-ready SOP for runtime consistency, worker parity, and safer buying decisions." name="twitter:description"/>
 <link href="/assets/css/site.css" rel="stylesheet"/>
 <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
+      "@type": "TechArticle",
+      "headline": "Antidetection Ops SOP 2026",
+      "dateModified": "2026-05-27",
+      "author": {
+        "@type": "Organization",
+        "name": "multilogin-labs"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "multilogin-labs"
+      },
+      "mainEntityOfPage": "https://multilogin-labs.github.io/guides/antidetection-ops-sop/"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
         {
-          "@type": "TechArticle",
-          "headline": "Antidetection Ops SOP 2026",
-          "dateModified": "2026-05-27",
-          "author": {"@type": "Organization", "name": "multilogin-labs"},
-          "publisher": {"@type": "Organization", "name": "multilogin-labs"},
-          "mainEntityOfPage": "https://multilogin-labs.github.io/guides/antidetection-ops-sop/"
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://multilogin-labs.github.io/"
         },
         {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://multilogin-labs.github.io/"},
-            {"@type": "ListItem", "position": 2, "name": "Guides", "item": "https://multilogin-labs.github.io/guides/"},
-            {"@type": "ListItem", "position": 3, "name": "Antidetection Ops SOP", "item": "https://multilogin-labs.github.io/guides/antidetection-ops-sop/"}
-          ]
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Guides",
+          "item": "https://multilogin-labs.github.io/guides/"
         },
         {
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "How many repeated sessions are enough before scale?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Run at least three repeated clean sessions per critical flow and block rollout if a critical signal drifts."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Why does worker parity matter?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Worker context often exposes inconsistencies that are hidden in main-thread-only checks, so parity checks reduce false confidence."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "When should affiliate recommendations appear?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Only after publishing pass and fail evidence, operational caveats, and clear no-buy criteria for the tested stack."
-              }
-                        },
-                        {
-                            "@type": "Question",
-                            "name": "How often should this SOP be reviewed?",
-                            "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "Review monthly and after major browser, proxy, or automation-library changes. Publish change notes when pass-fail logic is updated."
-                            }
-            }
-          ]
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Antidetection Ops SOP",
+          "item": "https://multilogin-labs.github.io/guides/antidetection-ops-sop/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How many repeated sessions are enough before scale?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Run at least three repeated clean sessions per critical flow and block rollout if a critical signal drifts."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does worker parity matter?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Worker context often exposes inconsistencies that are hidden in main-thread-only checks, so parity checks reduce false confidence."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "When should affiliate recommendations appear?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Only after publishing pass and fail evidence, operational caveats, and clear no-buy criteria for the tested stack."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How often should this SOP be reviewed?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Review monthly and after major browser, proxy, or automation-library changes. Publish change notes when pass-fail logic is updated."
+          }
         }
       ]
     }
-    </script>
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to main content</a>

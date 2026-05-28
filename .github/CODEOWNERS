@@ -1,0 +1,14 @@
+# Default reviewer for all paths
+*       @multilogin-labs
+
+# Homepage performance lock — extra scrutiny
+/index.html             @multilogin-labs
+/assets/css/home.css    @multilogin-labs
+/assets/js/home.js      @multilogin-labs
+
+# Automation pipeline
+/scripts/               @multilogin-labs
+/.github/workflows/     @multilogin-labs
+
+# Open datasets
+/data/                  @multilogin-labs

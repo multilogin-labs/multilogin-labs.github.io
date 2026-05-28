@@ -32,101 +32,194 @@
 <meta content="Follow a step-by-step learning sequence from API runbooks and open-source blueprint conversions to onboarding, QA, and scale-readiness checks." name="twitter:description"/>
 <link href="/assets/css/site.css" rel="stylesheet"/>
 <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
+      "@type": "CollectionPage",
+      "name": "multilogin-labs Automation Guides Hub",
+      "url": "https://multilogin-labs.github.io/guides/",
+      "hasPart": [
         {
-          "@type": "CollectionPage",
-          "name": "multilogin-labs Automation Guides Hub",
-          "url": "https://multilogin-labs.github.io/guides/",
-          "hasPart": [
-            {"@type": "WebPage", "url": "https://multilogin-labs.github.io/guides/multilogin-x-api-playwright/"},
-                        {"@type": "WebPage", "url": "https://multilogin-labs.github.io/guides/antidetect-libs-playbook/"},
-                        {"@type": "WebPage", "url": "https://multilogin-labs.github.io/guides/browser-fingerprint-checklist/"},
-                        {"@type": "WebPage", "url": "https://multilogin-labs.github.io/guides/detection-tests/"},
-                                                {"@type": "WebPage", "url": "https://multilogin-labs.github.io/guides/connection-leak-tests/"},
-                                                                                                {"@type": "WebPage", "url": "https://multilogin-labs.github.io/guides/antidetection-ops-sop/"},
-                                                                                                                                                                                                {"@type": "WebPage", "url": "https://multilogin-labs.github.io/guides/evaluation-methodology/"},
-                                                                                                                                                                                                {"@type": "WebPage", "url": "https://multilogin-labs.github.io/guides/benchmark-reports/"},
-                                                                                                                                                                                                                                                                                                                                                                                                {"@type": "WebPage", "url": "https://multilogin-labs.github.io/guides/methodology-changelog/"},
-                                                                                                                                                                                                                                                                                                                                                                                                {"@type": "WebPage", "url": "https://multilogin-labs.github.io/guides/benchmark-reports/report-template/"},
-                                                                                                                                                                                                                                                                                                                                                                                                {"@type": "WebPage", "url": "https://multilogin-labs.github.io/guides/antidetect-browser-pricing-playbook/"},
-                                                                                                                                                                                                                                                                                                                                                                                                {"@type": "WebPage", "url": "https://multilogin-labs.github.io/guides/multilogin-x-open-source-blueprints/"},
-                                                                                                                                                                                                                                                                                                                                                                                                {"@type": "WebPage", "url": "https://multilogin-labs.github.io/guides/laravel-multilogin-sdk-playbook/"},
-                                                                                                                                                                                                                                                                                                                                                                                                {"@type": "WebPage", "url": "https://multilogin-labs.github.io/guides/cookie-automation-runbook/"},
-                                                                                                                                                                                                                                                                                                                                                                                                    {"@type": "WebPage", "url": "https://multilogin-labs.github.io/guides/proxy-profile-bootstrap-playbook/"},
-                                                                                                                                                                                                                                                                                                                                                                                                    {"@type": "WebPage", "url": "https://multilogin-labs.github.io/guides/multilogin-x-getting-started-roadmap/"},
-                                                                                                                                                                                                                                                                                                                                                                                                    {"@type": "WebPage", "url": "https://multilogin-labs.github.io/guides/workspace-id-and-token-setup-runbook/"},
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        {"@type": "WebPage", "url": "https://multilogin-labs.github.io/guides/multilogin-x-script-runner-playbook/"},
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        {"@type": "WebPage", "url": "https://multilogin-labs.github.io/guides/openmultilogin-risk-and-migration-guide/"},
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        {"@type": "WebPage", "url": "https://multilogin-labs.github.io/guides/mlx-api-integration-map/"},
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        {"@type": "WebPage", "url": "https://multilogin-labs.github.io/guides/google-search-indexing/"}
-          ]
+          "@type": "WebPage",
+          "url": "https://multilogin-labs.github.io/guides/multilogin-x-api-playwright/"
         },
         {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://multilogin-labs.github.io/"},
-            {"@type": "ListItem", "position": 2, "name": "Guides", "item": "https://multilogin-labs.github.io/guides/"}
-          ]
+          "@type": "WebPage",
+          "url": "https://multilogin-labs.github.io/guides/antidetect-libs-playbook/"
         },
         {
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "What should I read first if I am new?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Start with the API plus Playwright guide, then run the fingerprint checklist before scaling profile volume."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "How often should I rerun the fingerprint checklist?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Rerun it after browser updates, proxy changes, or any infrastructure shift that can alter runtime signals."
-              }
-                        },
-                        {
-                            "@type": "Question",
-                            "name": "When should I use the antidetection ops SOP guide?",
-                            "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "Use it after baseline detection checks and before procurement decisions to enforce clear go or no-go rollout gates."
-                            }
-                        },
-                        {
-                                "@type": "Question",
-                                "name": "Where can I review the exact scoring and reproducibility protocol?",
-                                "acceptedAnswer": {
-                                        "@type": "Answer",
-                                        "text": "Use the evaluation methodology guide to review weighted scoring criteria, blocker rules, and correction workflow standards."
-                                }
-                    },
-                    {
-                    "@type": "Question",
-                    "name": "Where can I track monthly benchmark changes?",
-                    "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Use the benchmark reports hub and methodology changelog to track monthly reliability updates and protocol evolution."
-                    }
-                        },
-                        {
-                                "@type": "Question",
-                                "name": "Where can I find practical playbooks converted from open-source repository patterns?",
-                                "acceptedAnswer": {
-                                        "@type": "Answer",
-                                        "text": "Use the Multilogin X open-source blueprints hub for Laravel SDK integration, cookie automation workflow, and proxy-profile bootstrap controls."
-                                }
-            }
-          ]
+          "@type": "WebPage",
+          "url": "https://multilogin-labs.github.io/guides/browser-fingerprint-checklist/"
+        },
+        {
+          "@type": "WebPage",
+          "url": "https://multilogin-labs.github.io/guides/detection-tests/"
+        },
+        {
+          "@type": "WebPage",
+          "url": "https://multilogin-labs.github.io/guides/connection-leak-tests/"
+        },
+        {
+          "@type": "WebPage",
+          "url": "https://multilogin-labs.github.io/guides/antidetection-ops-sop/"
+        },
+        {
+          "@type": "WebPage",
+          "url": "https://multilogin-labs.github.io/guides/evaluation-methodology/"
+        },
+        {
+          "@type": "WebPage",
+          "url": "https://multilogin-labs.github.io/guides/benchmark-reports/"
+        },
+        {
+          "@type": "WebPage",
+          "url": "https://multilogin-labs.github.io/guides/methodology-changelog/"
+        },
+        {
+          "@type": "WebPage",
+          "url": "https://multilogin-labs.github.io/guides/benchmark-reports/report-template/"
+        },
+        {
+          "@type": "WebPage",
+          "url": "https://multilogin-labs.github.io/guides/antidetect-browser-pricing-playbook/"
+        },
+        {
+          "@type": "WebPage",
+          "url": "https://multilogin-labs.github.io/guides/multilogin-x-open-source-blueprints/"
+        },
+        {
+          "@type": "WebPage",
+          "url": "https://multilogin-labs.github.io/guides/laravel-multilogin-sdk-playbook/"
+        },
+        {
+          "@type": "WebPage",
+          "url": "https://multilogin-labs.github.io/guides/cookie-automation-runbook/"
+        },
+        {
+          "@type": "WebPage",
+          "url": "https://multilogin-labs.github.io/guides/proxy-profile-bootstrap-playbook/"
+        },
+        {
+          "@type": "WebPage",
+          "url": "https://multilogin-labs.github.io/guides/multilogin-x-getting-started-roadmap/"
+        },
+        {
+          "@type": "WebPage",
+          "url": "https://multilogin-labs.github.io/guides/workspace-id-and-token-setup-runbook/"
+        },
+        {
+          "@type": "WebPage",
+          "url": "https://multilogin-labs.github.io/guides/multilogin-x-script-runner-playbook/"
+        },
+        {
+          "@type": "WebPage",
+          "url": "https://multilogin-labs.github.io/guides/openmultilogin-risk-and-migration-guide/"
+        },
+        {
+          "@type": "WebPage",
+          "url": "https://multilogin-labs.github.io/guides/mlx-api-integration-map/"
+        },
+        {
+          "@type": "WebPage",
+          "url": "https://multilogin-labs.github.io/guides/google-search-indexing/"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://multilogin-labs.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Guides",
+          "item": "https://multilogin-labs.github.io/guides/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What should I read first if I am new?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Start with the API plus Playwright guide, then run the fingerprint checklist before scaling profile volume."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How often should I rerun the fingerprint checklist?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Rerun it after browser updates, proxy changes, or any infrastructure shift that can alter runtime signals."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "When should I use the antidetection ops SOP guide?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Use it after baseline detection checks and before procurement decisions to enforce clear go or no-go rollout gates."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where can I review the exact scoring and reproducibility protocol?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Use the evaluation methodology guide to review weighted scoring criteria, blocker rules, and correction workflow standards."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where can I track monthly benchmark changes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Use the benchmark reports hub and methodology changelog to track monthly reliability updates and protocol evolution."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where can I find practical playbooks converted from open-source repository patterns?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Use the Multilogin X open-source blueprints hub for Laravel SDK integration, cookie automation workflow, and proxy-profile bootstrap controls."
+          }
         }
       ]
     }
-    </script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://multilogin-labs.github.io/guides/"}, "headline": "Automation Guides Hub 2026: Implementation Playbooks | multilogin-labs", "datePublished": "2026-04-11", "dateModified": "2026-05-27", "author": {"@type": "Organization", "name": "multilogin-labs"}, "publisher": {"@type": "Organization", "name": "multilogin-labs"}}</script></head>
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://multilogin-labs.github.io/guides/"
+  },
+  "headline": "Automation Guides Hub 2026: Implementation Playbooks | multilogin-labs",
+  "datePublished": "2026-04-11",
+  "dateModified": "2026-05-27",
+  "author": {
+    "@type": "Organization",
+    "name": "multilogin-labs"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "multilogin-labs"
+  }
+}
+</script></head>
 <body>
 <a class="skip-link" href="#main-content">Skip to main content</a>
 <div class="site-announcement">SAAS50 = <strong>50% off</strong> plans · MIN50 = cloud phone — <a href="https://multilogin.com/pricing/?utm_source=saas&amp;utm_medium=partner&amp;a_aid=saas&amp;a_bid=f5fad549" rel="sponsored noopener noreferrer" target="_blank">Multilogin pricing →</a></div>

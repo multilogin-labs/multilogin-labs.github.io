@@ -94,10 +94,7 @@ def build_breadcrumb(path: str, page_title: str | None) -> dict | None:
     for i, part in enumerate(parts):
         acc += f"/{part}"
         is_last = i == len(parts) - 1
-        if is_last and page_title:
-            name = page_title
-        else:
-            name = SECTION_LABELS.get(part, humanize_slug(part))
+        name = page_title if is_last and page_title else SECTION_LABELS.get(part, humanize_slug(part))
         item: dict = {"@type": "ListItem", "position": i + 2, "name": name}
         if not is_last:
             item["item"] = f"{BASE}{acc}/"
@@ -139,9 +136,12 @@ def add_social_meta(text: str, canonical: str | None, title: str | None, desc: s
         elif "<!-- mll-head -->" in text:
             text = text.replace("<!-- mll-head -->", f"<!-- mll-head -->{TWITTER_DEFAULTS}", 1)
 
-    if "og:locale" not in text:
-        if LOCALE_META not in text and 'name="twitter:card"' in text:
-            text = text.replace('name="twitter:card"/>', 'name="twitter:card"/>' + "\n" + LOCALE_META, 1)
+    if (
+        "og:locale" not in text
+        and LOCALE_META not in text
+        and 'name="twitter:card"' in text
+    ):
+        text = text.replace('name="twitter:card"/>', 'name="twitter:card"/>' + "\n" + LOCALE_META, 1)
 
     if canonical and 'property="og:url"' not in text:
         og_url = f'<meta content="{canonical}" property="og:url"/>\n'

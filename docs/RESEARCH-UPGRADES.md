@@ -33,6 +33,10 @@ Auto-maintained notes from sitewide audit passes. Run: `python3 scripts/automate
 | `index_health.py` | Sitemap vs indexable coverage report (`docs/INDEX-HEALTH.md`) |
 | `internal_link_audit.py` | Inlink/outlink graph summary (`docs/INTERNAL-LINK-AUDIT.md`) |
 | `content_freshness.py` | Stale content SLA report (`docs/CONTENT-FRESHNESS.md`) |
+| `normalize_jsonld.py` | Parse + revalidate + reformat every JSON-LD block (skip homepage) |
+| `schema_coverage.py` | Sitewide schema audit (`docs/SCHEMA-COVERAGE.md`) |
+| `a11y_check.py` | Sitewide a11y guard (lang, h1, skip-link, alt) |
+| `upgrade_promo_pages.py` | Indexable promo detail pages with per-vendor research + cross-links |
 | `sync_affiliate_links.py` | Checkout URL + `/go/` hop |
 | `upgrade_inner_site.py` | sponsored rel, catalog, ai.txt |
 | `upgrade_sitewide.py` | announcement, prefetch, lab CTA |
@@ -45,3 +49,4 @@ Auto-maintained notes from sitewide audit passes. Run: `python3 scripts/automate
 - `docs/INDEX-HEALTH.md`
 - `docs/INTERNAL-LINK-AUDIT.md`
 - `docs/CONTENT-FRESHNESS.md`
+- `docs/SCHEMA-COVERAGE.md`

@@ -31,57 +31,78 @@
 <meta content="Use this pass-fail checklist to detect profile drift early and prevent fragile scale-ups." name="twitter:description"/>
 <link href="/assets/css/site.css" rel="stylesheet"/>
 <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
+      "@type": "TechArticle",
+      "headline": "Browser Fingerprint Checklist for Automation Teams",
+      "dateModified": "2026-05-27",
+      "author": {
+        "@type": "Organization",
+        "name": "multilogin-labs"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "multilogin-labs"
+      },
+      "mainEntityOfPage": "https://multilogin-labs.github.io/guides/browser-fingerprint-checklist/"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
         {
-          "@type": "TechArticle",
-          "headline": "Browser Fingerprint Checklist for Automation Teams",
-          "dateModified": "2026-05-27",
-          "author": {"@type": "Organization", "name": "multilogin-labs"},
-          "publisher": {"@type": "Organization", "name": "multilogin-labs"},
-          "mainEntityOfPage": "https://multilogin-labs.github.io/guides/browser-fingerprint-checklist/"
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://multilogin-labs.github.io/"
         },
         {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://multilogin-labs.github.io/"},
-            {"@type": "ListItem", "position": 2, "name": "Guides", "item": "https://multilogin-labs.github.io/guides/"},
-            {"@type": "ListItem", "position": 3, "name": "Fingerprint Checklist", "item": "https://multilogin-labs.github.io/guides/browser-fingerprint-checklist/"}
-          ]
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Guides",
+          "item": "https://multilogin-labs.github.io/guides/"
         },
         {
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "How many repeated sessions should I run before scale?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Run at least three repeated sessions per profile template and verify no major drift in core identity and runtime signals."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "When should a profile be quarantined?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Quarantine profiles when fingerprint outputs are inconsistent, geolocation mismatches appear, or lifecycle events cannot be traced reliably."
-              }
-                        },
-                        {
-                            "@type": "Question",
-                            "name": "Which 2026 signals should I recheck after updates?",
-                            "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "Recheck User-Agent Client Hints, worker GPU availability, storage partition behavior, and WebRTC or DNS consistency after major updates."
-                            }
-            }
-          ]
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Fingerprint Checklist",
+          "item": "https://multilogin-labs.github.io/guides/browser-fingerprint-checklist/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How many repeated sessions should I run before scale?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Run at least three repeated sessions per profile template and verify no major drift in core identity and runtime signals."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "When should a profile be quarantined?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Quarantine profiles when fingerprint outputs are inconsistent, geolocation mismatches appear, or lifecycle events cannot be traced reliably."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which 2026 signals should I recheck after updates?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Recheck User-Agent Client Hints, worker GPU availability, storage partition behavior, and WebRTC or DNS consistency after major updates."
+          }
         }
       ]
     }
-    </script>
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to main content</a>

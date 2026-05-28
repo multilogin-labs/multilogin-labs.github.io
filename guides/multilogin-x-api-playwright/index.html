@@ -31,57 +31,78 @@
 <meta content="Use this production runbook with preflight checks, timeout policy, and cleanup guarantees." name="twitter:description"/>
 <link href="/assets/css/site.css" rel="stylesheet"/>
 <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-            "@graph": [
-                {
-                    "@type": "TechArticle",
-                    "headline": "Multilogin X API + Playwright: Production Implementation Guide",
-                    "dateModified": "2026-05-27",
-                    "author": {"@type": "Organization", "name": "multilogin-labs"},
-                    "publisher": {"@type": "Organization", "name": "multilogin-labs"},
-                    "mainEntityOfPage": "https://multilogin-labs.github.io/guides/multilogin-x-api-playwright/"
-                },
-                {
-                    "@type": "BreadcrumbList",
-                    "itemListElement": [
-                        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://multilogin-labs.github.io/"},
-                        {"@type": "ListItem", "position": 2, "name": "Guides", "item": "https://multilogin-labs.github.io/guides/"},
-                        {"@type": "ListItem", "position": 3, "name": "Multilogin X API + Playwright", "item": "https://multilogin-labs.github.io/guides/multilogin-x-api-playwright/"}
-                    ]
-                },
-                {
-                    "@type": "FAQPage",
-                    "mainEntity": [
-                        {
-                            "@type": "Question",
-                            "name": "What is the minimum safe flow for production?",
-                            "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "Start profile with automation=true, connect over CDP with explicit timeout, run task logic, and always stop profile in a finally block."
-                            }
-                        },
-                        {
-                            "@type": "Question",
-                            "name": "What causes the most failures in practice?",
-                            "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "The most common issues are missing remote_debugging_address fields, weak timeout policies, and cleanup paths that fail to stop profiles."
-                            }
-                        },
-                        {
-                            "@type": "Question",
-                            "name": "Should this guide be paired with an ops SOP before checkout?",
-                            "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "Yes. Pair implementation checks with an operations SOP so procurement decisions happen only after repeated-session evidence is stable."
-                            }
-                        }
-                    ]
-                }
-            ]
+      "@type": "TechArticle",
+      "headline": "Multilogin X API + Playwright: Production Implementation Guide",
+      "dateModified": "2026-05-27",
+      "author": {
+        "@type": "Organization",
+        "name": "multilogin-labs"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "multilogin-labs"
+      },
+      "mainEntityOfPage": "https://multilogin-labs.github.io/guides/multilogin-x-api-playwright/"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://multilogin-labs.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Guides",
+          "item": "https://multilogin-labs.github.io/guides/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Multilogin X API + Playwright",
+          "item": "https://multilogin-labs.github.io/guides/multilogin-x-api-playwright/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the minimum safe flow for production?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Start profile with automation=true, connect over CDP with explicit timeout, run task logic, and always stop profile in a finally block."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What causes the most failures in practice?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The most common issues are missing remote_debugging_address fields, weak timeout policies, and cleanup paths that fail to stop profiles."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should this guide be paired with an ops SOP before checkout?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Pair implementation checks with an operations SOP so procurement decisions happen only after repeated-session evidence is stable."
+          }
+        }
+      ]
     }
-    </script>
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to main content</a>

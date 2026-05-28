@@ -31,82 +31,144 @@
 <meta content="Use these implementation tracks to move from open-source research to stable production workflows." name="twitter:description"/>
 <link href="/assets/css/site.css" rel="stylesheet"/>
 <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
+      "@type": "CollectionPage",
+      "name": "Multilogin X Open-Source Blueprints",
+      "url": "https://multilogin-labs.github.io/guides/multilogin-x-open-source-blueprints/",
+      "hasPart": [
         {
-          "@type": "CollectionPage",
-          "name": "Multilogin X Open-Source Blueprints",
-          "url": "https://multilogin-labs.github.io/guides/multilogin-x-open-source-blueprints/",
-          "hasPart": [
-            {"@type": "WebPage", "url": "https://multilogin-labs.github.io/guides/laravel-multilogin-sdk-playbook/"},
-            {"@type": "WebPage", "url": "https://multilogin-labs.github.io/guides/cookie-automation-runbook/"},
-            {"@type": "WebPage", "url": "https://multilogin-labs.github.io/guides/proxy-profile-bootstrap-playbook/"},
-                        {"@type": "WebPage", "url": "https://multilogin-labs.github.io/guides/multilogin-x-getting-started-roadmap/"},
-                        {"@type": "WebPage", "url": "https://multilogin-labs.github.io/guides/workspace-id-and-token-setup-runbook/"},
-                        {"@type": "WebPage", "url": "https://multilogin-labs.github.io/guides/multilogin-x-script-runner-playbook/"},
-                        {"@type": "WebPage", "url": "https://multilogin-labs.github.io/guides/openmultilogin-risk-and-migration-guide/"},
-            {"@type": "WebPage", "url": "https://multilogin-labs.github.io/guides/multilogin-x-api-playwright/"},
-            {"@type": "WebPage", "url": "https://multilogin-labs.github.io/guides/antidetection-ops-sop/"}
-          ]
+          "@type": "WebPage",
+          "url": "https://multilogin-labs.github.io/guides/laravel-multilogin-sdk-playbook/"
         },
         {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://multilogin-labs.github.io/"},
-            {"@type": "ListItem", "position": 2, "name": "Guides", "item": "https://multilogin-labs.github.io/guides/"},
-            {"@type": "ListItem", "position": 3, "name": "Open-Source Blueprints", "item": "https://multilogin-labs.github.io/guides/multilogin-x-open-source-blueprints/"}
-          ]
+          "@type": "WebPage",
+          "url": "https://multilogin-labs.github.io/guides/cookie-automation-runbook/"
         },
         {
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "Is this page a copy of external repositories?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "No. This hub converts public repository patterns into original implementation guidance, decision frameworks, and QA checkpoints."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "What should I read first if my team uses Laravel?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Start with the Laravel SDK playbook, then move to proxy and cookie runbooks for reliability controls before scale."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "How does this help affiliate conversion quality?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "These guides reduce low-confidence recommendations by forcing pre-checks, repeated-session evidence, and transparent decision rules before checkout."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Can I use these pages after deleting the reference folder?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes. The pages stand alone as implementation playbooks and do not require the reference folder to remain in the website repository."
-              }
-                        },
-                        {
-                            "@type": "Question",
-                            "name": "Where can I find onboarding and migration guides from the second content wave?",
-                            "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "Use the getting started roadmap, workspace and token setup runbook, script runner playbook, and OpenMultiLogin risk migration guide."
-                            }
-            }
-          ]
+          "@type": "WebPage",
+          "url": "https://multilogin-labs.github.io/guides/proxy-profile-bootstrap-playbook/"
+        },
+        {
+          "@type": "WebPage",
+          "url": "https://multilogin-labs.github.io/guides/multilogin-x-getting-started-roadmap/"
+        },
+        {
+          "@type": "WebPage",
+          "url": "https://multilogin-labs.github.io/guides/workspace-id-and-token-setup-runbook/"
+        },
+        {
+          "@type": "WebPage",
+          "url": "https://multilogin-labs.github.io/guides/multilogin-x-script-runner-playbook/"
+        },
+        {
+          "@type": "WebPage",
+          "url": "https://multilogin-labs.github.io/guides/openmultilogin-risk-and-migration-guide/"
+        },
+        {
+          "@type": "WebPage",
+          "url": "https://multilogin-labs.github.io/guides/multilogin-x-api-playwright/"
+        },
+        {
+          "@type": "WebPage",
+          "url": "https://multilogin-labs.github.io/guides/antidetection-ops-sop/"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://multilogin-labs.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Guides",
+          "item": "https://multilogin-labs.github.io/guides/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Open-Source Blueprints",
+          "item": "https://multilogin-labs.github.io/guides/multilogin-x-open-source-blueprints/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is this page a copy of external repositories?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. This hub converts public repository patterns into original implementation guidance, decision frameworks, and QA checkpoints."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What should I read first if my team uses Laravel?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Start with the Laravel SDK playbook, then move to proxy and cookie runbooks for reliability controls before scale."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does this help affiliate conversion quality?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "These guides reduce low-confidence recommendations by forcing pre-checks, repeated-session evidence, and transparent decision rules before checkout."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use these pages after deleting the reference folder?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The pages stand alone as implementation playbooks and do not require the reference folder to remain in the website repository."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where can I find onboarding and migration guides from the second content wave?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Use the getting started roadmap, workspace and token setup runbook, script runner playbook, and OpenMultiLogin risk migration guide."
+          }
         }
       ]
     }
-    </script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://multilogin-labs.github.io/guides/multilogin-x-open-source-blueprints/"}, "headline": "Multilogin X Open-Source Blueprints 2026: SDK, Cookie, Proxy Ops | multilogin-labs", "datePublished": "2026-04-11", "dateModified": "2026-05-27", "author": {"@type": "Organization", "name": "multilogin-labs"}, "publisher": {"@type": "Organization", "name": "multilogin-labs"}}</script></head>
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://multilogin-labs.github.io/guides/multilogin-x-open-source-blueprints/"
+  },
+  "headline": "Multilogin X Open-Source Blueprints 2026: SDK, Cookie, Proxy Ops | multilogin-labs",
+  "datePublished": "2026-04-11",
+  "dateModified": "2026-05-27",
+  "author": {
+    "@type": "Organization",
+    "name": "multilogin-labs"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "multilogin-labs"
+  }
+}
+</script></head>
 <body>
 <a class="skip-link" href="#main-content">Skip to main content</a>
 <div class="site-announcement">SAAS50 = <strong>50% off</strong> plans · MIN50 = cloud phone — <a href="https://multilogin.com/pricing/?utm_source=saas&amp;utm_medium=partner&amp;a_aid=saas&amp;a_bid=f5fad549" rel="sponsored noopener noreferrer" target="_blank">Multilogin pricing →</a></div>

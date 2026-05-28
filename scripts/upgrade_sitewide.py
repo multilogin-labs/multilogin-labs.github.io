@@ -90,9 +90,13 @@ def patch_file(path: Path, raw_url: str, html_url: str) -> bool:
     if "speculationrules" not in new and "</body>" in new:
         new = new.replace("</body>", SPEC_RULES + "\n</body>", 1)
 
-    if slug not in SKIP_CTA_TAIL and "lab-cta" not in new and "</main>" in new:
-        if "multilogin.com/pricing" not in new:
-            new = new.replace("</main>", lab_cta(html_url) + "\n</main>", 1)
+    if (
+        slug not in SKIP_CTA_TAIL
+        and "lab-cta" not in new
+        and "</main>" in new
+        and "multilogin.com/pricing" not in new
+    ):
+        new = new.replace("</main>", lab_cta(html_url) + "\n</main>", 1)
 
     if new != text:
         path.write_text(new, encoding="utf-8")

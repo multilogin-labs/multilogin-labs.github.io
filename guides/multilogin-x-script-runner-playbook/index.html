@@ -31,57 +31,78 @@
 <meta content="Payload standards and failure controls for safe script runner orchestration." name="twitter:description"/>
 <link href="/assets/css/site.css" rel="stylesheet"/>
 <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
+      "@type": "TechArticle",
+      "headline": "Multilogin X Script Runner Playbook 2026",
+      "dateModified": "2026-05-27",
+      "author": {
+        "@type": "Organization",
+        "name": "multilogin-labs"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "multilogin-labs"
+      },
+      "mainEntityOfPage": "https://multilogin-labs.github.io/guides/multilogin-x-script-runner-playbook/"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
         {
-          "@type": "TechArticle",
-          "headline": "Multilogin X Script Runner Playbook 2026",
-          "dateModified": "2026-05-27",
-          "author": {"@type": "Organization", "name": "multilogin-labs"},
-          "publisher": {"@type": "Organization", "name": "multilogin-labs"},
-          "mainEntityOfPage": "https://multilogin-labs.github.io/guides/multilogin-x-script-runner-playbook/"
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://multilogin-labs.github.io/"
         },
         {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://multilogin-labs.github.io/"},
-            {"@type": "ListItem", "position": 2, "name": "Guides", "item": "https://multilogin-labs.github.io/guides/"},
-            {"@type": "ListItem", "position": 3, "name": "Script Runner Playbook", "item": "https://multilogin-labs.github.io/guides/multilogin-x-script-runner-playbook/"}
-          ]
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Guides",
+          "item": "https://multilogin-labs.github.io/guides/"
         },
         {
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "What is the biggest risk in batch script execution?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "The biggest risk is uncontrolled failure propagation when one bad payload or profile state affects an entire batch."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Should headless mode be default for all profiles?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Not always. Use headless mode only where your workload and validation checks prove stable behavior."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "How do I connect this to affiliate conversion content?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Publish script-run reliability evidence first, then route users to alternatives and promo pages with transparent pass criteria."
-              }
-            }
-          ]
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Script Runner Playbook",
+          "item": "https://multilogin-labs.github.io/guides/multilogin-x-script-runner-playbook/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the biggest risk in batch script execution?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The biggest risk is uncontrolled failure propagation when one bad payload or profile state affects an entire batch."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should headless mode be default for all profiles?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not always. Use headless mode only where your workload and validation checks prove stable behavior."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I connect this to affiliate conversion content?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Publish script-run reliability evidence first, then route users to alternatives and promo pages with transparent pass criteria."
+          }
         }
       ]
     }
-    </script>
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to main content</a>

@@ -35,9 +35,7 @@ def is_skipped(path: Path) -> bool:
     if path.resolve() == HOMEPAGE.resolve():
         return True
     rel = path.relative_to(ROOT).as_posix()
-    if rel == "go/multilogin/index.html":
-        return True
-    return False
+    return rel == "go/multilogin/index.html"
 
 
 def patch_html(text: str) -> str:

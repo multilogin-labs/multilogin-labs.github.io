@@ -84,7 +84,6 @@ def main() -> None:
         raise SystemExit(f"Missing {CONFIG}")
     raw_url, html_url = load_checkout()
     write_go_page(raw_url, html_url)
-    n_go = 1
     n = 0
     for html in sorted(ROOT.rglob("*.html")):
         if ".git" in html.parts:

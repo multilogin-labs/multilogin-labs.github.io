@@ -3,7 +3,7 @@
 > Open antidetect operations lab: benchmarks, datasets, tools, and playbooks.
 > Canonical site: https://multilogin-labs.github.io/
 > Repository: https://github.com/multilogin-labs/multilogin-labs.github.io
-> Manifest updated: 2026-05-27
+> Manifest updated: 2026-05-28
 
 ## Primary entry points
 

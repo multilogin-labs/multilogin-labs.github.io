@@ -31,57 +31,78 @@
 <meta content="Turn cookie automation into a controlled QA workflow with clear safeguards and incident limits." name="twitter:description"/>
 <link href="/assets/css/site.css" rel="stylesheet"/>
 <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
+      "@type": "TechArticle",
+      "headline": "Cookie Automation Runbook 2026",
+      "dateModified": "2026-05-27",
+      "author": {
+        "@type": "Organization",
+        "name": "multilogin-labs"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "multilogin-labs"
+      },
+      "mainEntityOfPage": "https://multilogin-labs.github.io/guides/cookie-automation-runbook/"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
         {
-          "@type": "TechArticle",
-          "headline": "Cookie Automation Runbook 2026",
-          "dateModified": "2026-05-27",
-          "author": {"@type": "Organization", "name": "multilogin-labs"},
-          "publisher": {"@type": "Organization", "name": "multilogin-labs"},
-          "mainEntityOfPage": "https://multilogin-labs.github.io/guides/cookie-automation-runbook/"
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://multilogin-labs.github.io/"
         },
         {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://multilogin-labs.github.io/"},
-            {"@type": "ListItem", "position": 2, "name": "Guides", "item": "https://multilogin-labs.github.io/guides/"},
-            {"@type": "ListItem", "position": 3, "name": "Cookie Automation Runbook", "item": "https://multilogin-labs.github.io/guides/cookie-automation-runbook/"}
-          ]
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Guides",
+          "item": "https://multilogin-labs.github.io/guides/"
         },
         {
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "What is the safe use case for cookie automation?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Use cookie automation for controlled QA, session continuity testing, and metadata verification under your own governance policy."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Why should metadata normalization be mandatory?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Without normalized schema and timestamp control, teams cannot compare sessions reliably or debug drift across environments."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "How does this guide support commercial pages?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "By proving session quality first, you can send readers to compare and promo pages with stronger trust and lower post-purchase friction."
-              }
-            }
-          ]
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Cookie Automation Runbook",
+          "item": "https://multilogin-labs.github.io/guides/cookie-automation-runbook/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the safe use case for cookie automation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Use cookie automation for controlled QA, session continuity testing, and metadata verification under your own governance policy."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why should metadata normalization be mandatory?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Without normalized schema and timestamp control, teams cannot compare sessions reliably or debug drift across environments."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does this guide support commercial pages?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "By proving session quality first, you can send readers to compare and promo pages with stronger trust and lower post-purchase friction."
+          }
         }
       ]
     }
-    </script>
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to main content</a>

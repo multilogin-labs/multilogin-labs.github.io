@@ -31,57 +31,78 @@
 <meta content="A practical access setup guide for team-safe automation workflows." name="twitter:description"/>
 <link href="/assets/css/site.css" rel="stylesheet"/>
 <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
+      "@type": "TechArticle",
+      "headline": "Workspace ID and Token Setup Runbook 2026",
+      "dateModified": "2026-05-27",
+      "author": {
+        "@type": "Organization",
+        "name": "multilogin-labs"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "multilogin-labs"
+      },
+      "mainEntityOfPage": "https://multilogin-labs.github.io/guides/workspace-id-and-token-setup-runbook/"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
         {
-          "@type": "TechArticle",
-          "headline": "Workspace ID and Token Setup Runbook 2026",
-          "dateModified": "2026-05-27",
-          "author": {"@type": "Organization", "name": "multilogin-labs"},
-          "publisher": {"@type": "Organization", "name": "multilogin-labs"},
-          "mainEntityOfPage": "https://multilogin-labs.github.io/guides/workspace-id-and-token-setup-runbook/"
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://multilogin-labs.github.io/"
         },
         {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://multilogin-labs.github.io/"},
-            {"@type": "ListItem", "position": 2, "name": "Guides", "item": "https://multilogin-labs.github.io/guides/"},
-            {"@type": "ListItem", "position": 3, "name": "Workspace and Token Setup", "item": "https://multilogin-labs.github.io/guides/workspace-id-and-token-setup-runbook/"}
-          ]
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Guides",
+          "item": "https://multilogin-labs.github.io/guides/"
         },
         {
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "Which identifiers should be tracked for automation audit?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "At minimum track workspace_id, user_id, profile_id, token version, and trace_id for each execution."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Should one token be shared by all teams?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "No. Use scoped tokens per environment or role to reduce blast radius and improve incident triage."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "How often should token policy be reviewed?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Review quarterly, and immediately after incidents, team changes, or infrastructure migration events."
-              }
-            }
-          ]
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Workspace and Token Setup",
+          "item": "https://multilogin-labs.github.io/guides/workspace-id-and-token-setup-runbook/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Which identifiers should be tracked for automation audit?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "At minimum track workspace_id, user_id, profile_id, token version, and trace_id for each execution."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should one token be shared by all teams?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Use scoped tokens per environment or role to reduce blast radius and improve incident triage."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How often should token policy be reviewed?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Review quarterly, and immediately after incidents, team changes, or infrastructure migration events."
+          }
         }
       ]
     }
-    </script>
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to main content</a>

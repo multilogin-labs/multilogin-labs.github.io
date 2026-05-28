@@ -31,73 +31,94 @@
 <meta content="Engineering-first guide for choosing libraries and reducing hidden detection risk before procurement." name="twitter:description"/>
 <link href="/assets/css/site.css" rel="stylesheet"/>
 <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
+      "@type": "TechArticle",
+      "headline": "Anti-Detect Libraries Playbook 2026",
+      "dateModified": "2026-05-27",
+      "author": {
+        "@type": "Organization",
+        "name": "multilogin-labs"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "multilogin-labs"
+      },
+      "mainEntityOfPage": "https://multilogin-labs.github.io/guides/antidetect-libs-playbook/"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
         {
-          "@type": "TechArticle",
-          "headline": "Anti-Detect Libraries Playbook 2026",
-          "dateModified": "2026-05-27",
-          "author": {"@type": "Organization", "name": "multilogin-labs"},
-          "publisher": {"@type": "Organization", "name": "multilogin-labs"},
-          "mainEntityOfPage": "https://multilogin-labs.github.io/guides/antidetect-libs-playbook/"
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://multilogin-labs.github.io/"
         },
         {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://multilogin-labs.github.io/"},
-            {"@type": "ListItem", "position": 2, "name": "Guides", "item": "https://multilogin-labs.github.io/guides/"},
-            {"@type": "ListItem", "position": 3, "name": "Anti-Detect Libraries Playbook", "item": "https://multilogin-labs.github.io/guides/antidetect-libs-playbook/"}
-          ]
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Guides",
+          "item": "https://multilogin-labs.github.io/guides/"
         },
         {
-          "@type": "FAQPage",
-                    "mainEntity": [
-                        {
-                            "@type": "Question",
-                            "name": "Can I rely on one stealth library only?",
-                            "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "No. Durable setups use layered controls: profile orchestration, browser runtime hardening, behavior logic, and connection validation."
-                            }
-                        },
-                        {
-                            "@type": "Question",
-                            "name": "How should I choose libraries by framework?",
-                            "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "Start from your automation runtime, then evaluate each candidate by maintenance cadence, transparency, and repeat-session stability instead of feature headlines."
-                            }
-                        },
-                        {
-                            "@type": "Question",
-                            "name": "When does the SAAS50 checkout step make sense?",
-                            "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "After your detection and connection leak checks are stable and your stack choice is validated against your production risk profile."
-                            }
-                        },
-                        {
-                            "@type": "Question",
-                            "name": "Should I enable all Chrome launch arguments by default?",
-                            "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "No. Start with a minimal baseline and add arguments only when a repeated test proves a specific need, then re-validate for drift."
-                            }
-                        },
-                        {
-                            "@type": "Question",
-                            "name": "What proof should I collect before recommending an affiliate stack?",
-                            "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "Collect at least three repeated clean sessions with detection checks, connection leak checks, worker parity checks, and a rollback plan before adding affiliate recommendations."
-                            }
-                        }
-                    ]
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Anti-Detect Libraries Playbook",
+          "item": "https://multilogin-labs.github.io/guides/antidetect-libs-playbook/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can I rely on one stealth library only?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Durable setups use layered controls: profile orchestration, browser runtime hardening, behavior logic, and connection validation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How should I choose libraries by framework?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Start from your automation runtime, then evaluate each candidate by maintenance cadence, transparency, and repeat-session stability instead of feature headlines."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "When does the SAAS50 checkout step make sense?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "After your detection and connection leak checks are stable and your stack choice is validated against your production risk profile."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I enable all Chrome launch arguments by default?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Start with a minimal baseline and add arguments only when a repeated test proves a specific need, then re-validate for drift."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What proof should I collect before recommending an affiliate stack?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Collect at least three repeated clean sessions with detection checks, connection leak checks, worker parity checks, and a rollback plan before adding affiliate recommendations."
+          }
         }
       ]
     }
-    </script>
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to main content</a>

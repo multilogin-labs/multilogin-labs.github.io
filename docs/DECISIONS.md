@@ -61,6 +61,9 @@ These rules apply without per-change approval. Maintenance: `python3 scripts/sit
 | Validate + SEO | `site_maintenance.py` |
 | LLM manifest | `generate_llms_txt.py` |
 | IndexNow ping | `indexnow.py --from-sitemap` on push to `main` |
+| Lint | `ruff check scripts` (config in `pyproject.toml`, CI gate) |
+| Schema + a11y | `normalize_jsonld.py`, `schema_coverage.py`, `a11y_check.py` (CI gate) |
+| Sitemap drift | `git diff --exit-code sitemap.xml` (CI hard fail) |
 | Commit | **Human only** (not automated) |
 
 ## Data

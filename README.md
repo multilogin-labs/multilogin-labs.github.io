@@ -11,6 +11,9 @@ Benchmarks &amp; tools for teams still comparing vendors
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](./LICENSE)
 [![Methodology](https://img.shields.io/badge/methodology-v1.2-lightgrey?style=for-the-badge)](https://multilogin-labs.github.io/guides/evaluation-methodology/)
 [![CI](https://github.com/multilogin-labs/multilogin-labs.github.io/actions/workflows/ci.yml/badge.svg)](https://github.com/multilogin-labs/multilogin-labs.github.io/actions/workflows/ci.yml)
+[![Ruff](https://img.shields.io/badge/lint-ruff-blue?logo=ruff&logoColor=white)](https://github.com/astral-sh/ruff)
+[![Schema coverage](https://img.shields.io/badge/schema-100%25-2a9d8f)](./docs/SCHEMA-COVERAGE.md)
+[![A11y](https://img.shields.io/badge/a11y-passing-2a9d8f)](./scripts/a11y_check.py)
 
 **[Explore the live lab](https://multilogin-labs.github.io/)** · **[Browse the catalog](./CATALOG.md)** · **[Star on GitHub](https://github.com/multilogin-labs/multilogin-labs.github.io)**
 
@@ -59,13 +62,41 @@ curl -sL https://multilogin-labs.github.io/data/benchmark-matrix-2026-04.json | 
 
 ```
 ├── CATALOG.md          # Awesome-style index (start here on GitHub)
-├── data/               # Open JSON + JSON Schema
+├── ROADMAP.md          # What is shipping next + non-goals
+├── MAINTAINERS.md      # Merge-rights guide + homepage lock policy
+├── data/               # Open JSON + JSON Schema (manifest in data/index.json)
 ├── tools/              # Interactive browser tools (static)
 ├── guides/             # Original operational playbooks
-├── compare/            # 8 tier-1 head-to-head pages
+├── compare/            # Tier-1 head-to-head pages + alternatives matrix
+├── promo/              # 22 indexable vendor promo reviews (Multilogin-first)
 ├── snippets/           # Copy-paste automation starters
-├── scripts/            # CI helpers (links, sitemap, validation)
-└── .github/workflows/  # Automated checks on push
+├── scripts/            # Maintenance + CI helpers (links, sitemap, JSON-LD, a11y)
+├── docs/               # Decision log + auto-generated reports
+└── .github/workflows/  # CI (lint, validate, IndexNow)
+```
+
+## Architecture
+
+```mermaid
+flowchart LR
+    A[index.html<br>perf locked]:::lock
+    B[Inner pages<br>site.css + site.js]
+    C[Promo / Compare<br>22 + 22 indexable]
+    D[Tools<br>WebApplication schema]
+    E[Guides<br>HowTo + Article]
+    F[data/<br>JSON + schemas]
+    G[scripts/automate_site.py]
+    H[GitHub Actions CI]
+
+    G -->|guards| A
+    G -->|patches| B
+    G -->|generates| C
+    G -->|writes| F
+    H --> G
+    A --> CK[Multilogin<br>SAAS50 / MIN50]:::aff
+    B --> CK
+    classDef lock fill:#fff,stroke:#2a9d8f,stroke-width:2px;
+    classDef aff fill:#f5a623,stroke:#000,color:#000;
 ```
 
 ---
@@ -102,13 +133,23 @@ Machine-readable site index: **[llms.txt](./llms.txt)** (also at `https://multil
 
 See [CONTRIBUTING.md](./CONTRIBUTING.md). We welcome dataset updates, tool improvements, and reproducible playbook additions—not vendor doc copies.
 
+For maintainers, the local toolchain is captured in [MAINTAINERS.md](./MAINTAINERS.md):
+
+```bash
+python3 -m pip install --user ruff==0.5.7   # match CI version
+python3 -m ruff check scripts                # lint
+python3 scripts/automate_site.py             # full pipeline (homepage-locked)
+```
+
 ---
 
 ## Trust
 
 - [Editorial policy](https://multilogin-labs.github.io/editorial-policy/)
 - [Security policy](./SECURITY.md)
+- [Roadmap](./ROADMAP.md) · [Maintainers](./MAINTAINERS.md) · [Authors](./AUTHORS.md)
 - [Changelog](./CHANGELOG.md)
+- Auto-generated reports: [index health](./docs/INDEX-HEALTH.md) · [link audit](./docs/INTERNAL-LINK-AUDIT.md) · [content freshness](./docs/CONTENT-FRESHNESS.md) · [schema coverage](./docs/SCHEMA-COVERAGE.md)
 
 ---
 

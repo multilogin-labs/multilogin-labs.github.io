@@ -31,57 +31,78 @@
 <meta content="Use this practical bootstrap flow to reduce profile drift and improve scale-readiness." name="twitter:description"/>
 <link href="/assets/css/site.css" rel="stylesheet"/>
 <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
+      "@type": "TechArticle",
+      "headline": "Proxy Profile Bootstrap Playbook 2026",
+      "dateModified": "2026-05-27",
+      "author": {
+        "@type": "Organization",
+        "name": "multilogin-labs"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "multilogin-labs"
+      },
+      "mainEntityOfPage": "https://multilogin-labs.github.io/guides/proxy-profile-bootstrap-playbook/"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
         {
-          "@type": "TechArticle",
-          "headline": "Proxy Profile Bootstrap Playbook 2026",
-          "dateModified": "2026-05-27",
-          "author": {"@type": "Organization", "name": "multilogin-labs"},
-          "publisher": {"@type": "Organization", "name": "multilogin-labs"},
-          "mainEntityOfPage": "https://multilogin-labs.github.io/guides/proxy-profile-bootstrap-playbook/"
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://multilogin-labs.github.io/"
         },
         {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://multilogin-labs.github.io/"},
-            {"@type": "ListItem", "position": 2, "name": "Guides", "item": "https://multilogin-labs.github.io/guides/"},
-            {"@type": "ListItem", "position": 3, "name": "Proxy Profile Bootstrap", "item": "https://multilogin-labs.github.io/guides/proxy-profile-bootstrap-playbook/"}
-          ]
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Guides",
+          "item": "https://multilogin-labs.github.io/guides/"
         },
         {
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "What is the first rule for proxy-profile bootstrap?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Enforce one quality contract for latency, geo consistency, and failure rate before assigning proxies to profiles."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Should I run bulk profile provisioning without health checks?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "No. Run preflight health checks and quarantine weak proxies before they reach production profile pools."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "How does this guide support affiliate outcomes?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Reliable bootstrap evidence creates better buying confidence, improving quality traffic sent to comparison and promo pages."
-              }
-            }
-          ]
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Proxy Profile Bootstrap",
+          "item": "https://multilogin-labs.github.io/guides/proxy-profile-bootstrap-playbook/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the first rule for proxy-profile bootstrap?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Enforce one quality contract for latency, geo consistency, and failure rate before assigning proxies to profiles."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I run bulk profile provisioning without health checks?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Run preflight health checks and quarantine weak proxies before they reach production profile pools."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does this guide support affiliate outcomes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Reliable bootstrap evidence creates better buying confidence, improving quality traffic sent to comparison and promo pages."
+          }
         }
       ]
     }
-    </script>
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to main content</a>

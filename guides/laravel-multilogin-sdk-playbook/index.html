@@ -31,57 +31,78 @@
 <meta content="Use this guide to harden Laravel profile automation before scale and procurement decisions." name="twitter:description"/>
 <link href="/assets/css/site.css" rel="stylesheet"/>
 <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
+      "@type": "TechArticle",
+      "headline": "Laravel Multilogin SDK Playbook 2026",
+      "dateModified": "2026-05-27",
+      "author": {
+        "@type": "Organization",
+        "name": "multilogin-labs"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "multilogin-labs"
+      },
+      "mainEntityOfPage": "https://multilogin-labs.github.io/guides/laravel-multilogin-sdk-playbook/"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
         {
-          "@type": "TechArticle",
-          "headline": "Laravel Multilogin SDK Playbook 2026",
-          "dateModified": "2026-05-27",
-          "author": {"@type": "Organization", "name": "multilogin-labs"},
-          "publisher": {"@type": "Organization", "name": "multilogin-labs"},
-          "mainEntityOfPage": "https://multilogin-labs.github.io/guides/laravel-multilogin-sdk-playbook/"
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://multilogin-labs.github.io/"
         },
         {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://multilogin-labs.github.io/"},
-            {"@type": "ListItem", "position": 2, "name": "Guides", "item": "https://multilogin-labs.github.io/guides/"},
-            {"@type": "ListItem", "position": 3, "name": "Laravel SDK Playbook", "item": "https://multilogin-labs.github.io/guides/laravel-multilogin-sdk-playbook/"}
-          ]
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Guides",
+          "item": "https://multilogin-labs.github.io/guides/"
         },
         {
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "What is the most common Laravel integration mistake?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Teams often start profiles in queue jobs without guaranteed stop logic in finally blocks, creating orphan profile sessions and unstable retries."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Should I expose Multilogin tokens in .env only?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Use .env for bootstrap, then move to secrets management and define token rotation policy for production workloads."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "When should this guide connect to affiliate pages?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "After reliability checks pass, route users to comparison and promo verification pages with evidence context, not before."
-              }
-            }
-          ]
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Laravel SDK Playbook",
+          "item": "https://multilogin-labs.github.io/guides/laravel-multilogin-sdk-playbook/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the most common Laravel integration mistake?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Teams often start profiles in queue jobs without guaranteed stop logic in finally blocks, creating orphan profile sessions and unstable retries."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I expose Multilogin tokens in .env only?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Use .env for bootstrap, then move to secrets management and define token rotation policy for production workloads."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "When should this guide connect to affiliate pages?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "After reliability checks pass, route users to comparison and promo verification pages with evidence context, not before."
+          }
         }
       ]
     }
-    </script>
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to main content</a>

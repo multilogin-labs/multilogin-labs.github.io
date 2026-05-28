@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Discussion / question
+    url: https://github.com/multilogin-labs/multilogin-labs.github.io/discussions
+    about: Ask a question or share a workflow idea.
+  - name: Benchmark request
+    url: https://github.com/multilogin-labs/multilogin-labs.github.io/discussions/categories/benchmark-requests
+    about: Propose a vendor or scenario to include in the next benchmark month.
+  - name: Promo / pricing question
+    url: https://multilogin-labs.github.io/tools/multilogin-discount/
+    about: Check SAAS50 + MIN50 verification before opening an issue.

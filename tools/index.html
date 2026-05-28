@@ -33,115 +33,189 @@
 <meta content="Shortlist first, compare next, and use discounts only after reliability-fit is confirmed." name="twitter:description"/>
 <link href="/assets/css/site.css" rel="stylesheet"/>
 <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "name": "multilogin-labs Tools Hub",
+      "url": "https://multilogin-labs.github.io/tools/",
+      "hasPart": [
         {
-            "@context": "https://schema.org",
-            "@graph": [
-                {
-                    "@type": "CollectionPage",
-                    "name": "multilogin-labs Tools Hub",
-                    "url": "https://multilogin-labs.github.io/tools/",
-                    "hasPart": [
-                        {"@type": "WebPage", "url": "https://multilogin-labs.github.io/tools/antidetect-browsers/"},
-                        {"@type": "WebPage", "url": "https://multilogin-labs.github.io/compare/"},
-                        {"@type": "WebPage", "url": "https://multilogin-labs.github.io/promo/"},
-                        {"@type": "WebPage", "url": "https://multilogin-labs.github.io/guides/antidetect-libs-playbook/"},
-                        {"@type": "WebPage", "url": "https://multilogin-labs.github.io/guides/antidetection-ops-sop/"},
-                        {"@type": "WebPage", "url": "https://multilogin-labs.github.io/guides/evaluation-methodology/"},
-                        {"@type": "WebPage", "url": "https://multilogin-labs.github.io/guides/benchmark-reports/"},
-                        {"@type": "WebPage", "url": "https://multilogin-labs.github.io/guides/benchmark-reports/report-template/"},
-                        {"@type": "WebPage", "url": "https://multilogin-labs.github.io/guides/methodology-changelog/"},
-                        {"@type": "WebPage", "url": "https://multilogin-labs.github.io/guides/detection-tests/"},
-                        {"@type": "WebPage", "url": "https://multilogin-labs.github.io/guides/connection-leak-tests/"},
-                        {"@type": "WebPage", "url": "https://multilogin-labs.github.io/compare/multilogin-alternatives/"},
-                        {"@type": "WebPage", "url": "https://multilogin-labs.github.io/guides/antidetect-browser-pricing-playbook/"},
-                        {"@type": "WebPage", "url": "https://multilogin-labs.github.io/tools/multilogin-discount/"},
-                        {"@type": "WebPage", "url": "https://multilogin-labs.github.io/tools/fingerprint-readiness-score/"},
-                        {"@type": "WebPage", "url": "https://multilogin-labs.github.io/tools/evidence-pack-builder/"},
-                        {"@type": "WebPage", "url": "https://multilogin-labs.github.io/tools/benchmark-explorer/"},
-                        {"@type": "WebPage", "url": "https://multilogin-labs.github.io/tools/benchmark-release-checker/"}
-                    ]
-                },
-                {
-                    "@type": "FAQPage",
-                    "mainEntity": [
-                        {
-                            "@type": "Question",
-                            "name": "What should I open first in the tools hub?",
-                            "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "Start with the ranking page, then validate tradeoffs in compare pages, and only then apply discount actions."
-                            }
-                        },
-                        {
-                            "@type": "Question",
-                            "name": "Is discount always the best first step?",
-                            "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "No. Discount should be the final action after reliability fit and operational risk are validated."
-                            }
-                        },
-                        {
-                            "@type": "Question",
-                            "name": "Where does the antidetection ops SOP fit in this flow?",
-                            "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "Use the ops SOP after baseline detection checks and before procurement so rollout decisions follow clear go or no-go gates."
-                            }
-                        },
-                        {
-                            "@type": "Question",
-                            "name": "Where can I audit scoring weights and blocker rules?",
-                            "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "Use the evaluation methodology guide for weighted criteria, reproducibility protocol, and correction standards."
-                            }
-                        },
-                        {
-                            "@type": "Question",
-                            "name": "Do you have a free readiness tool before procurement?",
-                            "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "Yes. Use the Fingerprint Readiness Score tool to estimate pilot readiness before long-term plan commitments."
-                            }
-                        },
-                        {
-                            "@type": "Question",
-                            "name": "Can I generate a reusable evidence package before approval?",
-                            "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "Yes. Use the Evidence Pack Builder tool to generate an SOP-ready YAML package with no-buy conditions and recommendation status."
-                            }
-                        },
-                        {
-                            "@type": "Question",
-                            "name": "Where can I find a monthly benchmark report template?",
-                            "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "Use the benchmark report template page to publish monthly releases with consistent evidence and traceability blocks."
-                            }
-                        },
-                        {
-                            "@type": "Question",
-                            "name": "How can I follow monthly lab updates without checking manually?",
-                            "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "Subscribe to the Lab Updates RSS feed for new benchmark releases, methodology updates, and tooling changes."
-                            }
-                        },
-                        {
-                            "@type": "Question",
-                            "name": "How can I validate benchmark publish gates before release?",
-                            "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "Use the Benchmark Release Checker tool to score publication readiness and identify missing evidence or governance gates."
-                            }
-                        }
-                    ]
-                }
-            ]
+          "@type": "WebPage",
+          "url": "https://multilogin-labs.github.io/tools/antidetect-browsers/"
+        },
+        {
+          "@type": "WebPage",
+          "url": "https://multilogin-labs.github.io/compare/"
+        },
+        {
+          "@type": "WebPage",
+          "url": "https://multilogin-labs.github.io/promo/"
+        },
+        {
+          "@type": "WebPage",
+          "url": "https://multilogin-labs.github.io/guides/antidetect-libs-playbook/"
+        },
+        {
+          "@type": "WebPage",
+          "url": "https://multilogin-labs.github.io/guides/antidetection-ops-sop/"
+        },
+        {
+          "@type": "WebPage",
+          "url": "https://multilogin-labs.github.io/guides/evaluation-methodology/"
+        },
+        {
+          "@type": "WebPage",
+          "url": "https://multilogin-labs.github.io/guides/benchmark-reports/"
+        },
+        {
+          "@type": "WebPage",
+          "url": "https://multilogin-labs.github.io/guides/benchmark-reports/report-template/"
+        },
+        {
+          "@type": "WebPage",
+          "url": "https://multilogin-labs.github.io/guides/methodology-changelog/"
+        },
+        {
+          "@type": "WebPage",
+          "url": "https://multilogin-labs.github.io/guides/detection-tests/"
+        },
+        {
+          "@type": "WebPage",
+          "url": "https://multilogin-labs.github.io/guides/connection-leak-tests/"
+        },
+        {
+          "@type": "WebPage",
+          "url": "https://multilogin-labs.github.io/compare/multilogin-alternatives/"
+        },
+        {
+          "@type": "WebPage",
+          "url": "https://multilogin-labs.github.io/guides/antidetect-browser-pricing-playbook/"
+        },
+        {
+          "@type": "WebPage",
+          "url": "https://multilogin-labs.github.io/tools/multilogin-discount/"
+        },
+        {
+          "@type": "WebPage",
+          "url": "https://multilogin-labs.github.io/tools/fingerprint-readiness-score/"
+        },
+        {
+          "@type": "WebPage",
+          "url": "https://multilogin-labs.github.io/tools/evidence-pack-builder/"
+        },
+        {
+          "@type": "WebPage",
+          "url": "https://multilogin-labs.github.io/tools/benchmark-explorer/"
+        },
+        {
+          "@type": "WebPage",
+          "url": "https://multilogin-labs.github.io/tools/benchmark-release-checker/"
         }
-        </script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://multilogin-labs.github.io/tools/"}, "headline": "Tools Hub: Rankings, Comparisons, and Discount Intelligence | multilogin-labs", "datePublished": "2026-04-11", "dateModified": "2026-05-27", "author": {"@type": "Organization", "name": "multilogin-labs"}, "publisher": {"@type": "Organization", "name": "multilogin-labs"}}</script><script type="application/ld+json">
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What should I open first in the tools hub?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Start with the ranking page, then validate tradeoffs in compare pages, and only then apply discount actions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is discount always the best first step?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Discount should be the final action after reliability fit and operational risk are validated."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where does the antidetection ops SOP fit in this flow?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Use the ops SOP after baseline detection checks and before procurement so rollout decisions follow clear go or no-go gates."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where can I audit scoring weights and blocker rules?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Use the evaluation methodology guide for weighted criteria, reproducibility protocol, and correction standards."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you have a free readiness tool before procurement?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Use the Fingerprint Readiness Score tool to estimate pilot readiness before long-term plan commitments."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I generate a reusable evidence package before approval?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Use the Evidence Pack Builder tool to generate an SOP-ready YAML package with no-buy conditions and recommendation status."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where can I find a monthly benchmark report template?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Use the benchmark report template page to publish monthly releases with consistent evidence and traceability blocks."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I follow monthly lab updates without checking manually?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Subscribe to the Lab Updates RSS feed for new benchmark releases, methodology updates, and tooling changes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I validate benchmark publish gates before release?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Use the Benchmark Release Checker tool to score publication readiness and identify missing evidence or governance gates."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://multilogin-labs.github.io/tools/"
+  },
+  "headline": "Tools Hub: Rankings, Comparisons, and Discount Intelligence | multilogin-labs",
+  "datePublished": "2026-04-11",
+  "dateModified": "2026-05-27",
+  "author": {
+    "@type": "Organization",
+    "name": "multilogin-labs"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "multilogin-labs"
+  }
+}
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",

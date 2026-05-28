@@ -1,0 +1,42 @@
+name: Feature request
+description: Propose a new tool, guide, or dataset addition
+labels: ["enhancement"]
+body:
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Category
+      options:
+        - New benchmark month
+        - New guide / playbook
+        - New client-side tool
+        - Data schema improvement
+        - Site UX / SEO
+        - Automation script
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem statement
+      description: What gap or pain does this address for antidetect ops teams?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: Outline the deliverable (page, dataset, tool). Reproducible methodology only.
+    validations:
+      required: true
+  - type: checkboxes
+    id: ground-rules
+    attributes:
+      label: Ground rules
+      options:
+        - label: This is original work, not a copy of vendor documentation
+          required: true
+        - label: Client-side only (no backend, no scraped credentials)
+          required: true
+        - label: I have read CONTRIBUTING.md
+          required: true

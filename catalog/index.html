@@ -32,18 +32,81 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
+  "@graph": [
     {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://multilogin-labs.github.io/"
+      "@type": "CollectionPage",
+      "name": "multilogin-labs resource catalog",
+      "url": "https://multilogin-labs.github.io/catalog/",
+      "description": "Awesome-list style index of tools, datasets, guides, compare pages, and promo intelligence.",
+      "isPartOf": {
+        "@type": "WebSite",
+        "url": "https://multilogin-labs.github.io/"
+      }
     },
     {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "multilogin-labs resource catalog"
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://multilogin-labs.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Catalog",
+          "item": "https://multilogin-labs.github.io/catalog/"
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "name": "multilogin-labs primary catalog sections",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "url": "https://multilogin-labs.github.io/tools/multilogin-discount/",
+          "name": "Multilogin SAAS50 + MIN50 verifier"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "url": "https://multilogin-labs.github.io/compare/multilogin-alternatives/",
+          "name": "Multilogin alternatives matrix"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "url": "https://multilogin-labs.github.io/tools/benchmark-explorer/",
+          "name": "Benchmark explorer"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "url": "https://multilogin-labs.github.io/guides/procurement-evidence-gate/",
+          "name": "Procurement evidence gate"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "url": "https://multilogin-labs.github.io/guides/evaluation-methodology/",
+          "name": "Evaluation methodology v1.2"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "url": "https://multilogin-labs.github.io/promo/",
+          "name": "Promo verification hub"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "url": "https://multilogin-labs.github.io/data/index.json",
+          "name": "Open datasets manifest"
+        }
+      ]
     }
   ]
 }
